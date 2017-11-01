@@ -1,5 +1,6 @@
 # Summary
 
 * [介绍](README.md)
-* [First Chapter](chapter1.md)
+* [安装方法](chapter1.md)
+* [客户端使用说明](ke-hu-duan-shi-yong-shuo-ming.md)
 
