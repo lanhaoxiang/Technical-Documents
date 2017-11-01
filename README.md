@@ -1,3 +1,22 @@
-# My Awesome Book
+# 公信链（GXChain）技术文档
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+
+
+## 公信链简介
+
+ 公信链（GXChain）是一条公有链，是公信宝数据交易所的底层区块链，不仅支撑着公信宝的高频数据交易，还支持第三方开发应用，在公信链上开发应用不仅可以得到链上支持，还可以获得公信宝多维度数据的对接，可以做出非常落地于民生的有价值应用。
+
+## **公信链节点介绍**
+
+//公信链节点、客户端种类
+
+## **公信链节点下载**
+
+//公信链客户端下载地址
+
+## 节点端口说明
+
+//公信链端口种类及调用说明
+
+
+
