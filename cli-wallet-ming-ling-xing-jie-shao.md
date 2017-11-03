@@ -222,10 +222,19 @@ unlocked >>>
 
 其中method 传入命令名，params 数组传入参数清单\(无参数时，params传空数组\)， id为请求的标识，返回结果中的id和请求id一致。如果执行成功，结果会有 result ，否则会有 error。
 
+```
+// 解锁钱包
+curl --data '{"jsonrpc": "2.0", "method": "unlock", "params": ["my_password"], "id": 1}' http://127.0.0.1:8091/rpc
 
+// 查询帐户
+curl --data '{"jsonrpc": "2.0", "method": "get_account", "params": ["1.2.0"], "id": 1}' http://127.0.0.1:8091/rpc
+{"id":1,"result":{"id":"1.2.0","membership_expiration_date":"1969-12-31T23:59:59","merchant_expiration_date":"1970-01-01T00:00:00","datasource_expiration_date":"1970-01-01T00:00:00","data_transaction_member_expiration_date":"1970-01-01T00:00:00","registrar":"1.2.0","referrer":"1.2.0","lifetime_referrer":"1.2.0","merchant_auth_referrer":"1.2.0","datasource_auth_referrer":"1.2.0","network_fee_percentage":2000,"lifetime_referrer_fee_percentage":8000,"referrer_rewards_percentage":0,"name":"committee-account","owner":{"weight_threshold":1,"account_auths":[],"key_auths":[],"address_auths":[]},"active":{"weight_threshold":22743,"account_auths":[["1.2.6",45474],["1.2.7",1],["1.2.8",1],["1.2.9",1],["1.2.10",1],["1.2.11",1],["1.2.12",1],["1.2.13",1],["1.2.14",1],["1.2.15",1],["1.2.16",1]],"key_auths":[],"address_auths":[]},"options":{"memo_key":"GXC1111111111111111111111111111111114T1Anm","voting_account":"1.2.5","num_witness":0,"num_committee":0,"votes":[],"extensions":[]},"statistics":"2.6.0","whitelisting_accounts":[],"blacklisting_accounts":[],"whitelisted_accounts":[],"blacklisted_accounts":[],"owner_special_authority":[0,{}],"active_special_authority":[0,{}],"top_n_control_flags":0}}$ curl --data '{"jsonrpc": "2.0", "method": "get_account", "params": ["1.2.0"], "id": 1}' http://127.0.0.1:8091/rpc
 
-[  
-](https://doc.gxb.io/core/yuan-ma-bian-yi.html)
+// 调用tranfer2转帐, 其中“99d3b67210d1332b51d5e79176f24e6386b172d3”为返回的交易id
+curl --data '{"jsonrpc": "2.0", "method": "transfer2", "params": ["from_account", "to_account", 100, "GXC", "",  true], "id": 1}' http://127.0.0.1:8091/rpc
+{"id":1,"result":["99d3b67210d1332b51d5e79176f24e6386b172d3",{"ref_block_num":46390,"ref_block_prefix":40036483,"expiration":"2017-08-14T10:22:39","operations":[[0,{"fee":{"amount":100000,"asset_id":"1.3.0"},"from":"1.2.17","to":"1.2.6","amount":{"amount":10000000,"asset_id":"1.3.0"},"extensions":[]}]],"extensions":[],"signatures":["1f11ba3a2a1d2aaf251e2e8a2fb7c4b2cd7621fa2509155ccef0a94585a87bf6b96cb596fadc4a1fd2d51eeec057039aeecb5673d7d4380d0ae6c680cfe463c1db"]}]}  
+
+```
 
 
 
