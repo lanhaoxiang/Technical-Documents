@@ -28,11 +28,7 @@
 
 #### 下载GXB-Box（为了便于升级，推荐使用[源码方式启动](https://doc.gxb.io/box/other.html#sourcecode)） {#下载gxb-box（为了便于升级，推荐使用源码方式启动）}
 
-| 系统 |
-| :--- |
-
-
-|  | 下载地址 |
+| 系统 | 下载地址 |
 | :--- | :--- |
 | Mac | [http://gxb-package.oss-cn-hangzhou.aliyuncs.com/gxb-box/gxb-box-mac-2017-09-26.tar.gz](http://gxb-package.oss-cn-hangzhou.aliyuncs.com/gxb-box/gxb-box-mac-2017-09-26.tar.gz) |
 | Linux | [http://gxb-package.oss-cn-hangzhou.aliyuncs.com/gxb-box/gxb-box-linux-2017-09-26.tar.gz](http://gxb-package.oss-cn-hangzhou.aliyuncs.com/gxb-box/gxb-box-linux-2017-09-26.tar.gz) |
@@ -79,14 +75,12 @@ Mac, Linux系统：
 
 ```
 bash start.sh
-
 ```
 
 Windows系统，在cmd下执行：
 
 ```
 ./start.cmd
-
 ```
 
 > 源码方式运行请查看源码地址：[https://github.com/gxchain/gxb-box](https://github.com/gxchain/gxb-box)
@@ -96,4 +90,151 @@ Windows系统，在cmd下执行：
 ## 第四步：调用接口 {#invoke}
 
 以KYC认证产品调用为例
+
+![](/assets/KYC_PARAMS.png)假设GXB-Box启动在**3000**端口
+
+则接口地址为：`http://localhost:3000/rpc/1.17.0/1.0.2`
+
+> 其中**1.17.0**为产品id，**1.0.2**为当前接口版本号
+
+**浏览器访问**: \(推荐使用Postman以及Post方式调用接口\)
+
+```
+http://localhost:3000/rpc/1.17.0/1.0.2?name=姓名&idcard=身份证号&photo=照片base64
+
+```
+
+得到以下结果:
+
+![](/assets/request_id.png)
+
+得到的不是请求结果而是一个request\_id，因为整个过程不是一个长连接，接口调用是一个异步的过程，而联盟市场存在一个请求多个返回的情况
+
+> 经过测试，自由市场一笔数据交易时间最快可在500ms内完成
+
+假设设置的回调地址\(merchant.callback\_url\)为`http://localhost:3000/demo/callback`
+
+很快会收到**数据推送**：
+
+![](/assets/callback_result.png)
+
+**数据格式**如下
+
+```
+{
+        "request_id": "fb17941dce8dc78d6275b04afbb4a5202f7fd4defca4918cf21c913abe706d4e", // 前面返回的request_id
+        "datasource": "1.2.21", //数据源id
+        "body": {
+                "message": "", //业务状态码的描述
+                "data": { //对应出参说明中的结果
+                        "result": true
+                },
+                "code": 0 //业务状态码
+        }
+}
+```
+
+### API接口 {#api接口}
+
+除了数据推送外，GXB-Box提供了2个查询接口:
+
+#### 1. 从链上获取request状态信息 {#1--从链上获取request状态信息}
+
+```
+GET /api/request/:request_id
+```
+
+请求示例:
+
+```
+http://localhost:3000/api/request/6c2d7a4605c7019877a456d0d30db31c9221672f08991c8750cb834c1f80dd2f
+```
+
+返回示例:
+
+```
+{
+```
+
+```
+    "id": "1.20.858",
+    "request_id": "6c2d7a4605c7019877a456d0d30db31c9221672f08991c8750cb834c1f80dd2f",
+    "product_id": "1.18.0",
+    "version": "1.0.1",
+    "params": "CBhO4Zx/r7pCbbvnkpJXROIn8QrS8UkevzS3cX1XOoyfqukPYH4+cf1VOIIaBSDmURU1o/M332JHLXtrfYzPDuiLPg4nNewCn3fneep3aYPHjfK4CfUpVPrJx4QqwJY63X444panfsBbUh6HFPz2iw==",
+    "status": 1, //0:初始化,1:已确认,99:隐私交易拒绝
+    "create_date_time": "2017-07-24T13:27:36",
+    "requester": "1.2.19",
+    "league_id": "1.19.0",
+    "memo": "",
+    "datasources_status": [
+        {
+            "datasource": "1.2.19",
+            "status": 0 //0:未上传，1:已上传 2:已支付 99:数据源上传出错
+        },
+        {
+            "datasource": "1.2.21",
+            "status": 2
+        },
+        {
+            "datasource": "1.2.24",
+            "status": 0
+        },
+        {
+            "datasource": "1.2.23",
+            "status": 2
+        }
+    ]
+}
+
+```
+
+#### 2. 从本地获取已购买数据 {#2--从本地获取已购买数据}
+
+```
+GET /api/request/:request_id/data
+
+```
+
+请求示例:
+
+```
+http://localhost:3000/api/request/6c2d7a4605c7019877a456d0d30db31c9221672f08991c8750cb834c1f80dd2f/data
+
+```
+
+返回示例:
+
+```
+[
+    {
+        "request_id": "6c2d7a4605c7019877a456d0d30db31c9221672f08991c8750cb834c1f80dd2f",
+        "datasource": "1.2.21",
+        "body": {
+            "message": "",
+            "data": {
+                "result": true
+            },
+            "code": 0
+        }
+    },
+    {
+        "request_id": "6c2d7a4605c7019877a456d0d30db31c9221672f08991c8750cb834c1f80dd2f",
+        "datasource": "1.2.23",
+        "body": {
+            "message": "",
+            "data": {
+                "result": true
+            },
+            "code": 0
+        }
+    }
+]
+
+```
+
+
+
+[  
+](https://doc.gxb.io/box/datasource.html)
 

@@ -16,4 +16,7 @@
 * [GXB-BOX介绍](gxb-box.md)
   * [环境安装](gxb-boxjie-shao/huan-jing-an-zhuang.md)
   * [商户接入](gxb-boxjie-shao/shang-hu-jie-ru.md)
+  * [数据源接入](gxb-boxjie-shao/shu-ju-yuan-jie-ru.md)
+  * 其他说明
+  * [接口清单](gxb-boxjie-shao/jie-kou-qing-dan.md)
 
