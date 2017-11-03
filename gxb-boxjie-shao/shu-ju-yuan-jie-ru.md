@@ -168,7 +168,7 @@ service需要返回固定格式的数据结构：
 }
 ```
 
-入参和出参支持integer, boolean, string, number, array复杂格式的数据可以参考
+>入参和出参支持integer, boolean, string, number, array复杂格式的数据可以参考
 
 [其他说明-复杂格式数据定义](https://doc.gxb.io/box/other.html#complex)
 
