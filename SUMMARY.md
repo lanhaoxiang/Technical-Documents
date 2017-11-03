@@ -15,4 +15,5 @@
 * [私有链搭建](si-you-lian-da-jian.md)
 * [GXB-BOX介绍](gxb-box.md)
   * [环境安装](gxb-boxjie-shao/huan-jing-an-zhuang.md)
+  * [商户接入](gxb-boxjie-shao/shang-hu-jie-ru.md)
 
