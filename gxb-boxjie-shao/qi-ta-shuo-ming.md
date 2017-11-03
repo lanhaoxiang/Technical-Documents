@@ -129,5 +129,130 @@ GXB-Box使用的是活跃权限私钥，可以在 账户-&gt;权限-&gt;活跃�
 npm install pm2 -g
 ```
 
+进入gxb-box目录并在命令行下执行:
+
+```
+pm2 stop gxb-box
+pm2 start dist/gxb-box.js --name gxb-box --log-date-format="YYYY-MM-DD HH:mm Z"
+```
+
+进程查看:
+
+```
+pm2 ls
+
+```
+
+日志查看:
+
+```
+pm2 logs gxb-box
+
+```
+
+监控:
+
+```
+pm2 monit
+
+```
+
+重启:
+
+```
+pm2 restart gxb-box
+
+```
+
+关闭:
+
+```
+pm2 stop gxb-box
+
+```
+
+更多命令可查看PM2官方API文档:[http://pm2.keymetrics.io/](http://pm2.keymetrics.io/)
+
+## 6. 源码方式启动 {#sourcecode}
+
+首次下载
+
+```
+git clone https://github.com/gxchain/gxb-box
+cd gxb-box
+npm install -d
+npm install webpack -g
+npm run build
+pm2 start dist/gxb-box.js --name gxb-box --log-date-format="YYYY-MM-DD HH:mm Z"
+```
+
+代码升级
+
+```
+git stash
+git pull 
+git stash pop
+npm install -d 
+npm run build
+pm2 restart gxb-box
+```
+
+## 7. npm install很慢 {#7-npm-install很慢}
+
+国内主机建议切换成淘宝镜像
+
+```
+npm config set registry https://registry.npm.taobao.org
+```
+
+## 8. 模块安装失败 {#8-模块安装失败}
+
+部分模块依赖gcc
+
+```
+yum -y install gcc
+yum -y install gcc-c++
+```
+
+## 9. 返回数据结构说明 {#9-返回数据结构说明}
+
+创建交易请求返回格式\(json\)：
+
+```
+{
+    code:"",
+    message:"",
+    data:{}
+}
+```
+
+通过/api/request/:request\_id/data返回数据格式\(array\)
+
+```
+[{
+    request_id:"",
+    datasource:"", //针对联盟市场，自由市场非必须
+    body: {
+        code: "",
+        message: "",
+        data:{}
+    }
+}]
+```
+
+推送返回数据格式\(json\)
+
+```
+{
+    request_id:"",
+    datasource:"",//针对联盟市场，自由市场非必须
+    body: {
+        code: "",
+        message: "",
+        data:{}
+    }
+}
+```
+
 
 
