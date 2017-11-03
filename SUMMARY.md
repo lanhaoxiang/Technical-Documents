@@ -11,4 +11,5 @@
 * [原生API调用](apidiao-yong.md)
 * [数据交易API调用](shu-ju-jiao-yi-api-diao-yong.md)
 * [BAAS-API调用](baas-apidiao-yong.md)
+* [私有链搭建](si-you-lian-da-jian.md)
 
