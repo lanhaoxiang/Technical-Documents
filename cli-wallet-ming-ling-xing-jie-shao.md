@@ -202,7 +202,7 @@ unlocked >>>
 
 ##### 
 
-### 13. gethelp {#13-gethelp}
+### 15. gethelp {#13-gethelp}
 
 ##### 说明：帮助命令，查看指定钱包命令的调用方法 {#说明：帮助命令，查看指定钱包命令的调用方法}
 
@@ -232,8 +232,7 @@ curl --data '{"jsonrpc": "2.0", "method": "get_account", "params": ["1.2.0"], "i
 
 // 调用tranfer2转帐, 其中“99d3b67210d1332b51d5e79176f24e6386b172d3”为返回的交易id
 curl --data '{"jsonrpc": "2.0", "method": "transfer2", "params": ["from_account", "to_account", 100, "GXC", "",  true], "id": 1}' http://127.0.0.1:8091/rpc
-{"id":1,"result":["99d3b67210d1332b51d5e79176f24e6386b172d3",{"ref_block_num":46390,"ref_block_prefix":40036483,"expiration":"2017-08-14T10:22:39","operations":[[0,{"fee":{"amount":100000,"asset_id":"1.3.0"},"from":"1.2.17","to":"1.2.6","amount":{"amount":10000000,"asset_id":"1.3.0"},"extensions":[]}]],"extensions":[],"signatures":["1f11ba3a2a1d2aaf251e2e8a2fb7c4b2cd7621fa2509155ccef0a94585a87bf6b96cb596fadc4a1fd2d51eeec057039aeecb5673d7d4380d0ae6c680cfe463c1db"]}]}  
-
+{"id":1,"result":["99d3b67210d1332b51d5e79176f24e6386b172d3",{"ref_block_num":46390,"ref_block_prefix":40036483,"expiration":"2017-08-14T10:22:39","operations":[[0,{"fee":{"amount":100000,"asset_id":"1.3.0"},"from":"1.2.17","to":"1.2.6","amount":{"amount":10000000,"asset_id":"1.3.0"},"extensions":[]}]],"extensions":[],"signatures":["1f11ba3a2a1d2aaf251e2e8a2fb7c4b2cd7621fa2509155ccef0a94585a87bf6b96cb596fadc4a1fd2d51eeec057039aeecb5673d7d4380d0ae6c680cfe463c1db"]}]}
 ```
 
 

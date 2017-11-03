@@ -6,18 +6,36 @@
 * [客户端使用说明](ke-hu-duan-shi-yong-shuo-ming.md)
 * [测试网络](test net.md)
 * [Cli-wallet 命令行介绍](cli-wallet-ming-ling-xing-jie-shao.md)
+* [API调用](apidiao-yong.md)
+  * [Cli-wallet API](apidiao-yong/cli-wallet-api.md)
+    * [set\_password](apidiao-yong/cli-wallet-api/setpassword.md)
+    * [un\_Lock](apidiao-yong/cli-wallet-api/unlock.md)
+    * [import\_Key](apidiao-yong/cli-wallet-api/importkey.md)
+    * [dump\_private\_keys](apidiao-yong/cli-wallet-api/dumpprivate-keys.md)
+    * [get\_account](apidiao-yong/cli-wallet-api/getaccount.md)
+    * [list\_account\_balances](apidiao-yong/cli-wallet-api/listaccount-balances.md)
+    * get\_account\_history
+    * get\_relative\_account\_history
+    * get\_account\_history\_by\_operations
+    * transfer
+    * transfer2
+    * get\_block
+    * info
+    * help
+    * gethelp
+  * Witness API
+  * BAAS-API
 * [源码编译](yuan-ma-bian-yi.md)
 * [cli\_wallet配置nginx代理](cliwallet-pei-zhi-nginx-dai-li.md)
 * [GXB冷钱包离线签名](gxbleng-qian-bao-li-xian-qian-ming.md)
 * [原生API调用](apidiao-yong.md)
-* [数据交易API调用](shu-ju-jiao-yi-api-diao-yong.md)
-* [BAAS-API调用](baas-apidiao-yong.md)
 * [私有链搭建](si-you-lian-da-jian.md)
-* [共识机制](gong-shi-ji-zhi.md)
 * [GXB-BOX介绍](gxb-box.md)
   * [环境安装](gxb-boxjie-shao/huan-jing-an-zhuang.md)
   * [商户接入](gxb-boxjie-shao/shang-hu-jie-ru.md)
   * [数据源接入](gxb-boxjie-shao/shu-ju-yuan-jie-ru.md)
   * [其他说明](gxb-boxjie-shao/qi-ta-shuo-ming.md)
   * [接口清单](gxb-boxjie-shao/jie-kou-qing-dan.md)
+* [附录](fu-lu.md)
+  * [共识机制](fu-lu/gong-shi-ji-zhi.md)
 
