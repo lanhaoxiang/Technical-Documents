@@ -14,8 +14,8 @@
     * [dump\_private\_keys](apidiao-yong/cli-wallet-api/dumpprivate-keys.md)
     * [get\_account](apidiao-yong/cli-wallet-api/getaccount.md)
     * [list\_account\_balances](apidiao-yong/cli-wallet-api/listaccount-balances.md)
-    * get\_account\_history
-    * get\_relative\_account\_history
+    * [get\_account\_history](apidiao-yong/cli-wallet-api/getaccount-history.md)
+    * [get\_relative\_account\_history](apidiao-yong/cli-wallet-api/getrelative-account-history.md)
     * get\_account\_history\_by\_operations
     * transfer
     * transfer2
