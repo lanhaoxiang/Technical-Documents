@@ -1,6 +1,7 @@
 # Summary
 
-* [介绍](README.md)
+* [公信链](README.md)
+* [介绍](instruction.md)
 * [安装方法](node.md)
 * [客户端使用说明](ke-hu-duan-shi-yong-shuo-ming.md)
 * [测试网络](ce-shi-wang-luo.md)
