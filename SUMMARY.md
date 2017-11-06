@@ -34,8 +34,9 @@
   * [环境安装](gxb-box/installation.md)
   * [商户接入](gxb-box/shang-hu-jie-ru.md)
   * [数据源接入](gxb-box/shu-ju-yuan-jie-ru.md)
-  * [其他说明](gxb-box/appendix.md)
   * [接口清单](gxb-box/Port list Q&A.md)
+  * [其他说明](gxb-box/appendix.md)
 * [附录](fu-lu.md)
   * [共识机制](supplement/DPoS.md)
+  * [exchange](supplement/exchange.md)
 
