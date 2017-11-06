@@ -3,13 +3,64 @@
 | 命令 | 参数 | 说明 | 备注 |
 | :--- | :--- | :--- | :--- |
 | get\_objects | &lt;ids&gt; | 根据ids查询目标 |  |
-| set_subscribe_callback |  |  |  |
-| set_pending_transaction_callback |  |  |  |
-| set_block_applied_callback |  |  |  |
-| cancel_all_subscriptions |  |  |  |
-| get_block_header | block_num | 获取区块头信息 |  |
-| get_transaction | block_num | 获得交易信息 |  |
-| get_block | block_num | 获取区块信息 |  |
+| set\_subscribe\_callback |  | 停止获取通知 |  |
+| set\_pending\_transaction\_callback |  |  |  |
+| set\_block\_applied\_callback |  |  |  |
+| cancel\_all\_subscriptions |  |  |  |
+| get\_block\_header | block\_num | 获取区块头信息 |  |
+| get\_transaction | block\_num | 获得交易信息 |  |
+| get\_block | block\_num | 获取区块信息 |  |
+| get\_recent\_transaction\_by\_id |  |  |  |
+| get\_chain\_properties |  |  |  |
+| get\_global\_properties |  |  |  |
+| get\_config |  |  |  |
+| get\_chain\_id |  |  |  |
+| get\_dynamic\_global\_properties |  |  |  |
+| get\_key\_references |  |  |  |
+| get\_accounts |  |  |  |
+| get\_full\_accounts |  |  |  |
+| get\_account\_by\_name |  |  |  |
+| get\_account\_references |  |  |  |
+| lookup\_account\_names |  |  |  |
+| lookup\_accounts |  |  |  |
+| get\_account\_count |  |  |  |
+| get\_account\_balances |  |  |  |
+| get\_named\_account\_balances |  |  |  |
+| get\_balance\_objects |  |  |  |
+| get\_vested\_balances |  |  |  |
+| get\_vesting\_balances |  |  |  |
+| get\_assets |  |  |  |
+| list\_assets |  |  |  |
+| lookup\_asset\_symbols |  |  |  |
+| get\_order\_book |  |  |  |
+| get\_limit\_orders |  |  |  |
+| get\_call\_orders |  |  |  |
+| get\_settle\_orders |  |  |  |
+| get\_margin\_positions |  |  |  |
+| subscribe\_to\_market |  |  |  |
+| unsubscribe\_from\_market |  |  |  |
+| get\_ticker |  |  |  |
+| get\_24\_volume |  |  |  |
+| get\_trade\_history |  |  |  |
+| get\_witnesses |  |  |  |
+| get\_witness\_by\_account |  |  |  |
+| lookup\_witness\_accounts |  |  |  |
+| get\_witness\_count |  |  |  |
+| get\_committee\_members |  |  |  |
+| get\_committee\_member\_by\_account |  |  |  |
+| lookup\_committee\_member\_accounts |  |  |  |
+| get\_workers\_by\_account |  |  |  |
+| lookup\_vote\_ids |  |  |  |
+| get\_transaction\_hex |  |  |  |
+| get\_required\_signatures |  |  |  |
+| get\_potential\_signatures |  |  |  |
+| get\_potential\_address\_signatures |  |  |  |
+| verify\_authority |  |  |  |
+| verify_account_authority |  |  |  |
+| validate_transaction |  |  |  |
+| get_required_fees |  |  |  |
+| get_proposed_transactions |  |  |  |
+| get_blinded_balances |  |  |  |
 |  |  |  |  |
 |  |  |  |  |
 
