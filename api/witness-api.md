@@ -10,15 +10,15 @@
 | get\_block\_header | block\_num | 获取区块头信息 |  |
 | get\_transaction | block\_num | 获得交易信息 |  |
 | get\_block | block\_num | 获取区块信息 |  |
-| get\_recent\_transaction\_by\_id |  |  |  |
-| get\_chain\_properties |  |  |  |
-| get\_global\_properties |  |  |  |
-| get\_config |  |  |  |
-| get\_chain\_id |  |  |  |
-| get\_dynamic\_global\_properties |  |  |  |
+| get\_recent\_transaction\_by\_id |  | 根据TXID查询交易，若交易超出有效期则会返回空值 |  |
+| get\_chain\_properties |  | 获取链上资产信息 |  |
+| get\_global\_properties |  | 获取全局资产信息 |  |
+| get\_config |  | 获取编译时常量 |  |
+| get\_chain\_id |  | 获取链ID |  |
+| get\_dynamic\_global\_properties |  | 获取动态全局资产 |  |
 | get\_key\_references |  |  |  |
-| get\_accounts |  |  |  |
-| get\_full\_accounts |  |  |  |
+| get\_accounts |    &lt;account\_ids&gt; | 通过ID获取账户信息 |  |
+| get\_full\_accounts | &lt;call back&gt; &lt;names\_or\_ids&gt; | 获取符合条件的所有账户 |  |
 | get\_account\_by\_name |  |  |  |
 | get\_account\_references |  |  |  |
 | lookup\_account\_names |  |  |  |
@@ -56,11 +56,11 @@
 | get\_potential\_signatures |  |  |  |
 | get\_potential\_address\_signatures |  |  |  |
 | verify\_authority |  |  |  |
-| verify_account_authority |  |  |  |
-| validate_transaction |  |  |  |
-| get_required_fees |  |  |  |
-| get_proposed_transactions |  |  |  |
-| get_blinded_balances |  |  |  |
+| verify\_account\_authority |  |  |  |
+| validate\_transaction |  |  |  |
+| get\_required\_fees |  |  |  |
+| get\_proposed\_transactions |  |  |  |
+| get\_blinded\_balances |  |  |  |
 |  |  |  |  |
 |  |  |  |  |
 
