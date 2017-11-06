@@ -22,42 +22,32 @@
 | get\_account\_by\_name |  | 通过名字获取账户 |  |
 | get\_account\_references |  | 获取与秘钥相关联的账户 |  |
 | lookup\_account\_names | &lt;account\_names&gt; | 通过名字获取账户 |  |
-| lookup\_accounts | &lt;limit&gt; &lt;lower\_bound\_name&gt; | 获取已注册账户的名字和ID |  |
+| lookup\_accounts | &lt;limit&gt; &lt;lower\_bound\_name&gt; | 获取已注册账户的账户名和ID |  |
 | get\_account\_count |  | 获取链上注册的所有账户数量 |  |
 | get\_account\_balances | &lt;id&gt; &lt;assets&gt; | 获取账户资产余额 |  |
 | get\_named\_account\_balances |  | 与上条功能相同，不过是凭借名字而不是ID查询 |  |
 | get\_balance\_objects |  |  |  |
 | get\_vested\_balances |  |  |  |
 | get\_vesting\_balances |  |  |  |
-| get\_assets |  |  |  |
-| list\_assets |  |  |  |
-| lookup\_asset\_symbols |  |  |  |
-| get\_order\_book |  |  |  |
-| get\_limit\_orders |  |  |  |
-| get\_call\_orders |  |  |  |
-| get\_settle\_orders |  |  |  |
-| get\_margin\_positions |  |  |  |
-| subscribe\_to\_market |  |  |  |
-| unsubscribe\_from\_market |  |  |  |
-| get\_ticker |  |  |  |
-| get\_24\_volume |  |  |  |
-| get\_trade\_history |  |  |  |
-| get\_witnesses |  |  |  |
-| get\_witness\_by\_account |  |  |  |
-| lookup\_witness\_accounts |  |  |  |
-| get\_witness\_count |  |  |  |
-| get\_committee\_members |  |  |  |
-| get\_committee\_member\_by\_account |  |  |  |
-| lookup\_committee\_member\_accounts |  |  |  |
+| get\_assets | &lt;asset\_ids&gt; | 通过ID获取资产 |  |
+| list\_assets | &lt;limit&gt; &lt;lower\_bound\_symbol&gt; | 通过符号名称获取资产 |  |
+| lookup\_asset\_symbols | &lt;asset\_symbols&gt; | 通过符号获取资产列表 |  |
+| get\_witnesses | &lt;witness\_ids&gt; | 通过ID获取见证人列表 |  |
+| get\_witness\_by\_account | &lt;account&gt; | 通过账户名获取见证人 |  |
+| lookup\_witness\_accounts | &lt;lower\_bound\_name&gt; &lt;limit&gt; | 获取已注册见证人的ID和账户名 |  |
+| get\_witness\_count |  | 获取已注册见证人的数量 |  |
+| get\_committee\_members | &lt;committee\_member\_ids&gt; | 通过ID获取理事会成员列表 |  |
+| get\_committee\_member\_by\_account | &lt;account&gt; | 通过账户获取理事会成员 |  |
+| lookup\_committee\_member\_accounts | &lt;account&gt; | 获得已注册理事会成员的ID和账户名 |  |
 | get\_workers\_by\_account |  |  |  |
-| lookup\_vote\_ids |  |  |  |
-| get\_transaction\_hex |  |  |  |
-| get\_required\_signatures |  |  |  |
+| lookup\_vote\_ids |  | 通过投票情况来获得投票对象 |  |
+| get\_transaction\_hex |  | 获取二进制交易信息的十六进制编码 |  |
+| get\_required\_signatures |  | 获取一组满足签署部分交易的最小子集的公钥 |  |
 | get\_potential\_signatures |  |  |  |
 | get\_potential\_address\_signatures |  |  |  |
 | verify\_authority |  |  |  |
 | verify\_account\_authority |  |  |  |
-| validate\_transaction |  |  |  |
+| validate\_transaction |  | 在当前情况下验证交易而不广播交易 |  |
 | get\_required\_fees |  |  |  |
 | get\_proposed\_transactions |  |  |  |
 | get\_blinded\_balances |  |  |  |
