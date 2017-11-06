@@ -1,7 +1,7 @@
 ## Cli-wallet 命令列表
 
 | 命令 | 参数 | 说明 | 备注 |
-| :---: | :---: | :---: | :---: |
+| :--- | :--- | :--- | :--- |
 | [set\_password](/apidiao-yong/cli-wallet-api/setpassword.md) | &lt;new\_password&gt; | 对钱包设置一个新密码。首次启动钱包，需要设置密码 |  |
 | [unlock](/api/cli-wallet-api/unlock.md) | &lt;my\_password&gt; | 解锁钱包 |  |
 | [import\_key](/api/cli-wallet-api/importkey.md) | &lt;account\_name\_or\_id&gt;         &lt;true&gt; &lt;wif\_private\_key&gt; | 将帐户的私钥导入到钱包 |  |
@@ -10,7 +10,7 @@
 | [list\_account\_balances](/api/cli-wallet-api/listaccount-balances.md) | &lt;account\_name\_or\_id&gt; | 查询帐户余额 |  |
 | [get\_account\_history](/api/cli-wallet-api/getaccount-history.md) | &lt;account\_name\_or\_id&gt;         &lt;limt\_num&gt; | 查询帐户最近的交易记录 |  |
 | [get\_relative\_account\_history](/api/cli-wallet-api/getrelative-account-history.md) | &lt;account\_name\_or\_id&gt;       &lt;start&gt; &lt;limit&gt; &lt;stop&gt; | 查询帐户最近的交易记录, 支持翻页 |  |
-| [get\_account\_history\_by\_operations](/api/cli-wallet-api/getaccount-history-by-operations.md) | &lt;account\_name\_or\_id&gt; &lt;\[\]&gt;  &lt;start&gt; &lt;limit\_num&gt; | 根据oeration\_type查询帐户最近的交易记录，支持翻页并且返回operation对应的txID |  |
+| [get\_account\_history\_by\_operations](/api/cli-wallet-api/getaccount-history-by-operations.md) | &lt;account\_name\_or\_id&gt; &lt;\[\]&gt;  &lt;start&gt; &lt;limit\_num&gt; | 根据oeration\_type查询帐户最近的交易记录，并且返回 operation对应的txID |  |
 | [transfer](/api/cli-wallet-api/transfer.md) | &lt;from\_account&gt;                   &lt;to\_account&gt; &lt;amount&gt;     &lt;GXS&gt; &lt;memo&gt; &lt;true&gt; | 转帐操作 |  |
 | [transfer2](/api/cli-wallet-api/transfer2.md) | &lt;from\_account&gt;                   &lt;to\_account&gt; &lt;amount&gt;     &lt;GXS&gt; &lt;memo&gt; &lt;true&gt; | 转帐操作，参数同transfer, 返回结果中包含当前交易的id |  |
 | [get\_block](/api/cli-wallet-api/getblock.md) | &lt;block\_num&gt; | 获取指定区块信息 |  |
