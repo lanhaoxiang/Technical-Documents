@@ -19,13 +19,13 @@
 | get\_key\_references |  |  |  |
 | get\_accounts | &lt;account\_ids&gt; | 通过ID获取账户信息 |  |
 | get\_full\_accounts | &lt;call back&gt; &lt;names\_or\_ids&gt; | 获取符合条件的所有账户 |  |
-| get\_account\_by\_name |  |  |  |
+| get\_account\_by\_name |  | 通过名字获取账户 |  |
 | get\_account\_references |  | 获取与秘钥相关联的账户 |  |
 | lookup\_account\_names | &lt;account\_names&gt; | 通过名字获取账户 |  |
 | lookup\_accounts | &lt;limit&gt; &lt;lower\_bound\_name&gt; | 获取已注册账户的名字和ID |  |
-| get\_account\_count |  |  |  |
-| get\_account\_balances |  |  |  |
-| get\_named\_account\_balances |  |  |  |
+| get\_account\_count |  | 获取链上注册的所有账户数量 |  |
+| get\_account\_balances | &lt;id&gt; &lt;assets&gt; | 获取账户资产余额 |  |
+| get\_named\_account\_balances |  | 与上条功能相同，不过是凭借名字而不是ID查询 |  |
 | get\_balance\_objects |  |  |  |
 | get\_vested\_balances |  |  |  |
 | get\_vesting\_balances |  |  |  |
