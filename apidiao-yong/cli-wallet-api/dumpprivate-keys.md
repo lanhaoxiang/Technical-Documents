@@ -1,4 +1,4 @@
-### dump\_private\_keys {#4-dumpprivatekeys}
+# dump\_private\_keys {#4-dumpprivatekeys}
 
 ##### 说明：打印钱包拥有的所有公私钥对 {#说明：打印钱包拥有的所有公私钥对}
 

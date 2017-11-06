@@ -1,4 +1,4 @@
-### get\_account {#5-getaccount}
+# get\_account {#5-getaccount}
 
 ##### 说明：查询指定帐户信息，参数可以为帐户名或者帐户id {#说明：查询指定帐户信息，参数可以为帐户名或者帐户id}
 

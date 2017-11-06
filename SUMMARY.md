@@ -16,13 +16,13 @@
     * [list\_account\_balances](apidiao-yong/cli-wallet-api/listaccount-balances.md)
     * [get\_account\_history](apidiao-yong/cli-wallet-api/getaccount-history.md)
     * [get\_relative\_account\_history](apidiao-yong/cli-wallet-api/getrelative-account-history.md)
-    * get\_account\_history\_by\_operations
-    * transfer
-    * transfer2
-    * get\_block
-    * info
-    * help
-    * gethelp
+    * [get\_account\_history\_by\_operations](apidiao-yong/cli-wallet-api/getaccount-history-by-operations.md)
+    * [transfer](apidiao-yong/cli-wallet-api/transfer.md)
+    * [transfer2](apidiao-yong/cli-wallet-api/transfer2.md)
+    * [get\_block](apidiao-yong/cli-wallet-api/getblock.md)
+    * [info](apidiao-yong/cli-wallet-api/info.md)
+    * [help](apidiao-yong/cli-wallet-api/help.md)
+    * [gethelp](apidiao-yong/cli-wallet-api/gethelp.md)
   * Witness API
   * BAAS-API
 * [源码编译](yuan-ma-bian-yi.md)

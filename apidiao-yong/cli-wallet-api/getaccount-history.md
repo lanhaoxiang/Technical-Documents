@@ -1,4 +1,4 @@
-### get\_account\_history {#7--getaccounthistory}
+# get\_account\_history {#7--getaccounthistory}
 
 ##### 说明：查询帐户最近的交易记录 {#说明：查询帐户最近的交易记录}
 
