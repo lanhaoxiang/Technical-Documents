@@ -6,5 +6,5 @@
 
 上图简单表述了这样的一个数据交易流程。
 
-如需了解全文，请点击[这里](https://github.com/gxchain/gxb-box/blob/dev/README-CN.md)。
+**如需了解全文，请点击**[**这里**](https://github.com/gxchain/gxb-box/blob/dev/README-CN.md)**。**
 
