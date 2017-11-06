@@ -29,12 +29,12 @@
     * 11
   * [BAAS-API](api/baas-api.md)
     * [22](api/baas-api/22.md)
+* [GXB-BOX](gxb-box.md)
 * [GXB-CORE](gxb-core.md)
   * [源码编译](gxb-core/compile.md)
   * [cli\_wallet配置nginx代理](gxb-core/cliwallet nginx.md)
   * [Core指令集](gxb-core/core operation.md)
   * [GXB冷钱包离线签名](gxb-core/gxb cold wallet.md)
-* [GXB-BOX](gxb-box.md)
 * [附录](fu-lu.md)
   * [共识机制](supplement/DPoS.md)
   * [exchange](supplement/exchange.md)
