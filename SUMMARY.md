@@ -4,6 +4,7 @@
 * [介绍](introduction.md)
 * [安装方法](node.md)
 * [客户端使用说明](Client instructions.md)
+* [见证人申请](apply witness .md)
 * [测试网络](test net.md)
 * [私有链搭建](private chain.md)
 * [API调用](API summary.md)
@@ -27,9 +28,6 @@
     * 11
   * [BAAS-API](apidiao-yong/baas-api.md)
     * 22
-* [源码编译](compile.md)
-* [cli\_wallet配置nginx代理](cliwallet nginx.md)
-* [GXB冷钱包离线签名](gxb cold wallet.md)
 * [GXB-BOX介绍](gxb-box.md)
   * [环境安装](gxb-box/installation.md)
   * [商户接入](gxb-box/shang-hu-jie-ru.md)
@@ -39,6 +37,9 @@
 * [附录](fu-lu.md)
   * [共识机制](supplement/DPoS.md)
   * [exchange](supplement/exchange.md)
-* [见证人申请](apply witness .md)
-* [Core指令集](core operation.md)
+* [GXB-CORE](gxb-core.md)
+  * [源码编译](gxb-core/compile.md)
+  * [cli\_wallet配置nginx代理](gxb-core/cliwallet nginx.md)
+  * [Core指令集](gxb-core/core operation.md)
+  * [GXB冷钱包离线签名](gxb-core/gxb cold wallet.md)
 
