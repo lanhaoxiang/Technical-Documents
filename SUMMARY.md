@@ -29,6 +29,7 @@
     * 22
 * [源码编译](compile.md)
 * [cli\_wallet配置nginx代理](cliwallet nginx.md)
+* [GXB冷钱包离线签名](gxb cold wallet.md)
 * [GXB-BOX介绍](gxb-box.md)
   * [环境安装](gxb-boxjie-shao/huan-jing-an-zhuang.md)
   * [商户接入](gxb-boxjie-shao/shang-hu-jie-ru.md)
@@ -37,5 +38,4 @@
   * [接口清单](gxb-boxjie-shao/jie-kou-qing-dan.md)
 * [附录](fu-lu.md)
   * [共识机制](supplement/DPoS.md)
-* [GXB冷钱包离线签名](gxbleng-qian-bao-li-xian-qian-ming.md)
 
