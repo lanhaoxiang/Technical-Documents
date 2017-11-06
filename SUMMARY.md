@@ -39,6 +39,6 @@
 * [附录](fu-lu.md)
   * [共识机制](supplement/DPoS.md)
   * [exchange](supplement/exchange.md)
-* [见证人申请](jian-zheng-ren-shen-qing.md)
-* [GXB-CORE](gxb-core.md)
+* [见证人申请](apply witness .md)
+* [Core指令集](core operation.md)
 
