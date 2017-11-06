@@ -5,7 +5,7 @@
 * [安装方法](node.md)
 * [客户端使用说明](ke-hu-duan-shi-yong-shuo-ming.md)
 * [测试网络](test net.md)
-* [API调用](apidiao-yong.md)
+* [API调用](API summary.md)
   * [Cli-wallet API](apidiao-yong/cli-wallet-api.md)
     * [set\_password](apidiao-yong/cli-wallet-api/setpassword.md)
     * [un\_Lock](apidiao-yong/cli-wallet-api/unlock.md)
@@ -22,11 +22,13 @@
     * [info](apidiao-yong/cli-wallet-api/info.md)
     * [help](apidiao-yong/cli-wallet-api/help.md)
     * [gethelp](apidiao-yong/cli-wallet-api/gethelp.md)
-  * Witness API
-  * BAAS-API
-* [源码编译](yuan-ma-bian-yi.md)
+  * [Witness API](apidiao-yong/witness-api.md)
+    * 11
+  * [BAAS-API](apidiao-yong/baas-api.md)
+    * 22
+* [源码编译](compile.md)
 * [cli\_wallet配置nginx代理](cliwallet nginx.md)
-* [GXB冷钱包离线签名](gxbleng-qian-bao-li-xian-qian-ming.md)
+* [GXB冷钱包离线签名](gxb cold wallet.md)
 * [私有链搭建](si-you-lian-da-jian.md)
 * [GXB-BOX介绍](gxb-box.md)
   * [环境安装](gxb-boxjie-shao/huan-jing-an-zhuang.md)
@@ -35,5 +37,5 @@
   * [其他说明](gxb-boxjie-shao/appendix.md)
   * [接口清单](gxb-boxjie-shao/jie-kou-qing-dan.md)
 * [附录](fu-lu.md)
-  * [共识机制](fu-lu/gong-shi-ji-zhi.md)
+  * [共识机制](supplement/DPoS.md)
 
