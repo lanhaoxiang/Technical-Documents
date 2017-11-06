@@ -1,11 +1,11 @@
 # Summary
 
 * [公信链](README.md)
-* [介绍](instruction.md)
+* [介绍](introduction.md)
 * [安装方法](node.md)
-* [客户端使用说明](ke-hu-duan-shi-yong-shuo-ming.md)
+* [客户端使用说明](Client instructions.md)
 * [测试网络](test net.md)
-* [私有链搭建](si-you-lian-da-jian.md)
+* [私有链搭建](private chain.md)
 * [API调用](API summary.md)
   * [Cli-wallet API](apidiao-yong/cli-wallet-api.md)
     * [set\_password](apidiao-yong/cli-wallet-api/setpassword.md)
@@ -37,4 +37,5 @@
   * [接口清单](gxb-boxjie-shao/jie-kou-qing-dan.md)
 * [附录](fu-lu.md)
   * [共识机制](supplement/DPoS.md)
+* [GXB冷钱包离线签名](gxbleng-qian-bao-li-xian-qian-ming.md)
 
