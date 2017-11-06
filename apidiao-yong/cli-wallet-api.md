@@ -8,7 +8,9 @@
 | :---: | :---: | :---: | :---: |
 | set\_password | new\_password | 钱包密码 |  |
 | unlock | my\_password | 钱包密码 |  |
-| import\_key |  |  |  |
+| import\_key | account_name_or_id   | 帐户名或者帐户id |  |
+|  | wif_private_key|帐户私钥   |
+|  | true | 表示执行 |     
 |  |  |  |  |
 |  |  |  |  |
 |  |  |  |  |
