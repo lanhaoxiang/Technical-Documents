@@ -5,6 +5,7 @@
 * [安装方法](node.md)
 * [客户端使用说明](ke-hu-duan-shi-yong-shuo-ming.md)
 * [测试网络](test net.md)
+* [私有链搭建](si-you-lian-da-jian.md)
 * [API调用](API summary.md)
   * [Cli-wallet API](apidiao-yong/cli-wallet-api.md)
     * [set\_password](apidiao-yong/cli-wallet-api/setpassword.md)
@@ -28,8 +29,6 @@
     * 22
 * [源码编译](compile.md)
 * [cli\_wallet配置nginx代理](cliwallet nginx.md)
-* [GXB冷钱包离线签名](gxb cold wallet.md)
-* [私有链搭建](si-you-lian-da-jian.md)
 * [GXB-BOX介绍](gxb-box.md)
   * [环境安装](gxb-boxjie-shao/huan-jing-an-zhuang.md)
   * [商户接入](gxb-boxjie-shao/shang-hu-jie-ru.md)
