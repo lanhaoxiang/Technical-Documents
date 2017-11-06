@@ -436,8 +436,7 @@ nohup ./programs/cli_wallet/cli_wallet -s ws://127.0.0.1:28090  --enable-rpc-log
 
 1. [witness\_node启动脚本](http://gxb-package.oss-cn-hangzhou.aliyuncs.com/gxb-core/script/witness_start.sh)
 2. [cli\_wallet启动脚本](http://gxb-package.oss-cn-hangzhou.aliyuncs.com/gxb-core/script/wallet_start.sh)
-3. [备用cli\_wallet启动脚本](http://gxb-package.oss-cn-hangzhou.aliyuncs.com/gxb-core/script/start_backup_wallet.exp)
-   ，脚本提供3个主网接入点，如果本地witness\_node暂时不可用，可以执行此脚本，连接主网接入点
+3. [备用cli\_wallet启动脚本](http://gxb-package.oss-cn-hangzhou.aliyuncs.com/gxb-core/script/start_backup_wallet.exp)，脚本提供3个主网接入点，如果本地witness\_node暂时不可用，可以执行此脚本，连接主网接入点
 4. [公信宝冷钱包离线签名教程](https://doc.gxb.io/core/gxbleng-qian-bao-li-xian-qian-ming.html)
 5. [wallet api说明文档](https://doc.gxb.io/core/ming-ling-xing-qian-bao-cli-wallet-api-shuo-ming.html)
 
