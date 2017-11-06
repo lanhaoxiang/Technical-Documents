@@ -43,13 +43,13 @@
 | lookup\_vote\_ids |  | 通过投票情况来获得投票对象 |  |
 | get\_transaction\_hex |  | 获取二进制交易信息的十六进制编码 |  |
 | get\_required\_signatures |  | 获取一组满足签署部分交易的最小子集的公钥 |  |
-| get\_potential\_signatures |  |  |  |
+| get\_potential\_signatures |  | 获取一组可能可以签署已知交易的公钥 |  |
 | get\_potential\_address\_signatures |  |  |  |
-| verify\_authority |  |  |  |
-| verify\_account\_authority |  |  |  |
+| verify\_authority |  | 验证交易是否已满足全部签名要求 |  |
+| verify\_account\_authority |  | 验证签名人是否有权限授权账户 |  |
 | validate\_transaction |  | 在当前情况下验证交易而不广播交易 |  |
-| get\_required\_fees |  |  |  |
-| get\_proposed\_transactions |  |  |  |
+| get\_required\_fees |  | 计算每一步操作的手续费 |  |
+| get\_proposed\_transactions |  | 通过具体账户ID获得相关的被提议的交易 |  |
 | get\_blinded\_balances |  |  |  |
 |  |  |  |  |
 |  |  |  |  |
