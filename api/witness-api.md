@@ -51,7 +51,7 @@
 | get\_required\_fees |  | 计算每一步操作的手续费 |  |
 | get\_proposed\_transactions |  | 通过具体账户ID获得相关的被提议的交易 |  |
 | get\_blinded\_balances |  |  |  |
-|  |  |  |  |
+| get\_account\_history | &lt;account&gt; &lt;stop&gt; &lt;limit&gt; &lt;start&gt; | 获得具体账户的操作记录 |  |
 |  |  |  |  |
 
 
