@@ -1,24 +1,18 @@
 # 私有链搭建
 
-
-
 ## 1、环境安装
 
 请安装见证人节点和[完整客户端](/introduction.md)
-
-
 
 ## 2、创建一个存储私链文件的文件夹
 
 创建一个新文件夹作为私链的根目录，并将复制见证人节点文件和完整客户端复制到此目录下。
 
-
-
 ## 3、初始文件
 
 通过初始文件初始化私链。
 
-基于石墨烯技术的区块链网络创世区块整合了所有见证人、理事会成员和基金会。单个称为`nathan`的账户可以通过以下私钥获得： 
+基于石墨烯技术的区块链网络创世区块整合了所有见证人、理事会成员和基金会。单个称为`nathan`的账户可以通过以下私钥获得：
 
 > 5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3
 
@@ -28,7 +22,6 @@
 
 ```
 $ witness_node --create-genesis-json my-genesis.json
-
 ```
 
 `my-genesis.json`这个文件将会存储在你私钥文件夹的根目录下，运行此命令后，所有见证人节点都会自行完成命令。
@@ -64,8 +57,6 @@ witness_node --data-dir data --genesis-json my-genesis.json   # your own genesis
 
 * 在词典库`data`中创建了一个新文件`config.ini`
 * Your blockchain id is now known - it’s displayed in the message above.
-
-
 
 **注意**
 
@@ -103,27 +94,22 @@ witness-id = "1.6.10"
 witness-id = "1.6.11"
 ```
 
-上述列表授权了见证人节点用见证人ID来生成区块. 正常情况下，每个见证人的节点不同，但在私有链中，我们会先设定成全体见证人在同一个节点生成区块。这些见证人ID的私钥（用来签署区块）已经在`config.ini`中提供：
+上述列表授权了见证人节点用见证人ID来生成区块. 正常情况下，每个见证人的节点不同，但在私有链中，我们会先设定成全体见证人在同一个节点生产区块。这些见证人ID的私钥（用来签署区块）已经在`config.ini`中提供：
 
 ```
 # Tuple of [PublicKey, WIF private key] (may specify multiple times)
 private-key = ["GXC6MRyA...T5GDW5CV","5KQwrPb...tP79zkvFD3"]
 ```
 
-## START BLOCK PRODUCTION
+## 6、开始生产区块
 
-This is the crucial moment - you are about to produce the very first blocks of your private blockchain. Just run the witness node with this command:
+通过以下步骤，你可以生产基于你私链的第一个区块了，在见证人节点中运行以下命令:
 
 ```
-witness_node
---
-data
--
-dir
-data
+witness_node --data-dir data
 ```
 
-and your block production should start at this stage. You should see this big message:
+之后私链的区块将开始生成，你会看到如下指示:
 
 ```
 ********************************
@@ -133,295 +119,38 @@ and your block production should start at this stage. You should see this big me
 *   ------------------------   *
 *                              *
 ********************************
-
 ```
 
-and subseqently further messages indicating the successfull creation of blocks:
+之后会有更多成功生成区块的日志生成:
 
 ```
-2322793
-ms
-th_a
-main
-.
-cpp
-:
-176
-main
-]
-Started
-witness
-node
-on
-a
-chain
-with
-0
-blocks
-.
-2322794
-ms
-th_a
-main
-.
-cpp
-:
-177
-main
-]
-Chain
-ID
-is
-8
-b7bd36a146a03d0e5d0a971e286098f41230b209d96f92465cd62bd64294824
-2324613
-ms
-th_a
-witness
-.
-cpp
-:
-185
-block_production_loo
-]
-Generated
-block
-#1 with timestamp 2016-01-21T22:38:40 at time 2016-01-21T22:38:40
-2325604
-ms
-th_a
-witness
-.
-cpp
-:
-194
-block_production_loo
-]
-Not
-producing
-block
-because
-slot
-has
-not
-yet
-arrived
-2342604
-ms
-th_a
-witness
-.
-cpp
-:
-194
-block_production_loo
-]
-Not
-producing
-block
-because
-slot
-has
-not
-yet
-arrived
-2343609
-ms
-th_a
-witness
-.
-cpp
-:
-194
-block_production_loo
-]
-Not
-producing
-block
-because
-slot
-has
-not
-yet
-arrived
-2344604
-ms
-th_a
-witness
-.
-cpp
-:
-185
-block_production_loo
-]
-Generated
-block
-#2 with timestamp 2016-01-21T22:39:00 at time 2016-01-21T22:39:00
-2345605
-ms
-th_a
-witness
-.
-cpp
-:
-194
-block_production_loo
-]
-Not
-producing
-block
-because
-slot
-has
-not
-yet
-arrived
-2349616
-ms
-th_a
-witness
-.
-cpp
-:
-185
-block_production_loo
-]
-Generated
-block
-#3 with timestamp 2016-01-21T22:39:05 at time 2016-01-21T22:39:05
-2350602
-ms
-th_a
-witness
-.
-cpp
-:
-194
-block_production_loo
-]
-Not
-producing
-block
-because
-slot
-has
-not
-yet
-arrived
-2353612
-ms
-th_a
-witness
-.
-cpp
-:
-194
-block_production_loo
-]
-Not
-producing
-block
-because
-slot
-has
-not
-yet
-arrived
-2354605
-ms
-th_a
-witness
-.
-cpp
-:
-185
-block_production_loo
-]
-Generated
-block
-#4 with timestamp 2016-01-21T22:39:10 at time 2016-01-21T22:39:10
-2355609
-ms
-th_a
-witness
-.
-cpp
-:
-194
-block_production_loo
-]
-Not
-producing
-block
-because
-slot
-has
-not
-yet
-arrived
-2356609
-ms
-th_a
-witness
-.
-cpp
-:
-194
-block_production_loo
-]
-Not
-producing
-block
-because
-slot
-has
-not
-yet
-arrived
+2322793ms th_a  main.cpp:176     main    ] Started witness node on a chain with 0 blocks.
+2322794ms th_a  main.cpp:177     main    ] Chain ID is 8b7bd36a146a03d0e5d0a971e286098f41230b209d96f92465cd62bd64294824
+2324613ms th_a  witness.cpp:185  block_production_loo ] Generated block #1 with timestamp 2016-01-21T22:38:40 at time 2016-01-21T22:38:40
+2325604ms th_a  witness.cpp:194  block_production_loo ] Not producing block because slot has not yet arrived
+2342604ms th_a  witness.cpp:194  block_production_loo ] Not producing block because slot has not yet arrived
+2343609ms th_a  witness.cpp:194  block_production_loo ] Not producing block because slot has not yet arrived
+2344604ms th_a  witness.cpp:185  block_production_loo ] Generated block #2 with timestamp 2016-01-21T22:39:00 at time 2016-01-21T22:39:00
+2345605ms th_a  witness.cpp:194  block_production_loo ] Not producing block because slot has not yet arrived
+2349616ms th_a  witness.cpp:185  block_production_loo ] Generated block #3 with timestamp 2016-01-21T22:39:05 at time 2016-01-21T22:39:05
+2350602ms th_a  witness.cpp:194  block_production_loo ] Not producing block because slot has not yet arrived
+2353612ms th_a  witness.cpp:194  block_production_loo ] Not producing block because slot has not yet arrived
+2354605ms th_a  witness.cpp:185  block_production_loo ] Generated block #4 with timestamp 2016-01-21T22:39:10 at time 2016-01-21T22:39:10
+2355609ms th_a  witness.cpp:194  block_production_loo ] Not producing block because slot has not yet arrived
+2356609ms th_a  witness.cpp:194  block_production_loo ] Not producing block because slot has not yet arrived
 ```
 
-## CLI USAGE
+## 7、CLI 用法
 
-We are now ready to connect the CLI to your testnet witness node. Keep your witness node running and in another_Command Prompt_window run this command:
+现在可以将客户端和你的私链的见证人节点相关联。先确保你的见证人节点在运行状态，在另外一个CMD中运行以下命令：
 
 ```
-cli_wallet
---
-wallet
--
-file
-=
-my
--
-wallet
-.
-json
---
-chain
--
-id
-8
-b7bd36a146a03d0e5d0a971e286098f41230b209d96f92465cd62bd64294824
---
-server
--
-rpc
--
-endpoint
-=
-ws
-:
-//
-127.0
-.
-0.1
-:
-11011
+cli_wallet --wallet-file=my-wallet.json --chain-id 8b7bd36a146a03d0e5d0a971e286098f41230b209d96f92465cd62bd64294824 --server-rpc-endpoint=ws://127.0.0.1:11011
 ```
 
-Note
+**注意**
 
-Make sure to replace the above blockchain id`8b7bd36a...4294824`with your own blockchain id. The blockchain id passed to the CLI needs to match the id generated and used by the witness node.
+请确保用**你自己私链的区块链ID**替代上述ID`8b7bd36a...4294824`with your own blockchain id. The blockchain id passed to the CLI needs to match the id generated and used by the witness node.
 
 If you get the`set_password`prompt, it means your CLI has successfully conected to the testnet witness node.
 
