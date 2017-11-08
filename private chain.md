@@ -140,7 +140,7 @@ witness_node --data-dir data
 2356609ms th_a  witness.cpp:194  block_production_loo ] Not producing block because slot has not yet arrived
 ```
 
-## 7、CLI 用法
+## 7、客户端（Cli）用法
 
 现在可以将客户端和你的私链的见证人节点相关联。先确保你的见证人节点在运行状态，在另外一个CMD中运行以下命令：
 
@@ -150,134 +150,93 @@ cli_wallet --wallet-file=my-wallet.json --chain-id 8b7bd36a146a03d0e5d0a971e2860
 
 **注意**
 
-请确保用**你自己私链的区块链ID**替代上述ID`8b7bd36a...4294824`The blockchain id passed to the CLI needs to match the id generated and used by the witness node.
+请确保用**你自己私链的区块链ID**替代上述ID`8b7bd36a...4294824`区块链ID传递给客户端时需要匹配生成的ID，且给见证人节点需要使用此区块链ID。
 
-If you get the`set_password`prompt, it means your CLI has successfully conected to the testnet witness node.
+如果你收到`set_password`提示，意味着你的客户端已经成功匹配见证人节点。
 
 ### 创建一个新钱包
 
-首先你需要Fist you need to create a new password for your wallet. This password is used to encrypt all the private keys in the wallet. For this tutorial we will use the password`supersecret`but obviously you are free to come up with your own combination of letters and numbers. Use this command to create the password:
+首先你需要为你的钱包创建一个新的密码。这个密码被用于加密所有钱包的私钥。在教程中我们使用如下密码：`supersecret`
+
+但你可以使用字母和数字的组合来创建属于你的密码。通过以下命令来创建你的密码：:
 
 ```
->
->
->
-set_password
-supersecret
+>>> set_password supersecret
 ```
 
-Now you can unlock the newly created wallet:
+现在你可以解锁你新建的钱包了：
 
 ```
-unlock
-supersecret
+unlock supersecret
 ```
 
-### Gain access to the genesis stake
+### 获得初始份额
 
-In Graphene, balances are contained in accounts. To import an account into your wallet, all you need to know its name and its private key. We will now import into the wallet an account called`nathan`using the`import_key`command:
-
-```
-import_key
-nathan
-5
-KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3
-```
-
-Note
-
-Note that`nathan`happens to be the account name defined in the genesis file. If you had edited your`my-genesies.json`file just after it was created, you could have put a different name there. Also, note that`5KQwrPbwdL...P79zkvFD3`is the private key defined in the`config.ini`file.
-
-Now we have the private key imported into the wallet but still no funds assocciated with it. Funds are stored in genesis balance objects. These funds can be claimed, with no fee, using the`import_balance`command:
+在石墨烯中，资产账户包含在钱包账户中， 要向你的钱包中添加钱包账户, 你需要知道账户名以及账户的私钥。 在例子中，我们将通过`import_key`命令向现有钱包中添加一个名叫`nathan`的账户：
 
 ```
-import_balance
-nathan
-[
-"5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3"
-]
-true
+import_key nathan 5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3
 ```
 
-As a result, we have one account \(named`nathan`\) imported into the wallet and this account is well funded with BTS as we have claimed the funds stored in the genesis file. You can view this account by using this command:
+**注意**
+
+注意nathan在初始文件中会被用于定义账户名. 如果你修改过`my-genesies.json` 文件，你可以填入一个不同的名字。并且，请注意`5KQwrPbwdL...P79zkvFD3`是定义在`config.ini`内的私钥
+
+现在我们已经将私钥导入进钱包，但没有和储蓄相关联。储蓄被保存在初始账户内。这些储蓄可以通过`import_balance`命令来申明，无需申明费用：
 
 ```
-get_account
-nathan
+import_balance nathan ["5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3"] true
 ```
 
-and its balance by using this command:
+因此，我们导入了一个名为`nathan`的账户，且账户储蓄已经完全与GXB相关联，因为我们已经声称这些储蓄被保存在了初始文件内。你可以通过以下命令来检视你的账户：
 
 ```
-list_account_balances
-nathan
+get_account nathan
 ```
 
-### Create another account
-
-We will now create another account \(named`alpha`\) so that we can transfer funds back and forth between`nathan`and`alpha`.
-
-Creating a new account is always done by using an existing account - we need it because someone \(i.e. the registrar\) has to fund the registration fee. Also, there is the requirement for the registrar account to have a lifetime member \(LTM\) status. Therefore we need to upgrade the account`nathan`to LTM, before we can proceed with creating other accounts. To upgrade to LTM, use the`upgrade_account`command:
+用以下命令获取账户余额：
 
 ```
-upgrade_account
-nathan
-true
+list_account_balances nathan
 ```
 
-Note
+### 创建其他账户
 
-Due to a known[caching issue](https://github.com/cryptonomex/graphene/issues/530), you need to restart the CLI at this stage as otherwise it will not be aware of`nathan`having been upgraded. Stop the CLI by pressing`ctrl-c`and start it again by using exactly the same command as before, i.e.
+现在我们讲创建一个新的账户`alpha` ，这样我们可以在 `nathan`和`alpha`两个账户中来回转账了。
 
-```
-cli_wallet
---
-wallet
--
-file
-=
-my
--
-wallet
-.
-json
---
-chain
--
-id
-8
-b7bd36a146a03d0e5d0a971e286098f41230b209d96f92465cd62bd64294824
---
-server
--
-rpc
--
-endpoint
-=
-ws
-:
-//
-127.0
-.
-0.1
-:
-11011
-```
-
-Verify that`nathan`has now a LTM status:
+通常我们用一个已有账户来创建新账户，因为登记员需要缴纳注册费用。 并且，登记员的账户需要进入Also, there is the requirement  lifetime member \(LTM\)状态.。因此我们必须在创建新账户前，先将账户`nathan`升级到LTM状态， 使用`upgrade_account`命令来升级账户：
 
 ```
-get_account
-nathan
+upgrade_account nathan GXC true
 ```
 
-In the response, next to`membership_expiration_date`you should see`1969-12-31T23:59:59`. If you get`1970-01-01T00:00:00`something is wrong and`nathan`has not been successfully upgraded.
+**注意**
 
-We can now register an account by using`nathan`as registrar. But first we need to get hold of the public key for the new account. We do it by using the`suggest_brain_key`command:
+你需要重启客户端，否则将无法识别`nathan`已经成功升级。通过`ctrl-c`停止客户端，然后通过如下指令重启客户端：
+
+```
+cli_wallet --wallet-file=my-wallet.json --chain-id 8b7bd36a146a03d0e5d0a971e286098f41230b209d96f92465cd62bd64294824 --server-rpc-endpoint=ws://127.0.0.1:11011
+```
+
+确认`nathan`已经拥有LTM权限：
+
+```
+get_account nathan
+```
+
+返回的信息中，在`membership_expiration_date`边上你会发现`1969-12-31T23:59:59`。 如果你看到`1970-01-01T00:00:00`，说明之前的操作出现了错误，`nathan`没能成功升级。
+
+成功升级后，我们可以通过`nathan`来注册新账户，但首先我们需要拥有新账户的公钥。通过使用`suggest_brain_key`命令来完成：
 
 ```
 suggest_brain_key
 ```
 
-And the resposne should be something similar to this:
+最终将有类似如下的回答：
+
+```
+list_account_balances alpha
+```
+
+
 
