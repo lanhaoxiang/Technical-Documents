@@ -150,13 +150,13 @@ cli_wallet --wallet-file=my-wallet.json --chain-id 8b7bd36a146a03d0e5d0a971e2860
 
 **注意**
 
-请确保用**你自己私链的区块链ID**替代上述ID`8b7bd36a...4294824`with your own blockchain id. The blockchain id passed to the CLI needs to match the id generated and used by the witness node.
+请确保用**你自己私链的区块链ID**替代上述ID`8b7bd36a...4294824`The blockchain id passed to the CLI needs to match the id generated and used by the witness node.
 
 If you get the`set_password`prompt, it means your CLI has successfully conected to the testnet witness node.
 
-### Create a new wallet
+### 创建一个新钱包
 
-Fist you need to create a new password for your wallet. This password is used to encrypt all the private keys in the wallet. For this tutorial we will use the password`supersecret`but obviously you are free to come up with your own combination of letters and numbers. Use this command to create the password:
+首先你需要Fist you need to create a new password for your wallet. This password is used to encrypt all the private keys in the wallet. For this tutorial we will use the password`supersecret`but obviously you are free to come up with your own combination of letters and numbers. Use this command to create the password:
 
 ```
 >
