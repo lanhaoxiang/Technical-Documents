@@ -234,7 +234,7 @@ get_account nathan
 suggest_brain_key
 ```
 
-最终将有类似如下的回答：
+最终将有类似如下的回复：
 
 ```
 list_account_balances alpha
