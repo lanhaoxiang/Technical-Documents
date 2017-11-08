@@ -2,7 +2,7 @@
 
 ## 1、环境安装
 
-请安装见证人节点和[完整客户端](/introduction.md)
+请安装[见证人节点](https://github.com/gxchain/gxb-core/releases)和[完整客户端](/introduction.md)
 
 ## 2、创建一个存储私链文件的文件夹
 
@@ -180,7 +180,7 @@ import_key nathan 5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3
 
 **注意**
 
-注意nathan在初始文件中会被用于定义账户名. 如果你修改过`my-genesies.json` 文件，你可以填入一个不同的名字。并且，请注意`5KQwrPbwdL...P79zkvFD3`是定义在`config.ini`内的私钥
+注意`nathan`在初始文件中会被用于定义账户名. 如果你修改过`my-genesies.json` 文件，你可以填入一个不同的名字。并且，请注意`5KQwrPbwdL...P79zkvFD3`是定义在`config.ini`内的私钥
 
 现在我们已经将私钥导入进钱包，但没有和储蓄相关联。储蓄被保存在初始账户内。这些储蓄可以通过`import_balance`命令来申明，无需申明费用：
 
@@ -204,7 +204,7 @@ list_account_balances nathan
 
 现在我们讲创建一个新的账户`alpha` ，这样我们可以在 `nathan`和`alpha`两个账户中来回转账了。
 
-通常我们用一个已有账户来创建新账户，因为登记员需要缴纳注册费用。 并且，登记员的账户需要进入Also, there is the requirement  lifetime member \(LTM\)状态.。因此我们必须在创建新账户前，先将账户`nathan`升级到LTM状态， 使用`upgrade_account`命令来升级账户：
+通常我们用一个已有账户来创建新账户，因为登记员需要缴纳注册费用。 并且，登记员的账户需要进入Also, there is the requirement  lifetime member \(LTM\)状态。因此我们必须在创建新账户前，先将账户`nathan`升级到LTM状态， 使用`upgrade_account`命令来升级账户：
 
 ```
 upgrade_account nathan GXC true
