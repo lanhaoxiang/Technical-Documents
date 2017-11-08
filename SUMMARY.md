@@ -26,7 +26,12 @@
     * [help](api/cli-wallet-api/help.md)
     * [gethelp](api/cli-wallet-api/gethelp.md)
   * [Witness API](api/witness-api.md)
-    * 11
+    * [get\_objects](api/witness-api/11.md)
+    * [get\_block\_header](api/witness-api/getblock-header.md)
+    * [get\_full\_accounts](api/witness-api/getfullaccounts.md)
+    * [lookup\_accounts](api/witness-api/lookupaccounts.md)
+    * [get\_account\_balances](api/witness-api/getaccount-balances.md)
+    * [list\_assets](api/witness-api/listassets.md)
   * [BAAS-API](api/baas-api.md)
     * [22](api/baas-api/22.md)
 * [GXB-BOX](gxb-box.md)
