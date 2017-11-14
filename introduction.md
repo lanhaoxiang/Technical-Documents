@@ -7,7 +7,9 @@
 ## **公信链节点介绍**
 
 公信链节点主要包含witness_node和cli_wallet两部分。
+
 witness_node 通过 P2P 方式连接到公信链网络，从网络接收最新区块，向网络广播本地签署的交易包。
+
 cli_wallet 通过 websocket 方式连接到 witness_node， 管理钱包文件； 提供交易签名功能，签名后通过 witness_node 向外广播； 通过 http rpc 的方式提供 API 供其他程序调用。
 
 ## **公信链客户端下载**
