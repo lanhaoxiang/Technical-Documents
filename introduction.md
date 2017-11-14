@@ -24,21 +24,40 @@ cli_wallet 通过 websocket 方式连接到 witness_node， 管理钱包文件�
 ## 节点端口说明
 
 
-进入gxb目录，启动公信宝见证节点witness\_node
+启动公信宝见证节点witness_node
 
 ```bash
 # 可以使用2个参数，节省内存： --track-account 和 --partial-operations=true
 nohup ./programs/witness_node/witness_node --data-dir=trusted_node --rpc-endpoint=127.0.0.1:28090 \
---p2p-endpoint=0.0.0.0:6789 --log-file --track-account "\"1.2.2999\""  --track-account "\"1.2.3000\"" \
+--p2p-endpoint=0.0.0.0:6789 --log-file  \
 --partial-operations=true >>witness.out 2>&1 &
 ```
 
-公信链端口种类及调用说明
+端口种类及调用说明
 
 | **端口类型** | **端口信息** |
 | :---: | :---: |
-|  |  |
-|  |  |
+|  28090 | witness_node提供的rpc服务端口 |
+| 6789  | P2P网络的通信接口，用于广播交易消息体和区块 |
+
+
+命令行钱包cli_wallet连接witness_node:
+```
+./programs/cli_wallet/cli_wallet -s ws://127.0.0.1:28090 \
+--enable-rpc-log -r 127.0.0.1:8091 --data-dir=trusted_node
+
+```
+
+端口种类及调用说明
+
+| **端口类型** | **端口信息** |
+| :---: | :---: |
+|  28090 | 连接witness_node提供的rpc服务端口 |
+| 8091  | cli_wallet提供的rpc服务端口 |
+
+
+
+
 
 
 
