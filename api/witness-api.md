@@ -2,7 +2,7 @@
 
 | 命令 | 参数 | 说明 | 备注 |
 | :--- | :--- | :--- | :--- |
-| [get\_objects](/api/witness-api/get objects.md) | &lt;ids&gt; | 根据ID查询目标对象 |  |
+| [get\_objects](/api/witness-api/getobjects.md) | &lt;ids&gt; | 根据ID查询目标对象 |  |
 | set\_subscribe\_callback | &lt;cb&gt; &lt;clear\_filter&gt; | 注册全局订阅的回调 |  |
 | set\_data\_transaction\_subscribe\_callback | &lt;cb&gt; &lt;clear\_filter&gt; | 注册数据交易的回调 |  |
 | unsubscribe\_data\_transaction\_callback |  | 取消注册数据交易的回调 |  |
