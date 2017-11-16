@@ -3,10 +3,10 @@
 | 命令 | 参数 | 说明 | 备注 |
 | :--- | :--- | :--- | :--- |
 | [get\_objects](/api/witness-api/11.md) | &lt;ids&gt; | 根据ID查询目标 |  |
-| set\_subscribe\_callback |  | 停止获取通知 |  |
-| set\_pending\_transaction\_callback |  |  |  |
-| set\_block\_applied\_callback |  |  |  |
-| cancel\_all\_subscriptions |  |  |  |
+| set\_subscribe\_callback | &lt;id, bool&gt; | 注册全局订阅的回调 |  |
+| set\_pending\_transaction\_callback | &lt;ids&gt; | 未确认的交易通知 |  |
+| set\_block\_applied\_callback | &lt;block_id&gt;  | 通知一个区块是否被应用到区块 |  |
+| cancel\_all\_subscriptions |  | 停止所有订阅 |  |
 | [get\_block\_header](/get_block_header) | block\_num | 获取区块头信息 |  |
 | get\_transaction | block\_num | 获得交易信息 |  |
 | get\_block | block\_num | 获取区块信息 |  |
@@ -16,7 +16,7 @@
 | get\_config |  | 获取编译时常量 |  |
 | get\_chain\_id |  | 获取链ID |  |
 | get\_dynamic\_global\_properties |  | 获取动态全局资产 |  |
-| get\_key\_references |  |  |  |
+| get\_key\_references | &lt;[public key]&gt;| 返回所有指向public key的帐户 |  |
 | get\_accounts | &lt;account\_ids&gt; | 通过ID获取账户信息 |  |
 | [get\_full\_accounts](/api/witness-api/getfullaccounts.md) | &lt;call back&gt; &lt;names\_or\_ids&gt; | 获取符合条件的所有账户 |  |
 | get\_account\_by\_name |  | 通过名字获取账户 |  |
@@ -26,7 +26,7 @@
 | get\_account\_count |  | 获取链上注册的所有账户数量 |  |
 | [get\_account\_balances](/api/witness-api/getaccount-balances.md) | &lt;id&gt; &lt;assets&gt; | 获取账户资产余额 |  |
 | get\_named\_account\_balances |  | 与上条功能相同，不过是凭借名字而不是ID查询 |  |
-| get\_balance\_objects |  |  |  |
+| get\_balance\_objects | &lt;<[address]>&gt; | 返回地址address上所有未领取的余额对象 |  |
 | get\_vested\_balances |  |  |  |
 | get\_vesting\_balances |  |  |  |
 | get\_assets | &lt;asset\_ids&gt; | 通过ID获取资产 |  |
