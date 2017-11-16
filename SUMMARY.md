@@ -26,7 +26,7 @@
     * [help](api/cli-wallet-api/help.md)
     * [gethelp](api/cli-wallet-api/gethelp.md)
   * [Witness API](api/witness-api.md)
-    * [get\_objects](api/witness-api/11.md)
+    * [get\_objects](api/witness-api/get objects.md)
     * [get\_block\_header](api/witness-api/getblock-header.md)
     * [get\_full\_accounts](api/witness-api/getfullaccounts.md)
     * [lookup\_accounts](api/witness-api/lookupaccounts.md)
@@ -42,6 +42,4 @@
   * [GXB冷钱包离线签名](gxb-core/gxb cold wallet.md)
 * [附录](Supplement.md)
   * [共识机制](supplement/DPoS.md)
-
-
 
