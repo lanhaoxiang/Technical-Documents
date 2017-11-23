@@ -16,11 +16,11 @@ Ubuntu 14.04 LTS 64位系统，见证节点程序下载，选择其中一个下�
 
 | 平台 | 下载地址 |
 | :--- | :--- |
-|github| https://github.com/gxchain/gxb-core/releases/download/1.0.171031/gxb_1.0.171031.tar.gz |
+|github| https://github.com/gxchain/gxb-core/releases/ (选择相应的版本即可)|
 |阿里云| http://gxb-package.oss-cn-hangzhou.aliyuncs.com/gxb-core/gxb_1.0.171031.tar.gz |
 
 ### OS X系统
-OS X系统运行，需要自主编译程序。
+OS X系统运行，需要自主编译程序。点击[这里](/gxb-core.md)
 
 
 ## 公信链的安装方法
