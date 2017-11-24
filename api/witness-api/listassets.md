@@ -4,7 +4,7 @@
 
 | 参数 | 说明 |
 | :--- | :--- |
-| lower\_bound\_symbol | 资产符号名的下界 |
+| lower\_bound\_symbol | 资产符号名 |
 | limit | 最大列表数量（不超过1000） |
 
 
