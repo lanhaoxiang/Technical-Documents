@@ -58,7 +58,6 @@
 | get\_required\_fees | &lt;ops&gt; &lt;id&gt; | 通过操作ID和资产ID获取手续费 |  |
 | get\_proposed\_transactions | &lt;id&gt; | 通过具体账户ID获得相关的被提议的交易 |  |
 | get\_blinded\_balances | &lt;id&gt; | 通过委托ID获取隐藏资产 |  |
-| get\_account\_history | &lt;account&gt; &lt;stop&gt; &lt;limit&gt; &lt;start&gt; | 获得具体账户的操作记录 |  |
 | get\_data\_transaction\_product\_costs | &lt;start&gt; &lt;end&gt; | 获取指定时间内数据交易的产品费用 |  |
 | get\_data\_transaction\_total\_count | &lt;start&gt; &lt;end&gt; | 获取指定时间内数据交易的次数 |  |
 | get\_merchants\_total\_count |  | 获取当前商户个数 |  |
