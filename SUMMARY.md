@@ -32,7 +32,7 @@
     * [lookup\_accounts](api/witness-api/lookupaccounts.md)
     * [get\_account\_balances](api/witness-api/getaccount-balances.md)
     * [list\_assets](api/witness-api/listassets.md)
-  * [BAAS-API](api/baas-api.md)
+  * [BaaS-API](api/baas-api.md)
     * [22](api/baas-api/22.md)
 * [GXB-BOX](gxb-box.md)
 * [GXB-CORE](gxb-core.md)
@@ -42,5 +42,5 @@
   * [GXB冷钱包离线签名](gxb-core/gxb cold wallet.md)
 * [附录](Supplement.md)
   * [共识机制](supplement/DPoS.md)
-  * [对象和ID](supplement/objects and IDs.md)
+  * [objects&IDs](supplement/objects and IDs.md)
 
