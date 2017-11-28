@@ -59,6 +59,16 @@
 | get\_proposed\_transactions | &lt;id&gt; | 通过具体账户ID获得相关的被提议的交易 |  |
 | get\_blinded\_balances | &lt;id&gt; | 通过委托ID获取隐藏资产 |  |
 | get\_account\_history | &lt;account&gt; &lt;stop&gt; &lt;limit&gt; &lt;start&gt; | 获得具体账户的操作记录 |  |
+| get\_data\_transaction\_product\_costs | &lt;start&gt; &lt;end&gt; | 获取指定时间内数据交易的产品费用 |  |
+| get\_data\_transaction\_total\_count | &lt;start&gt; &lt;end&gt; | 获取指定时间内数据交易的次数 |  |
+| get\_merchants\_total\_count |  | 获取当前商户个数 |  |
+| get\_data\_transaction\_commission | &lt;start&gt; &lt;end&gt; | 获取指定时间内数据交易的佣金 |  |
+| get\_data\_transaction\_pay\_fee | &lt;start&gt; &lt;end&gt; | 获取指定时间内数据交易的手续费 |  |
+| get\_data\_transaction\_product\_costs\_by\_requester | &lt;requester&gt; &lt;start&gt; &lt;end&gt; | 获取请求账户（即商户）在指定时间内数据交易产生的产品费用 |  |
+| get\_data\_transaction\_total\_count\_by\_requester | &lt;requester&gt; &lt;start&gt; &lt;end&gt; | 获取请求账户（即商户）在指定时间内发起数据交易的次数 |  |
+| get\_data\_transaction\_pay\_fees\_by\_requester | &lt;requester&gt; &lt;start&gt; &lt;end&gt; | 获取请求账户（即商户）在指定时间内发起数据交易的手续费 |  |
+| get\_data\_transaction\_product\_costs\_by\_product\_id | &lt;product_id&gt; &lt;start&gt; &lt;end&gt; | 获取在指定时间内购买指定产品的产品费用 |  |
+| get\_data\_transaction\_total\_count\_by\_product\_id | &lt;product_id&gt; &lt;start&gt; &lt;end&gt; | 获取在指定时间内购买指定产品的次数 |  |
 |  |  |  |  |
 
 
