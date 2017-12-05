@@ -21,7 +21,7 @@
 | 1.6.x | 见证人对象witness object |
 | 1.10.x | 提议对象proposal object |
 | 1.11.x | 操作历史对象operation history object |
-| 1.13.x | vesting balance object |
+| 1.13.x | 冻结中的财产对象vesting balance object |
 | 1.14.x | worker object |
 | 1.15.x | 余额对象balance object |
 | 2.0.x | 全局财产对象global\_property\_object |
