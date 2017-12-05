@@ -40,6 +40,7 @@
   * [cli\_wallet配置nginx代理](gxb-core/cliwallet nginx.md)
   * [Core指令集](gxb-core/core operation.md)
   * [GXB冷钱包离线签名](gxb-core/gxb cold wallet.md)
+  * [operation IDs](gxb-core/operation-ids.md)
 * [附录](Supplement.md)
   * [共识机制](supplement/DPoS.md)
   * [objects&IDs](supplement/objects and IDs.md)
