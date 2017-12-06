@@ -10,8 +10,6 @@
 | :--- | :--- |
 | account\_name\_or\_id | 帐户名或id |
 
-
-
 ### **调用示例**
 
 ```
@@ -20,8 +18,7 @@ curl --data '{
 "method": "call", 
 "params": [0, "get_accounts", [["1.2.1","1.2.2"]]], "id": 1
 }'  
-https://node1.gxb.io/rpc 
-
+https://node1.gxb.io/rpc
 ```
 
 
