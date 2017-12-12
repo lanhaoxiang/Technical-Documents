@@ -14,6 +14,18 @@
 
 ### **调用示例**
 
+#### CURL  POST 命令行请求
+
+进入命令行，输入
+
+```
+curl --data '{"jsonrpc": "2.0", "method": "call", "params": [0, "get_accounts", [["1.2.1","1.2.2"]]], "id": 1}'  https://node1.gxb.io/rpc
+```
+
+即可看到返回结果
+
+
+
 #### POST请求示例
 
 请求URL如下
