@@ -72,9 +72,9 @@ wget http://gxb-package.oss-cn-hangzhou.aliyuncs.com/gxb-core/genesis/testnet-ge
 --enable-rpc-log -r 127.0.0.1:8091 --data-dir=testnet_node
 ```
 
-如需额外注册钱包，请进入GXS Community
+**如需额外注册钱包，请进入GXS Community**
 
-Https://forum.gxb.io
+**Https://forum.gxb.io**
 
-私信联系管理员@admin，提供公钥和账户名。团队将帮你注册账户和发放一定量的GXS用作测试。
+**私信联系管理员@admin，提供公钥和账户名。团队将帮你注册账户和发放一定量的GXS用作测试。**
 
