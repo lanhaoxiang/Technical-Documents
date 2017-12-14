@@ -4,9 +4,10 @@
 * [介绍](introduction.md)
 * [安装方法](node.md)
 * [客户端使用说明](Client instructions.md)
-* [见证人申请](apply witness .md)
 * [测试网络](test net.md)
 * [私有链搭建](private chain.md)
+* [见证人申请](apply witness .md)
+
 * [API调用](API summary.md)
   * [安装环境](api/installation.md)
   * [Cli-wallet API调用](api/cli-wallet-api.md)
@@ -44,4 +45,6 @@
 * [附录](Supplement.md)
   * [共识机制](supplement/DPoS.md)
   * [objects&IDs](supplement/objects and IDs.md)
+
+
 
