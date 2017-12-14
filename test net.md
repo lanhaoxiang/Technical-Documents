@@ -13,7 +13,6 @@
 ```
 wget http://gxb-package.oss-cn-hangzhou.aliyuncs.com/gxb-core/gxb_1.0.171116.tar.gz -O gxb_1.0.171116.tar.gz
 tar zxvf gxb_1.0.171116.tar.gz
-
 ```
 
 ### 2. 下载testnet的genesis.json文件 {#2-下载testnet的genesisjson文件}
@@ -25,7 +24,7 @@ wget http://gxb-package.oss-cn-hangzhou.aliyuncs.com/gxb-core/genesis/testnet-ge
 ### 3. 启动witness\_node，同步区块 {#3-启动witness_node同步区块}
 
 ```
-./programs/witness_node/witness_node --data-dir=testnet_node --rpc-endpoint="0.0.0.0:28090" --p2p-endpoint="0.0.0.0:9999" --seed-nodes='["106.14.180.117:9999"]' --genesis-json genesis.json --log-file & 
+./programs/witness_node/witness_node --data-dir=testnet_node --rpc-endpoint="0.0.0.0:28090" --p2p-endpoint="0.0.0.0:9999" --seed-nodes='["106.14.180.117:9999"]' --genesis-json genesis.json --log-file &
 ```
 
 各选项的含义如下：
@@ -73,5 +72,5 @@ wget http://gxb-package.oss-cn-hangzhou.aliyuncs.com/gxb-core/genesis/testnet-ge
 --enable-rpc-log -r 127.0.0.1:8091 --data-dir=testnet_node
 ```
 
-
+如需额外注册钱包，请参考下一章——私有链搭建。
 
