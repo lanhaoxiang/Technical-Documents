@@ -1,5 +1,7 @@
 ## Witness API 命令列表
 
+### database api
+
 | 命令 | 参数 | 说明 | 备注 |
 | :--- | :--- | :--- | :--- |
 | [get\_objects](/api/witness-api/getobjects.md) | &lt;ids&gt; | 根据ID查询目标对象 |  |
@@ -66,9 +68,16 @@
 | get\_data\_transaction\_product\_costs\_by\_requester | &lt;requester&gt; &lt;start&gt; &lt;end&gt; | 获取请求账户（即商户）在指定时间内数据交易产生的产品费用 |  |
 | get\_data\_transaction\_total\_count\_by\_requester | &lt;requester&gt; &lt;start&gt; &lt;end&gt; | 获取请求账户（即商户）在指定时间内发起数据交易的次数 |  |
 | get\_data\_transaction\_pay\_fees\_by\_requester | &lt;requester&gt; &lt;start&gt; &lt;end&gt; | 获取请求账户（即商户）在指定时间内发起数据交易的手续费 |  |
-| get\_data\_transaction\_product\_costs\_by\_product\_id | &lt;product_id&gt; &lt;start&gt; &lt;end&gt; | 获取在指定时间内购买指定产品的产品费用 |  |
-| get\_data\_transaction\_total\_count\_by\_product\_id | &lt;product_id&gt; &lt;start&gt; &lt;end&gt; | 获取在指定时间内购买指定产品的次数 |  |
+| get\_data\_transaction\_product\_costs\_by\_product\_id | &lt;product\_id&gt; &lt;start&gt; &lt;end&gt; | 获取在指定时间内购买指定产品的产品费用 |  |
+| get\_data\_transaction\_total\_count\_by\_product\_id | &lt;product\_id&gt; &lt;start&gt; &lt;end&gt; | 获取在指定时间内购买指定产品的次数 |  |
 |  |  |  |  |
+
+### history api
+
+| 命令 | 参数 | 说明 | 备注 |
+| :--- | :--- | :--- | :--- |
+| get\_account\_history | &lt;account\_id&gt; &lt;start&gt; &lt;limit&gt; &lt;stop&gt; | 查询帐户的交易历史，其中start/stop为operation\_history\_id， id为1.11.x |  |
+| get\_account\_history\_by\_operations | &lt;account\_id&gt; &lt;operation\_ids&gt; &lt;start&gt; &lt;limit&gt; | 查询帐户的交易历史，根据operations\_ids筛选指定类型的交易历史，其中start为序号，从1开始 |  |
 
 
 
