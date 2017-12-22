@@ -6,7 +6,14 @@
 
 测试网络种子节点：106.14.180.117:9999 目前只有一个节点，社区开发者贡献节点可以加入测试网络，申请见证人。
 
-钱包接入点：[ws://106.14.180.117:28090](ws://106.14.180.117:28090) GXS资产发行在dev帐户，私钥：5JjPBNh2LEhrbeZ4uvjkJJduKjUwDAKNcopUSUpm3QpL4AgNQNJ
+钱包接入点：[ws://106.14.180.117:28090](ws://106.14.180.117:28090) 
+
+**如需注册钱包账户，请进入GXS Community**
+
+**Https://forum.gxb.io**
+
+**私信联系管理员@admin，提供公钥和账户名。团队将帮你注册账户和发放一定量的GXS用作测试。**
+
 
 ### 1. 下载程序, 解压 {#1-下载程序-解压}
 
@@ -72,9 +79,4 @@ wget http://gxb-package.oss-cn-hangzhou.aliyuncs.com/gxb-core/genesis/testnet-ge
 --enable-rpc-log -r 127.0.0.1:8091 --data-dir=testnet_node
 ```
 
-**如需额外注册钱包，请进入GXS Community**
-
-**Https://forum.gxb.io**
-
-**私信联系管理员@admin，提供公钥和账户名。团队将帮你注册账户和发放一定量的GXS用作测试。**
 
