@@ -6,7 +6,7 @@
 
 测试网络种子节点：106.14.180.117:9999 目前只有一个节点，社区开发者贡献节点可以加入测试网络，申请见证人。
 
-钱包接入点：[ws://106.14.180.117:28090](ws://106.14.180.117:28090) 
+钱包接入点：[ws://106.14.180.117:28090](ws://106.14.180.117:28090)
 
 **如需注册钱包账户，请进入GXS Community**
 
@@ -14,11 +14,16 @@
 
 **私信联系管理员@admin，提供公钥和账户名。团队将帮你注册账户和发放一定量的GXS用作测试。**
 
-
 ### 1. 下载程序, 解压 {#1-下载程序-解压}
 
-```
+```js
+# ubuntu 14.04+ 安装包下载
 wget http://gxb-package.oss-cn-hangzhou.aliyuncs.com/gxb-core/gxb_1.0.171116.tar.gz -O gxb_1.0.171116.tar.gz
+
+# osx 安装包下载
+wget http://gxb-package.oss-cn-hangzhou.aliyuncs.com/gxb-core/osx/gxb_osx_1.0.171227.tar.gz -O gxb_osx_1.0.171227.tar.gz
+
+# 解压程序
 tar zxvf gxb_1.0.171116.tar.gz
 ```
 
@@ -78,5 +83,6 @@ wget http://gxb-package.oss-cn-hangzhou.aliyuncs.com/gxb-core/genesis/testnet-ge
 ./programs/cli_wallet/cli_wallet -s ws://127.0.0.1:28090 \
 --enable-rpc-log -r 127.0.0.1:8091 --data-dir=testnet_node
 ```
+
 
 
