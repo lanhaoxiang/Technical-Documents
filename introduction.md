@@ -14,14 +14,14 @@ cli\_wallet 通过 websocket 方式连接到 witness\_node， 管理钱包文件
 
 ## **公信链客户端下载**
 
-公信链客户端下载地址， 目前只提供Ubuntu 14.04 LTS 64位系统的安装包， OS X系统需要自行编译。
+公信链客户端下载地址， 目前只提供Ubuntu 14.04 LTS 64位系统的安装包;  OS X系统[安装包下载](http://gxb-package.oss-cn-hangzhou.aliyuncs.com/gxb-core/osx/gxb_osx_1.0.171227.tar.gz)。
 
 选择其中一个下载即可。
 
 | 平台 | 下载地址 |
 | :--- | :--- |
-| github | https://github.com/gxchain/gxb-core/releases/download/1.0.171031/gxb\_1.0.171222.tar.gz |
-| 阿里云 | http://gxb-package.oss-cn-hangzhou.aliyuncs.com/gxb-core/gxb\_1.0.171227.tar.gz |
+| github | [https://github.com/gxchain/gxb-core/releases/download/1.0.171031/gxb\_1.0.171222.tar.gz](https://github.com/gxchain/gxb-core/releases/download/1.0.171031/gxb_1.0.171222.tar.gz) |
+| 阿里云 | [http://gxb-package.oss-cn-hangzhou.aliyuncs.com/gxb-core/gxb\_1.0.171227.tar.gz](http://gxb-package.oss-cn-hangzhou.aliyuncs.com/gxb-core/gxb_1.0.171227.tar.gz) |
 
 ## 节点端口说明
 
