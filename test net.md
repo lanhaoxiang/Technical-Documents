@@ -81,7 +81,7 @@ wget http://gxb-package.oss-cn-hangzhou.aliyuncs.com/gxb-core/genesis/testnet-ge
 
 ```
 ./programs/cli_wallet/cli_wallet -s ws://127.0.0.1:28090 \
---enable-rpc-log -r 127.0.0.1:8091 --data-dir=testnet_node
+--enable-rpc-log -r 127.0.0.1:8091 --data-dir=testnet_node --chain-id c2af30ef9340ff81fd61654295e98a1ff04b23189748f86727d0b26b40bb0ff4
 ```
 
 
