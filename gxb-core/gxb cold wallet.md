@@ -100,7 +100,7 @@ add_operation_to_builder_transaction $HANDLE <operation>
 ```
 例：
 unlocked >>> add_operation_to_builder_transaction 0 [0,{"fee": { "amount": 0,"asset_id": "1.3.0"},\
-"from": "1.2.17","to": "1.2.18","amount": {"amount": 10,"asset_id": "1.3.0"},"extensions": []}]
+"from": "1.2.17","to": "1.2.18","amount": {"amount": 1000000,"asset_id": "1.3.0"},"extensions": []}]
 null
 ```
 <operation>的报文格式可以根据get_prototype_operation接口获取，如下所示：
@@ -162,7 +162,7 @@ unlocked >>> preview_builder_transaction 0
         "from": "1.2.17",
         "to": "1.2.18",
         "amount": {
-          "amount": 10,
+          "amount": 1000000,
           "asset_id": "1.3.0"
         },
         "extensions": []
@@ -183,20 +183,20 @@ sign_builder_transaction $HANDLE false
 例：
 unlocked >>> sign_builder_transaction 0 false
 {
-  "ref_block_num": 25199,
-  "ref_block_prefix": 2900862013,
-  "expiration": "2017-09-01T08:11:54",
+  "ref_block_num": 21422,
+  "ref_block_prefix": 3156211995,
+  "expiration": "2018-01-25T14:12:15",
   "operations": [[
       0,{
         "fee": {
-          "amount": 10000,
+          "amount": 2500,
           "asset_id": "1.3.1"
         },
         "from": "1.2.17",
-        "to": "1.2.18",
+        "to": "1.2.19",
         "amount": {
-          "amount": 10,
-          "asset_id": "1.3.0"
+          "amount": 1000000,
+          "asset_id": "1.3.1"
         },
         "extensions": []
       }
@@ -204,7 +204,7 @@ unlocked >>> sign_builder_transaction 0 false
   ],
   "extensions": [],
   "signatures": [
-    "2029ea9756641bf955abacc1f29dc08af8e66690740bc161dcfe379da477c7df4b76d7c839f92fc7e5c72e2b91d9db698168439216df9e1a0a1773640b049bbf7c"
+    "200140efcf4d5b1c44ce3ce3c25b3f3ad2090444259c45495e1764489b95156e9d6ed8ce7b2c77ea8fa464cf537ab2f17d3b8d4b84d316c6445eb1918ebd32d5da"
   ]
 }
 ```
@@ -217,35 +217,34 @@ broadcast_transaction $tx
 
 ```
 例：
-locked >>> broadcast_transaction {"ref_block_num": 25199,"ref_block_prefix": 2900862013,"expiration": \
-"2017-09-01T08:11:54","operations": [[0,{"fee": {"amount": 10000,"asset_id": "1.3.1"},"from": "1.2.17",\
-"to": "1.2.18", "amount": {"amount": 10,"asset_id": "1.3.0"},"extensions": []}]],"extensions": \
-[],"signatures":["2029ea9756641bf955abacc1f29dc08af8e66690740bc161dcfe379da477c7df4b76d7c839f92fc7e5c72e2b91d9db698168439216df9e1a0a1773640b049bbf7c"]}
-{
-  "ref_block_num": 25483,
-  "ref_block_prefix": 3857887445,
-  "expiration": "2017-09-01T08:26:15",
-  "operations": [[
-      0,{
-        "fee": {
-          "amount": 10000,
-          "asset_id": "1.3.1"
-        },
-        "from": "1.2.17",
-        "to": "1.2.18",
-        "amount": {
-          "amount": 10,
-          "asset_id": "1.3.0"
-        },
-        "extensions": []
-      }
+locked >>>  broadcast_transaction {"ref_block_num":21422,"ref_block_prefix":3156211995,"expiration":"2018-01-25T14:12:15","operations":[[0,{"fee":{"amount":2500,"asset_id":"1.3.1"},"from":"1.2.17","to":"1.2.19","amount":{"amount":1000000,"asset_id":"1.3.1"},"extensions":[]}]],"extensions":[],"signatures":["200140efcf4d5b1c44ce3ce3c25b3f3ad2090444259c45495e1764489b95156e9d6ed8ce7b2c77ea8fa464cf537ab2f17d3b8d4b84d316c6445eb1918ebd32d5da"]}
+[
+  "314a701ab1d598418b0104ef99f0eabb2bef8f3a",{
+    "ref_block_num": 21422,
+    "ref_block_prefix": 3156211995,
+    "expiration": "2018-01-25T14:12:15",
+    "operations": [[
+        0,{
+          "fee": {
+            "amount": 2500,
+            "asset_id": "1.3.1"
+          },
+          "from": "1.2.17",
+          "to": "1.2.19",
+          "amount": {
+            "amount": 1000000,
+            "asset_id": "1.3.1"
+          },
+          "extensions": []
+        }
+      ]
+    ],
+    "extensions": [],
+    "signatures": [
+      "200140efcf4d5b1c44ce3ce3c25b3f3ad2090444259c45495e1764489b95156e9d6ed8ce7b2c77ea8fa464cf537ab2f17d3b8d4b84d316c6445eb1918ebd32d5da"
     ]
-  ],
-  "extensions": [],
-  "signatures": [
-    "2029ea9756641bf955abacc1f29dc08af8e66690740bc161dcfe379da477c7df4b76d7c839f92fc7e5c72e2b91d9db698168439216df9e1a0a1773640b049bbf7c"
-  ]
-}
+  }
+]
 ```
 
 
