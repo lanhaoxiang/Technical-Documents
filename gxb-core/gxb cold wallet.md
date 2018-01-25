@@ -103,6 +103,27 @@ unlocked >>> add_operation_to_builder_transaction 0 [0,{"fee": { "amount": 0,"as
 "from": "1.2.17","to": "1.2.18","amount": {"amount": 10,"asset_id": "1.3.0"},"extensions": []}]
 null
 ```
+<operation>的报文格式可以根据get_prototype_operation接口获取，如下所示：
+
+```
+unlocked >>> get_prototype_operation transfer_operation
+[
+  0,{
+    "fee": {
+      "amount": 0,
+      "asset_id": "1.3.0"
+    },
+    "from": "1.2.0",
+    "to": "1.2.0",
+    "amount": {
+      "amount": 0,
+      "asset_id": "1.3.0"
+    },
+    "extensions": []
+  }
+]
+```
+
 
 3）设置操作手续费：
 
@@ -188,18 +209,18 @@ unlocked >>> sign_builder_transaction 0 false
 }
 ```
 
-6）启动在线的机器的witness\_node和cli\_wallet，对cli\_wallet进行解锁操作， 然后将上一步生成的报文复制到此机器中:
+6）启动在线的机器的witness\_node和cli\_wallet， 然后将上一步生成的报文复制到此机器中:
 
 ```
-sign_transaction $tx true
+broadcast_transaction $tx
 ```
 
 ```
 例：
-unlocked >>> sign_transaction {"ref_block_num": 25199,"ref_block_prefix": 2900862013,"expiration": \
+locked >>> broadcast_transaction {"ref_block_num": 25199,"ref_block_prefix": 2900862013,"expiration": \
 "2017-09-01T08:11:54","operations": [[0,{"fee": {"amount": 10000,"asset_id": "1.3.1"},"from": "1.2.17",\
 "to": "1.2.18", "amount": {"amount": 10,"asset_id": "1.3.0"},"extensions": []}]],"extensions": \
-[],"signatures":["2029ea9756641bf955abacc1f29dc08af8e66690740bc161dcfe379da477c7df4b76d7c839f92fc7e5c72e2b91d9db698168439216df9e1a0a1773640b049bbf7c"]} true
+[],"signatures":["2029ea9756641bf955abacc1f29dc08af8e66690740bc161dcfe379da477c7df4b76d7c839f92fc7e5c72e2b91d9db698168439216df9e1a0a1773640b049bbf7c"]}
 {
   "ref_block_num": 25483,
   "ref_block_prefix": 3857887445,
@@ -222,7 +243,7 @@ unlocked >>> sign_transaction {"ref_block_num": 25199,"ref_block_prefix": 290086
   ],
   "extensions": [],
   "signatures": [
-    "204bf3a8b85ea490731bcb221d7aca9dd82a552d4ce82a812aa420b196e62204567db5d1c8b7d377c046186772c124a16def8ef779b6b17e38aed022800f9c7860"
+    "2029ea9756641bf955abacc1f29dc08af8e66690740bc161dcfe379da477c7df4b76d7c839f92fc7e5c72e2b91d9db698168439216df9e1a0a1773640b049bbf7c"
   ]
 }
 ```
