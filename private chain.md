@@ -234,6 +234,8 @@ get_account nathan
 suggest_brain_key
 ```
 
+然后调用
+
 最终将有类似如下的回复：
 
 ```
