@@ -234,8 +234,13 @@ get_account nathan
 suggest_brain_key
 ```
 
-然后调用
+然后调用register\_account / register\_account2接口创建新帐户
 
+```
+register_account alpha GXC6vQtDEgHSickqe9itW8fbFyUrKZK5xsg4FRHzQZ7hStaWqEKhZ GXC6vQtDEgHSickqe9itW8fbFyUrKZK5xsg4FRHzQZ7hStaWqEKhZ nathan nathan 10
+```
+
+  
 最终将有类似如下的回复：
 
 ```
