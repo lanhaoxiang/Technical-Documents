@@ -3,7 +3,7 @@
 | 命令 | 参数 | 说明 | 备注 |
 | :--- | :--- | :--- | :--- |
 | [set\_password](/api/cli-wallet-api/setpassword.md) | &lt;new\_password&gt; | 对钱包设置一个新密码。首次启动钱包，需要设置密码 |  |
-| [un\_lock](/api/cli-wallet-api/unlock.md) | &lt;my\_password&gt; | 解锁钱包 |  |
+| [unlock](/api/cli-wallet-api/unlock.md) | &lt;my\_password&gt; | 解锁钱包 |  |
 | [import\_key](/api/cli-wallet-api/importkey.md) | &lt;account\_name\_or\_id&gt;         &lt;true&gt; &lt;wif\_private\_key&gt; | 将帐户的私钥导入到钱包 |  |
 | [dump\_private\_keys](/api/cli-wallet-api/dumpprivate-keys.md) |  | 打印钱包拥有的所有私钥对 |  |
 | [get\_account](/api/cli-wallet-api/getaccount.md) | &lt;account\_name\_or\_id&gt; | 查询指定帐户信息，参数可以为帐户名或者帐户id |  |
