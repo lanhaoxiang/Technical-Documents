@@ -12,7 +12,7 @@
   * [安装环境](api/installation.md)
   * [Cli-wallet API调用](api/cli-wallet-api.md)
     * [set\_password](api/cli-wallet-api/setpassword.md)
-    * [un\_Lock](api/cli-wallet-api/unlock.md)
+    * [unlock](api/cli-wallet-api/unlock.md)
     * [import\_Key](api/cli-wallet-api/importkey.md)
     * [dump\_private\_keys](api/cli-wallet-api/dumpprivate-keys.md)
     * [get\_account](api/cli-wallet-api/getaccount.md)
