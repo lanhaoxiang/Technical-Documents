@@ -13,7 +13,7 @@
   * [Cli-wallet API调用](api/cli-wallet-api.md)
     * [set\_password](api/cli-wallet-api/setpassword.md)
     * [unlock](api/cli-wallet-api/unlock.md)
-    * [import\_Key](api/cli-wallet-api/importkey.md)
+    * [import\_key](api/cli-wallet-api/importkey.md)
     * [dump\_private\_keys](api/cli-wallet-api/dumpprivate-keys.md)
     * [get\_account](api/cli-wallet-api/getaccount.md)
     * [list\_account\_balances](api/cli-wallet-api/listaccount-balances.md)
