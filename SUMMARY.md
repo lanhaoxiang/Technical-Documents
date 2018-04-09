@@ -7,7 +7,6 @@
 * [测试网络](test net.md)
 * [私有链搭建](private chain.md)
 * [见证人申请](apply witness .md)
-
 * [API调用](API summary.md)
   * [安装环境](api/installation.md)
   * [Cli-wallet API调用](api/cli-wallet-api.md)
@@ -34,7 +33,9 @@
     * [get\_account\_balances](api/witness-api/getaccount-balances.md)
     * [list\_assets](api/witness-api/listassets.md)
   * [BaaS-API](api/baas-api.md)
-    * [22](api/baas-api/22.md)
+    * [获取费率接口](api/baas-api/huo-qu-fei-lv-jie-kou.md)
+    * 数据存储接口
+    * [获取已存数据接口](api/baas-api/huo-qu-yi-cun-shu-ju-jie-kou.md)
 * [GXB-BOX](gxb-box.md)
 * [GXB-CORE](gxb-core.md)
   * [源码编译](gxb-core/compile.md)
@@ -45,6 +46,4 @@
 * [附录](Supplement.md)
   * [共识机制](supplement/DPoS.md)
   * [objects&IDs](supplement/objects and IDs.md)
-
-
 
