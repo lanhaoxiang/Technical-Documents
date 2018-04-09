@@ -34,7 +34,7 @@
     * [list\_assets](api/witness-api/listassets.md)
   * [BaaS-API](api/baas-api.md)
     * [获取费率接口](api/baas-api/huo-qu-fei-lv-jie-kou.md)
-    * 数据存储接口
+    * [数据存储接口](api/baas-api/shu-ju-cun-chu-jie-kou.md)
     * [获取已存数据接口](api/baas-api/huo-qu-yi-cun-shu-ju-jie-kou.md)
 * [GXB-BOX](gxb-box.md)
 * [GXB-CORE](gxb-core.md)
