@@ -13,7 +13,7 @@ PC端钱包使用教程，参考 教程[1 ](http://mp.weixin.qq.com/s/eNQyqY5dya
 ## BaaS存储服务地址
 
 ```
-http://baas.gxb.io
+http://baas.gxb.io
 ```
 
 ## 如何调用SDK
