@@ -29,7 +29,7 @@ http://baas.gxb.io  #待定
 
 ## 4. 如何调用SDK
 
-SDK使用方法
+目前暂时提供了Java版本的SDK。
 
 ## BaaS存储服务API接口
 
