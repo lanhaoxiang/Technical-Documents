@@ -2,11 +2,13 @@
 
 可以通过手机钱包、网页钱包创建帐户。
 
-PC端钱包使用教程，参考
+PC端钱包使用教程，参考 
+
+
 
 [http://mp.weixin.qq.com/s/eNQyqY5dyaP299J5qra0Bg](http://mp.weixin.qq.com/s/eNQyqY5dyaP299J5qra0Bg)
 
-[http://mp.weixin.qq.com/s/eNQyqY5dyaP299J5qra0Bg](http://mp.weixin.qq.com/s/27v540tvhfDHF6Bv5_ObKQ)
+http://mp.weixin.qq.com/s/27v540tvhfDHF6Bv5\_ObKQ
 
 手机钱包教程，参考 [教程](#)
 
