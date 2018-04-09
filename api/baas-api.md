@@ -29,7 +29,7 @@ http://baas.gxb.io  #待定
 
 ## 4. 如何调用SDK
 
-SDK提供了和BaaS存储服务交互的方法封装。目前暂时提供Java版本的SDK。
+SDK提供了和BaaS存储服务交互的方法封装。目前暂时提供Java版本的SDK，后续会支持多种语言。
 
 ## BaaS存储服务API接口
 
