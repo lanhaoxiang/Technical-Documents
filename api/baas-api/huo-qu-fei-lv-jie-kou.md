@@ -1,4 +1,4 @@
-## 介绍
+## 获取存储费率
 
 获取数据存储的费率（以KB为单位）
 
@@ -11,14 +11,16 @@ GET /api/storeFee
 ## 响应参数
 
 | 参数 | 类型 | 是否必填 | 最大长度 | 描述 | 示例 |
-| -- | -- | -- | -- | -- | -- |
-| price_per_kbyte | Number | Y |  | 每KB需要的GXS数 | 20 |
-    price_per_kbyte: 确保整数,金额 = 100000 * 实际金额
+| --- | --- | --- | --- | --- | --- |
+| price\_per\_kbyte | Number | Y |  | 每KB需要的GXS数 | 20 |
+
+```
+price_per_kbyte: 确保整数,金额 = 100000 * 实际金额
+```
 
 例子
 
 ```js
-
 {
     "code":200,
     "msg":"ok",
@@ -26,7 +28,6 @@ GET /api/storeFee
         "price_per_kbyte":20
     }
 }
-
 ```
 
 ## SDK示例-JAVA
@@ -38,6 +39,7 @@ GxbClient gxbClient = new GxbDefaultClient(storeUrl);
 GetStoreDataFeeResp resp = gxbClient.execute(request);
 ```
 
-
 ## 错误情况
+
+
 
