@@ -1,4 +1,4 @@
-# BaaS API使用说明
+# BaaS 存储API使用说明
 
 本文档介绍了如何快速调用BaaS API。
 
