@@ -22,9 +22,9 @@ PC端钱包使用教程，参考
 
 | 接口 | 描述 |
 | :--- | :--- |
-| storeFee | 获取存储费率 |
-| store | 数据存储 |
-| data | 获取数据 |
+| [storeFee](/api/baas-api/huo-qu-fei-lv-jie-kou.md) | 获取存储费率 |
+| [store](/api/baas-api/shu-ju-cun-chu-jie-kou.md) | 数据存储 |
+| [data](/api/baas-api/huo-qu-yi-cun-shu-ju-jie-kou.md) | 获取数据 |
 
 
 
