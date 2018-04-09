@@ -1,4 +1,4 @@
-# BaaS API使用方法
+# BaaS API使用说明
 
 ## 创建帐户
 
