@@ -24,7 +24,7 @@ PC端钱包/网页钱包使用教程:
 ## 3. BaaS存储服务地址
 
 ```
-http://baas.gxb.io  #待定
+http://baas.gxb.io/storage
 ```
 
 ## 4. 如何调用SDK
