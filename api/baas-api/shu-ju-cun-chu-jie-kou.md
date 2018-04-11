@@ -12,7 +12,7 @@ Content-Type= **multipart/form-data**
 
 | 参数 | 类型 | 必填 | 最大长度 | 描述 | 示例 |
 | --- | --- | --- | --- | --- | --- |
-| from | String | Y | 32 | 存储数据的账户id | 1.2.264 |
+| from | String | Y | 32 | 存储数据的账户id | 1.2.639290 |
 | to | String | Y | 32 | Baas平台账户id | 1.2.639287 |
 | proxy\_account | String | Y | 32 | Baas平台账户id | 1.2.639287 |
 | percent | String | Y | 0 - 100 | 费率百分比，即 amount的百分之多少分成给proxy\_account | 0 |
