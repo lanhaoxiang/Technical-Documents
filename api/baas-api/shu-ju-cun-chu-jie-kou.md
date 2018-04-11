@@ -77,9 +77,9 @@ Amount amount = Amount.builder().amount(20L).assetId("1.3.1").build();
 String data = "123";
 // 数据MD5值
 String dataMd5 = DigestUtils.md5DigestAsHex(data.getBytes());
-// 你的账户
-String from = "";
-// BaaS账户
+// 你的账户id
+String from = "1.2.639290";
+// BaaS账户id
 String baasAccount = "1.2.265";
 // 过期时间
 Long expiration = new Date().getTime() / 1000 + 60;
