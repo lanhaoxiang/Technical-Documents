@@ -17,7 +17,7 @@ Content-Type= **multipart/form-data**
 | proxy\_account | String | Y | 32 | Baas平台账户id | 1.2.639287 |
 | percent | String | Y | 0 - 100 | 费率百分比，即 amount的百分之多少分成给proxy\_account | 0 |
 | amount | String | Y |  | 支付存储费用的资产数量，精确到小数点后5位 | 0.02 |
-| asset\_id | String | Y |  | 资产id， GXS的资产id为1.3.1 | 1.3.1 |
+| asset\_id | String | Y |  | 费用存储费用的资产id， GXS的资产id为1.3.1 | 1.3.1 |
 | memo | String | Y | 32 | 数据MD5值 | 68b329da9893e34099c7d8ad5cb9c940 |
 | expiration | Number | Y | 固定10 | 请求过期时间 | 1523390848 |
 | signatures | String | Y | 65 | 签名 | 1f150b63b7439559f258aa9830f05551c49172bf1862418480fa261e7456dda8d67f08c2c6e86f716 |
