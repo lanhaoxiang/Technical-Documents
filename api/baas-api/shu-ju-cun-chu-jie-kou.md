@@ -13,8 +13,8 @@ Content-Type= **multipart/form-data**
 | 参数 | 类型 | 必填 | 最大长度 | 描述 | 示例 |
 | --- | --- | --- | --- | --- | --- |
 | from | String | Y | 32 | 存储数据的账户id | 1.2.264 |
-| to | String | Y | 32 | Baas平台账户id | 1.2.265 |
-| proxy\_account | String | Y | 32 | Baas平台账户id | 1.2.265 |
+| to | String | Y | 32 | Baas平台账户id | 1.2.639287 |
+| proxy\_account | String | Y | 32 | Baas平台账户id | 1.2.639287 |
 | percent | String | Y | 0 - 100 | 费率百分比，即 amount的百分之多少分成给proxy\_account | 0 |
 | amount | String | Y |  | 资产的金额，精确到小数点后5位 | 0.02 |
 | asset\_id | String | Y |  | 资产id， GXS的资产id为1.3.1 | 1.3.1 |
