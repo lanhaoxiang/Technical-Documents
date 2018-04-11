@@ -15,7 +15,7 @@ Content-Type= **multipart/form-data**
 | from | String | Y | 32 | 存储数据的账户id | 1.2.264 |
 | to | String | Y | 32 | Baas平台账户id | 1.2.265 |
 | proxy\_account | String | Y | 32 | Baas平台账户id | 1.2.265 |
-| percent | String | Y | 0 - 100 | 费率 | 0 |
+| percent | String | Y | 0 - 100 | 费率百分比，即 amount的百分之多少作为佣金f | 0 |
 | amount | String | Y |  | 资产的金额，精确到小数点后5位 | 0.02 |
 | asset\_id | String | Y |  | 资产id， GXS的资产id为1.3.1 | 1.3.1 |
 | memo | String | Y | 32 | 数据MD5值 | 68b329da9893e34099c7d8ad5cb9c940 |
