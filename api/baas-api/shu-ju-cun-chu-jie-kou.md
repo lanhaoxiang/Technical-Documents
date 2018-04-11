@@ -1,4 +1,4 @@
-## 数据存储接口
+## 介绍
 
 调用方通过该接口可把自己的数据通过baas平台服务有偿上链。
 
@@ -15,16 +15,17 @@ Content-Type= **multipart/form-data**
 |from | String | Y | 32 | 存储数据的账户id | 1.2.264 |
 | to | String | Y | 32 | Baas平台账户id | 1.2.265 |
 | proxy_account | String | Y | 32 | Baas平台账户id | 1.2.265 | 
-| percent | Number | Y | 0 - 100 | 费率 | 0 |
-| amount | Number | Y |  | 金额 | 20 |
+| percent | String | Y | 0 - 100 | 费率 | 0 |
+| amount | String | Y |  | 金额 | 20 |
 | asset_id | String | Y |  | 资产代码 | 1.3.1 |
 | memo | String | Y | 32 | 数据MD5值 | 68b329da9893e34099c7d8ad5cb9c940 |
-| expiration | String | Y |  | 请求过期时间 | 2018-11-01T02:12:21 |
-| signatures | List<String> | Y | 65 | 签名 | ["1f150b63b7439559f258aa9830f05551c49172bf1862418480fa261e7456dda8d67f08c2c6e86f716"] |
-| data | byte/File | Y | <=2MB | 上链的原始数据 | 12345678asdfg()_:<>!@#$%^&*=-';\\" ' |
+| expiration | Number | Y | 固定10 | 请求过期时间 | 1523390848 |
+| signatures | String | Y | 65 | 签名 | 1f150b63b7439559f258aa9830f05551c49172bf1862418480fa261e7456dda8d67f08c2c6e86f716 |
+| data | byte/File | Y | 不超过2MB | 上链的原始数据 | 12345678asdfg()_:<>!@#$%^&*=-';\\" ' |
 
     amount: 确保整数,金额 = 100000 * 实际金额, 示例中的20实际为 0.0002 GXS
     asset_id: 1.3.1 固定为 GXS 
+    data: 数据大小限制后续会放开
 
 例子：
 
@@ -38,8 +39,8 @@ Content-Type= **multipart/form-data**
     "amount":20,
     "asset_id":"1.3.1",
     "memo":"68b329da9893e34099c7d8ad5cb9c940",
-    "expiration":"2018-11-01T02:12:21",
-    "signature": ["1f150b63b7439559f258aa9830f05551c49172bf1862418480fa261e7456dda8d67f08c2c6e86f716"],
+    "expiration":1523390848,
+    "signature": "1f150b63b7439559f258aa9830f05551c49172bf1862418480fa261e7456dda8d67f08c2c6e86f716",
     "data":
 }
 
@@ -68,25 +69,35 @@ Content-Type= **multipart/form-data**
 ```
 
 ## SDK示例-JAVA
-
 ```java
-
+// 存取费用
 Amount amount = Amount.builder().amount(20L).assetId("1.3.1").build();
+// 原始数据
 String data = "123";
+// 数据MD5值
 String dataMd5 = DigestUtils.md5DigestAsHex(data.getBytes());
+// 你的账户
+String from = "";
+// BaaS账户
+String baasAccount = "1.2.265";
+// 过期时间
+Long expiration = new Date().getTime() / 1000 + 60;
 // 构建请求体
 StoreDataReq request =
-            StoreDataReq.builder().from(("1.2.264")).to("1.2.265").proxyAccount("1.2.265").amount(amount).percent(0).memo(dataMd5).expiration(new Date().getTime() / 1000 + 60).data(data.getBytes()).build();
-List<String> signatures = new ArrayList<>();
-signatures.add(SignatureUtil.signature(request.toBytes(),"privateKey"); // privateKey为账户1.2.264的私钥 该生成签名过程无网络连接 具体可查源码
-request.setSignatures(signatures);
-GxbClient gxbClient = new GxbDefaultClient(storeUrl);
+            StoreDataReq.builder().from(from).to(baasAccount).proxyAccount(baasAccount).amount(amount).percent(0).memo(dataMd5).expiration(expiration).data(data.getBytes()).build();
+// 生成签名
+String sign = SignatureUtil.signature(request.toBytes(), EXAMPLE_PRIVATE_KEY);
+while (!SignatureUtil.verify(request.toBytes(), sign, EXAMPLE_PUBLIC_KEY, true)) { // 签名需要校验位判断 符合条件输出
+    request.setExpiration(request.getExpiration() + 1);
+    sign = SignatureUtil.signature(request.toBytes(), EXAMPLE_PRIVATE_KEY);
+    }
+request.setSignatures(sign);
 // 获取返回
-StoreDataResp resp = gxbClient.execute(request);
+BaasClient baasClient = new BaasDefaultClient(url); // url为请求路径
+StoreDataResp resp = baasClient.executeFormData(request,"data",request.getData());
 ```
 
-    详情参照 com.gxb.sdk.developer.api.example.StoreDataExample 类
-
+    具体参照 com.gxb.block.baas.sdk.client.api.example.StoreDataExample
 ## 错误情况
 
 | code | msg | 描述 |
