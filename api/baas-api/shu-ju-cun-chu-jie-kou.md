@@ -152,8 +152,8 @@ curl --data '{"jsonrpc": "2.0", "method": "get_account_by_name", "params": ["gxs
 | 401 | DATA\_SIGN\_FAILURE | 验签失败 |
 | 402 | BALANCE\_NO\_ENOUGH | 账户余额不足 |
 | 404 | REQ\_EXPIRATION | 请求过期 |
-| 405 | DATA\_INVALID | 数据不合要求 |
-| 406 | ACCOUNT\_INVALID | 账户不合要求 |
+| 405 | DATA\_MD5\_INVALID | 数据MD5不通过 |
+| 406 | ACCOUNT\_NO\_EXIT | 账户不存在 |
 | 407 | DATA\_OVER\_SIZE | 数据长度过长 |
 | 408 | AMOUNT\_INVALID | 金额不合要求 |
 
