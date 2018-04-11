@@ -103,7 +103,7 @@ StoreDataResp resp = baasClient.executeFormData(request,"data",request.getData()
 具体参照 com.gxb.block.baas.sdk.client.api.example.StoreDataExample
 ```
 
-帐户的id, 帐户公钥可以根据帐户名获得：
+帐户的id, 帐户活跃权限公钥可以根据帐户名获得：
 
 ```js
 # 以帐户名gxs-dev为例，params传入帐户名
