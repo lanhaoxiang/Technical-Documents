@@ -87,10 +87,10 @@ Long expiration = new Date().getTime() / 1000 + 60;
 StoreDataReq request =
             StoreDataReq.builder().from(from).to(baasAccount).proxyAccount(baasAccount).amount(amount).percent(0).memo(dataMd5).expiration(expiration).data(data.getBytes()).build();
 // 生成签名
-String sign = SignatureUtil.signature(request.toBytes(), EXAMPLE_PRIVATE_KEY);
-while (!SignatureUtil.verify(request.toBytes(), sign, EXAMPLE_PUBLIC_KEY, true)) { // 签名需要校验位判断 符合条件输出
+String sign = SignatureUtil.signature(request.toBytes(), YOUR_PRIVATE_KEY);
+while (!SignatureUtil.verify(request.toBytes(), sign, YOUR_PUBLIC_KEY, true)) { // 签名需要校验位判断 符合条件输出
     request.setExpiration(request.getExpiration() + 1);
-    sign = SignatureUtil.signature(request.toBytes(), EXAMPLE_PRIVATE_KEY);
+    sign = SignatureUtil.signature(request.toBytes(), YOUR_PRIVATE_KEY);
     }
 request.setSignatures(sign);
 // 获取返回
@@ -102,7 +102,11 @@ StoreDataResp resp = baasClient.executeFormData(request,"data",request.getData()
 具体参照 com.gxb.block.baas.sdk.client.api.example.StoreDataExample
 ```
 
-帐户的id
+帐户的id,YOUR\_PRIVATE\_KEY,YOUR\_PUBLIC\_KEY可以使用如下方法获得：
+
+```js
+curl --data '{"jsonrpc": "2.0", "method": "get_account_by_name", "params": ["opengateway"], "id": 1}' https://node1.gxb.io
+```
 
 ## 
 
