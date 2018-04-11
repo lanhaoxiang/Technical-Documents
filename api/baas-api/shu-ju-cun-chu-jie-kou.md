@@ -102,14 +102,44 @@ StoreDataResp resp = baasClient.executeFormData(request,"data",request.getData()
 具体参照 com.gxb.block.baas.sdk.client.api.example.StoreDataExample
 ```
 
-帐户的id,YOUR\_PRIVATE\_KEY,YOUR\_PUBLIC\_KEY可以根据帐户名获得：
+帐户的id,YOUR\_PUBLIC\_KEY可以根据帐户名获得：
 
 ```js
 # 以帐户名gxs-dev为例，params传入帐户名
 curl --data '{"jsonrpc": "2.0", "method": "get_account_by_name", "params": ["gxs-dev"], "id": 1}' https://node1.gxb.io
 
 # 响应
-
+{
+	"id": 1,
+	"jsonrpc": "2.0",
+	"result": {
+		"id": "1.2.639290",  // 帐户id
+		"membership_expiration_date": "1970-01-01T00:00:00",
+...
+...
+		"lifetime_referrer_fee_percentage": 3000,
+		"referrer_rewards_percentage": 0,
+		"name": "gxs-dev",  // 帐户名
+		"owner": {
+			"weight_threshold": 1,
+			"account_auths": [],
+			"key_auths": [
+				["GXC85WbsFPSRjRto4n4gbopwGBEf41iroDesrNxN1WXJLTb9Mv2sc", 1]
+			],
+			"address_auths": []
+		},
+		"active": {
+			"weight_threshold": 1,
+			"account_auths": [],
+			"key_auths": [
+				["GXC7xQNvkevq5fkCZPfi7rLTXZb1WKfE41sDTxqf7xUg36BLbZLvh", 1] // 活跃权限私钥
+			],
+			"address_auths": []
+		},
+...
+...
+	}
+}
 ```
 
 ## 
