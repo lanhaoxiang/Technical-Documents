@@ -23,6 +23,10 @@ Content-Type= **multipart/form-data**
 | signatures | String | Y | 65 | 签名 | 1f150b63b7439559f258aa9830f05551c49172bf1862418480fa261e7456dda8d67f08c2c6e86f716 |
 | data | byte/File | Y | 不超过2MB | 要存储的原始数据 | 12345678asdfg\(\)\_:&lt;&gt;!@\#$%^&\*=-';\" ' |
 
+
+
+说明：
+
 ```
 amount: 确保整数,金额 = 100000 * 实际金额, 示例中的20实际为 0.0002 GXS
 asset_id: 1.3.1 固定为 GXS 
