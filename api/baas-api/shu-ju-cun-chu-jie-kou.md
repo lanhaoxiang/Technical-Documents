@@ -102,6 +102,10 @@ StoreDataResp resp = baasClient.executeFormData(request,"data",request.getData()
 具体参照 com.gxb.block.baas.sdk.client.api.example.StoreDataExample
 ```
 
+帐户的id
+
+## 
+
 ## 错误情况
 
 | code | msg | 描述 |
