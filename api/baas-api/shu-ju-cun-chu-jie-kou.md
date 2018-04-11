@@ -87,6 +87,7 @@ Long expiration = new Date().getTime() / 1000 + 60;
 StoreDataReq request =
             StoreDataReq.builder().from(from).to(baasAccount).proxyAccount(baasAccount).amount(amount).percent(0).memo(dataMd5).expiration(expiration).data(data.getBytes()).build();
 // 生成签名
+// 其中YOUR_PRIVATE_KEY / YOUR_PUBLIC_KEY分别为你的帐户对应的私钥和公钥
 String sign = SignatureUtil.signature(request.toBytes(), YOUR_PRIVATE_KEY);
 while (!SignatureUtil.verify(request.toBytes(), sign, YOUR_PUBLIC_KEY, true)) { // 签名需要校验位判断 符合条件输出
     request.setExpiration(request.getExpiration() + 1);
