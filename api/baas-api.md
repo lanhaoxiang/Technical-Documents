@@ -46,7 +46,7 @@ Java - maven
 | 接口 | 描述 |
 | :--- | :--- |
 | [storeFee](/api/baas-api/huo-qu-fei-lv-jie-kou.md) | 获取存储费率，以GXS支付 |
-| [store](/api/baas-api/shu-ju-cun-chu-jie-kou.md) | 数据存储 |
+| [store](/api/baas-api/shu-ju-cun-chu-jie-kou.md) | 数据存储接口 |
 | [data](/api/baas-api/huo-qu-yi-cun-shu-ju-jie-kou.md) | 获取数据 |
 
 
