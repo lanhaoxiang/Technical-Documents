@@ -31,13 +31,17 @@ http://baas.gxb.io/storage
 
 SDK提供了和BaaS存储服务交互的方法封装。目前暂时提供Java版本的SDK，后续会支持多种语言。
 
-如何调用SDK
+Java - maven
 
-如何进行数据存储
+```xml
+        <dependency>
+            <groupId>com.gxb.block.baas</groupId>
+            <artifactId>baas-sdk-client</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+```
 
-如何获取已存储的数据
 
-demo+注释
 
 ## BaaS存储服务API接口
 
