@@ -105,7 +105,8 @@ StoreDataResp resp = baasClient.executeFormData(request,"data",request.getData()
 帐户的id,YOUR\_PRIVATE\_KEY,YOUR\_PUBLIC\_KEY可以使用如下方法获得：
 
 ```js
-curl --data '{"jsonrpc": "2.0", "method": "get_account_by_name", "params": ["opengateway"], "id": 1}' https://node1.gxb.io
+# 以帐户gxs-dev为例
+curl --data '{"jsonrpc": "2.0", "method": "get_account_by_name", "params": ["gxs-dev"], "id": 1}' https://node1.gxb.io
 ```
 
 ## 
