@@ -16,7 +16,7 @@ Content-Type= **multipart/form-data**
 | to | String | Y | 32 | Baas平台账户id | 1.2.265 |
 | proxy\_account | String | Y | 32 | Baas平台账户id | 1.2.265 |
 | percent | String | Y | 0 - 100 | 费率 | 0 |
-| amount | String | Y |  | 金额 | 20 |
+| amount | String | Y |  | 金额 | 0.02 |
 | asset\_id | String | Y |  | 资产id， GXS的资产id为1.3.1 | 1.3.1 |
 | memo | String | Y | 32 | 数据MD5值 | 68b329da9893e34099c7d8ad5cb9c940 |
 | expiration | Number | Y | 固定10 | 请求过期时间 | 1523390848 |
