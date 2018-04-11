@@ -110,35 +110,35 @@ curl --data '{"jsonrpc": "2.0", "method": "get_account_by_name", "params": ["gxs
 
 # 响应
 {
-	"id": 1,
-	"jsonrpc": "2.0",
-	"result": {
-		"id": "1.2.639290",  // 帐户id
-		"membership_expiration_date": "1970-01-01T00:00:00",
+    "id": 1,
+    "jsonrpc": "2.0",
+    "result": {
+        "id": "1.2.639290",  // 帐户id
+        "membership_expiration_date": "1970-01-01T00:00:00",
 ...
 ...
-		"lifetime_referrer_fee_percentage": 3000,
-		"referrer_rewards_percentage": 0,
-		"name": "gxs-dev",  // 帐户名
-		"owner": {
-			"weight_threshold": 1,
-			"account_auths": [],
-			"key_auths": [
-				["GXC85WbsFPSRjRto4n4gbopwGBEf41iroDesrNxN1WXJLTb9Mv2sc", 1]
-			],
-			"address_auths": []
-		},
-		"active": {
-			"weight_threshold": 1,
-			"account_auths": [],
-			"key_auths": [
-				["GXC7xQNvkevq5fkCZPfi7rLTXZb1WKfE41sDTxqf7xUg36BLbZLvh", 1] // 活跃权限私钥
-			],
-			"address_auths": []
-		},
+        "lifetime_referrer_fee_percentage": 3000,
+        "referrer_rewards_percentage": 0,
+        "name": "gxs-dev",  // 帐户名
+        "owner": {
+            "weight_threshold": 1,
+            "account_auths": [],
+            "key_auths": [
+                ["GXC85WbsFPSRjRto4n4gbopwGBEf41iroDesrNxN1WXJLTb9Mv2sc", 1]
+            ],
+            "address_auths": []
+        },
+        "active": {
+            "weight_threshold": 1,
+            "account_auths": [],
+            "key_auths": [
+                ["GXC7xQNvkevq5fkCZPfi7rLTXZb1WKfE41sDTxqf7xUg36BLbZLvh", 1] // 活跃权限公钥
+            ],
+            "address_auths": []
+        },
 ...
 ...
-	}
+    }
 }
 ```
 
