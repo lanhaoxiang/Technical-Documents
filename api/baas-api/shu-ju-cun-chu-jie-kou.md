@@ -129,7 +129,7 @@ curl --data '{"jsonrpc": "2.0", "method": "get_account_by_name", "params": ["gxs
             ],
             "address_auths": []
         },
-        "active": {
+        "active": { // 活跃权限
             "weight_threshold": 1,
             "account_auths": [],
             "key_auths": [
