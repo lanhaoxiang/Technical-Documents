@@ -12,7 +12,7 @@ GET /api/storeFee
 
 | 参数 | 类型 | 是否必填 | 最大长度 | 描述 | 示例 |
 | --- | --- | --- | --- | --- | --- |
-| price\_per\_kbyte | Number | Y |  | 每KB需要的GXS数 | 20 |
+| price\_per\_kbyte | Number | Y |  | 每KB需要的GXS数，整数 | 20，实际为20/100000即0.00002GXS/KB |
 
 ```
 price_per_kbyte: 确保整数,金额 = 100000 * 实际金额

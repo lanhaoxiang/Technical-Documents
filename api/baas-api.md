@@ -19,7 +19,7 @@ PC端钱包/网页钱包使用教程:
 
 ## 2. 导出私钥
 
-从手机钱包或者网页钱包导出帐户私钥，供后面调用SDK时使用。
+从手机钱包或者网页钱包导出帐户的活跃权限私钥，供后面调用SDK时使用。
 
 ## 3. BaaS存储服务地址
 
@@ -41,15 +41,13 @@ Java - maven
         </dependency>
 ```
 
-
-
 ## BaaS存储服务API接口
 
 | 接口 | 描述 |
 | :--- | :--- |
-| [storeFee](/api/baas-api/huo-qu-fei-lv-jie-kou.md) | 获取存储费率 |
-| [store](/api/baas-api/shu-ju-cun-chu-jie-kou.md) | 数据存储 |
-| [data](/api/baas-api/huo-qu-yi-cun-shu-ju-jie-kou.md) | 获取数据 |
+| [storeFee](/api/baas-api/huo-qu-fei-lv-jie-kou.md) | 获取存储费率，以GXS支付 |
+| [store](/api/baas-api/shu-ju-cun-chu-jie-kou.md) | 数据存储接口 |
+| [data](/api/baas-api/huo-qu-yi-cun-shu-ju-jie-kou.md) | 获取数据接口，根据cid获取数据 |
 
 
 
