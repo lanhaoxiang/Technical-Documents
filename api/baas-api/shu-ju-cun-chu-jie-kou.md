@@ -20,7 +20,7 @@ Content-Type= **multipart/form-data**
 | asset\_id | String | Y |  | 费用存储费用的资产id， GXS的资产id为1.3.1 | 1.3.1 |
 | memo | String | Y | 32 | 存储的原始数据MD5值 | 68b329da9893e34099c7d8ad5cb9c940 |
 | expiration | Number | Y | 固定10 | 请求过期时间 | 1523390848 |
-| signatures | String | Y | 65 | 调用方使用hnn私钥发起的数字签名 | 1f150b63b7439559f258aa9830f05551c49172bf1862418480fa261e7456dda8d67f08c2c6e86f716 |
+| signatures | String | Y | 65 | 调用方使用活跃权限私钥发起的数字签名 | 1f150b63b7439559f258aa9830f05551c49172bf1862418480fa261e7456dda8d67f08c2c6e86f716 |
 | data | byte/File | Y | 不超过2MB | 要存储的原始数据 | 12345678asdfg\(\)\_:&lt;&gt;!@\#$%^&\*=-';\" ' |
 
 说明：
