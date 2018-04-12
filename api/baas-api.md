@@ -5,7 +5,7 @@
 ![](/assets/index.png)
 
 ```
-                                              BaaS存储流程图
+                                         BaaS存储流程图
 ```
 
 ## 1. 创建帐户
