@@ -18,13 +18,13 @@
 
 ```js
 # ubuntu 14.04+ 安装包下载
-wget http://gxb-package.oss-cn-hangzhou.aliyuncs.com/gxb-core/gxb_1.0.171116.tar.gz -O gxb_1.0.171116.tar.gz
+wget http://gxb-package.oss-cn-hangzhou.aliyuncs.com/gxb-core/gxb_1.0.180404.tar.gz -O gxb_1.0.180404.tar.gz
 
 # osx 安装包下载
-wget http://gxb-package.oss-cn-hangzhou.aliyuncs.com/gxb-core/osx/gxb_osx_1.0.171227.tar.gz -O gxb_osx_1.0.171227.tar.gz
+wget http://gxb-package.oss-cn-hangzhou.aliyuncs.com/gxb-core/osx/gxb_osx_1.0.180404.tar.gz -O gxb_osx_1.0.180404.tar.gz
 
 # 解压程序
-tar zxvf gxb_1.0.171116.tar.gz
+tar zxvf gxb_1.0.180404.tar.gz
 ```
 
 ### 2. 下载testnet的genesis.json文件 {#2-下载testnet的genesisjson文件}
