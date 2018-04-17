@@ -20,8 +20,8 @@ cli\_wallet 通过 websocket 方式连接到 witness\_node， 管理钱包文件
 
 | 平台 | 下载地址 |
 | :--- | :--- |
-| github | [https://github.com/gxchain/gxb-core/releases/download/1.0.171031/gxb\_1.0.171222.tar.gz](https://github.com/gxchain/gxb-core/releases/download/1.0.171031/gxb_1.0.171222.tar.gz) |
-| 阿里云 | [http://gxb-package.oss-cn-hangzhou.aliyuncs.com/gxb-core/gxb\_1.0.171227.tar.gz](http://gxb-package.oss-cn-hangzhou.aliyuncs.com/gxb-core/gxb_1.0.171227.tar.gz) |
+| github | https://github.com/gxchain/gxb-core/releases/download/v1.0.180403/gxb_1.0.180404.tar.gz |
+| 阿里云 | http://gxb-package.oss-cn-hangzhou.aliyuncs.com/gxb-core/gxb_1.0.180404.tar.gz |
 
 ## 节点端口说明
 
