@@ -4,7 +4,7 @@
 
 ## 测试网络部署方法
 
-测试网络种子节点：106.14.180.117:9999 目前只有一个节点，社区开发者贡献节点可以加入测试网络，申请见证人。
+测试网络种子节点：106.14.180.117:6789 目前只有一个节点，社区开发者贡献节点可以加入测试网络，申请见证人。
 
 钱包接入点：[ws://106.14.180.117:28090](ws://106.14.180.117:28090)
 
@@ -36,7 +36,7 @@ wget http://gxb-package.oss-cn-hangzhou.aliyuncs.com/gxb-core/genesis/testnet-ge
 ### 3. 启动witness\_node，同步区块 {#3-启动witness_node同步区块}
 
 ```
-./programs/witness_node/witness_node --data-dir=testnet_node --rpc-endpoint="0.0.0.0:28090" --p2p-endpoint="0.0.0.0:9999" --seed-nodes='["106.14.180.117:9999"]' --genesis-json genesis.json --log-file &
+./programs/witness_node/witness_node --data-dir=testnet_node --rpc-endpoint="0.0.0.0:28090" --p2p-endpoint="0.0.0.0:9999" --seed-nodes='["106.14.180.117:6789"]' --genesis-json genesis.json --log-file &
 ```
 
 各选项的含义如下：
@@ -49,10 +49,10 @@ wget http://gxb-package.oss-cn-hangzhou.aliyuncs.com/gxb-core/genesis/testnet-ge
 --rpc-endpoint=127.0.0.1:28090
 
 # 用于连接p2p网络，此参数不建议修改
---p2p-endpoint=0.0.0.0:9999
+--p2p-endpoint=0.0.0.0:6789
 
 # 连接测试网络的种子节点
---seed-nodes='["124.127.116.135:9999"]'
+--seed-nodes='["124.127.116.135:6789"]'
 
 # 输出日志文件，若无此参数，日志输出到控制台
 --log-file 
