@@ -33,12 +33,20 @@ SDK提供了和BaaS存储服务交互的方法封装。目前暂时提供Java版
 
 Java - maven
 
+maven仓库地址
+
+```
+http://repo.gxchain.cn/repository/public/
+```
+
+pom依赖
+
 ```xml
-        <dependency>
-            <groupId>com.gxb.block.baas</groupId>
-            <artifactId>baas-sdk-client</artifactId>
-            <version>1.0.0</version>
-        </dependency>
+<dependency>
+    <groupId>com.gxb.block.baas</groupId>
+    <artifactId>baas-sdk-client</artifactId>
+    <version>1.0.0-RELEASE</version>
+</dependency>
 ```
 
 ## BaaS存储服务API接口

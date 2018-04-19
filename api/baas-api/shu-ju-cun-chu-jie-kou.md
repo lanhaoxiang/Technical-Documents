@@ -71,21 +71,21 @@ data: 数据大小限制后续会放开
 ## SDK示例-JAVA
 
 ```java
-// 存取费用
+// 存取费用 需要调用获取费率接口再根据要存数据的大小计算得出该值 eg: 1.2KB的数据费用amount为 2*20=40
 Amount amount = Amount.builder().amount(20L).assetId("1.3.1").build();
 // 原始数据
 String data = "123";
 // 数据MD5值
 String dataMd5 = DigestUtils.md5DigestAsHex(data.getBytes());
-// 你的账户id
+// 你的账户id 可通过区块浏览器输入账户名得到账户id
 String from = "1.2.639290";
-// BaaS账户id
-String baasAccount = "1.2.265";
-// 过期时间
-Long expiration = new Date().getTime() / 1000 + 60;
 // 构建请求体
-StoreDataReq request =
-            StoreDataReq.builder().from(from).to(baasAccount).proxyAccount(baasAccount).amount(amount).percent(0).memo(dataMd5).expiration(expiration).data(data.getBytes()).build();
+StoreDataReq request = new StoreDataReq();
+request.setFrom(EXAMPLE_ACCOUNT);
+request.setAmount(amount);
+request.setMemo(dataMd5);
+request.setData(dataBytes);
+
 // 生成签名
 // 其中YOUR_PRIVATE_KEY / YOUR_PUBLIC_KEY分别为你的帐户对应的私钥和公钥
 String sign = SignatureUtil.signature(request.toBytes(), YOUR_PRIVATE_KEY);
@@ -102,8 +102,9 @@ StoreDataResp resp = baasClient.executeFormData(request,"data",request.getData()
 ```
 具体参照 com.gxb.block.baas.sdk.client.api.example.StoreDataExample
 ```
-
 帐户的id, 帐户活跃权限公钥可以根据帐户名获得：
+
+[区块浏览器地址](https://block.gxb.io/#/)
 
 ```js
 # 以帐户名gxs-dev为例，params传入帐户名
