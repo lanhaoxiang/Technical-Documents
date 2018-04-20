@@ -9,17 +9,13 @@ GET /api/data/{cid}
 ## 请求参数
 
 | 参数 | 类型 | 必填 | 最大长度 | 描述 | 示例 |
-|---|---|---|---|---|---|
-|cid | String | Y | 64 | 存储数据的Cid值 | QmaZrwThXyZm8Rxs93Tih3L6p4Q8NqYEXp32iN4PeAqDgv |
+| --- | --- | --- | --- | --- | --- |
+| cid | String | Y | 64 | 存储数据的Cid值 | QmaZrwThXyZm8Rxs93Tih3L6p4Q8NqYEXp32iN4PeAqDgv |
 
 例子：
 
 ```js
-
-{
-    "cid":"QmaZrwThXyZm8Rxs93Tih3L6p4Q8NqYEXp32iN4PeAqDgv"
-}
-
+GET /api/data/QmaZrwThXyZm8Rxs93Tih3L6p4Q8NqYEXp32iN4PeAqDgv
 ```
 
 ## 响应返回
@@ -35,6 +31,10 @@ byte[] result = IOUtils.toByteArray(baasClient.download());
 ```
 
 ## 错误情况
+
 | code | msg | 描述 |
-| -- | -- |-- |
-| 401 | NO_EXIT | 不存在 |
+| --- | --- | --- |
+| 401 | NO\_EXIT | 不存在 |
+
+
+
