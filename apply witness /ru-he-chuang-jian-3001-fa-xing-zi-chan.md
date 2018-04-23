@@ -10,5 +10,9 @@ https://wallet.gxb.io/#/account/${your_account_name}/create-asset
 
 # 发行资产
 
+1. 访问资产发行链接
+
+
+
 
 
