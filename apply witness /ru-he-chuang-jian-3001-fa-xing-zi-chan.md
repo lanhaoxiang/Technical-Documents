@@ -18,5 +18,5 @@ https://wallet.gxb.io/#/account/${your_account_name}/assets
 
 其中${your\_account\_name}替换成你的公信宝钱包帐户名
 
-页面打开后，会显示
+页面打开后，会显示已发行的资产，点击"发行资产"
 
