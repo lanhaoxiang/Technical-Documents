@@ -7,6 +7,7 @@
 * [测试网络](test net.md)
 * [私有链搭建](private chain.md)
 * [见证人申请](apply witness .md)
+* [如何创建、发行资产](apply witness /ru-he-chuang-jian-3001-fa-xing-zi-chan.md)
 * [API调用](API summary.md)
   * [安装环境](api/installation.md)
   * [Cli-wallet API调用](api/cli-wallet-api.md)
