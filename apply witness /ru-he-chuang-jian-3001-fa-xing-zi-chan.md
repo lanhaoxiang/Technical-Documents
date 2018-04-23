@@ -20,3 +20,5 @@ https://wallet.gxb.io/#/account/${your_account_name}/assets
 
 页面打开后，会显示已发行的资产，点击"发行资产"
 
+![](/assets/import.png)
+
