@@ -12,7 +12,9 @@ https://wallet.gxb.io/#/account/${your_account_name}/create-asset
 
 1. 访问资产发行链接
 
+```
+https://wallet.gxb.io/#/account/${your_account_name}/assets
+```
 
-
-
+其中${your\_account\_name}替换成你的公信宝钱包帐户名
 
