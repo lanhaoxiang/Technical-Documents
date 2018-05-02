@@ -77,23 +77,18 @@ Amount amount = Amount.builder().amount(20L).assetId("1.3.1").build();
 String data = "123";
 // 数据MD5值
 String dataMd5 = DigestUtils.md5DigestAsHex(data.getBytes());
-// 你的账户id 可通过区块浏览器输入账户名得到账户id
-String from = "1.2.639290";
+// 你的账户YOUR_ACCOUNT_ID 可通过区块浏览器输入账户名得到账户id
+String from = "YOUR_ACCOUNT_ID";
 // 构建请求体
 StoreDataReq request = new StoreDataReq();
-request.setFrom(EXAMPLE_ACCOUNT);
-request.setAmount(amount);
+request.setFrom(YOUR_ACCOUNT_ID);
 request.setMemo(dataMd5);
 request.setData(dataBytes);
-
-// 生成签名
+// 存取费用,目前为20 需要调用获取费率接口再根据要存数据的大小计算得出该值 eg: 1.2KB的数据费用amount为 2*20=40
+request.setAmount(request.calculateAmount(20L));
 // 其中YOUR_PRIVATE_KEY / YOUR_PUBLIC_KEY分别为你的帐户对应的私钥和公钥
-String sign = SignatureUtil.signature(request.toBytes(), YOUR_PRIVATE_KEY);
-while (!SignatureUtil.verify(request.toBytes(), sign, YOUR_PUBLIC_KEY, true)) { // 签名需要校验位判断 符合条件输出
-    request.setExpiration(request.getExpiration() + 1);
-    sign = SignatureUtil.signature(request.toBytes(), YOUR_PRIVATE_KEY);
-    }
-request.setSignatures(sign);
+request.setSignatures(request.sign(YOUR_PRIVATE_KEY,YOUR_PUBLIC_KEY));
+
 // 获取返回
 BaasClient baasClient = new BaasDefaultClient(url); // url为请求路径
 StoreDataResp resp = baasClient.executeFormData(request,"data",request.getData());
@@ -102,9 +97,9 @@ StoreDataResp resp = baasClient.executeFormData(request,"data",request.getData()
 ```
 具体参照 com.gxb.block.baas.sdk.client.api.example.StoreDataExample
 ```
-帐户的id, 帐户活跃权限公钥可以根据帐户名获得：
+帐户的id, 帐户活跃权限公钥可以在公信宝区块浏览器上根据帐户名获得：
 
-[区块浏览器地址](https://block.gxb.io/#/)
+区块浏览器地址: [https://block.gxb.io/#/](https://block.gxb.io/#/)
 
 ```js
 # 以帐户名gxs-dev为例，params传入帐户名
