@@ -25,8 +25,8 @@ PC端钱包/网页钱包使用教程:
 
 ## 3. BaaS存储服务地址
 
-* 线上正式地址:  [https://baas.gxchain.cn/api/storage](https://baas.gxchain.cn/api/storage)
-* 线上开发者测试地址: [https://baas-developer.gxchain.cn/api/storage](https://baas-developer.gxchain.cn/api/storage)
+* 线上正式地址:  **https://baas.gxchain.cn/api/storage**
+* 线上开发者测试地址: **https://baas-developer.gxchain.cn/api/storage**
 
 ## 4. 如何调用SDK
 
@@ -34,7 +34,8 @@ SDK提供了和BaaS存储服务交互的方法封装。目前暂时提供Java版
 
 Java - maven
 
-* maven仓库地址: [https://repo.gxchain.cn/repository/public/](https://repo.gxchain.cn/repository/public/)
+* maven仓库地址(HTML View): [https://repo.gxchain.cn/service/rest/repository/browse/maven-public/](https://repo.gxchain.cn/service/rest/repository/browse/maven-public/)
+* maven仓库依赖地址: **https://repo.gxchain.cn/repository/maven-public/**
 
 pom依赖
 
