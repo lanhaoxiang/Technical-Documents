@@ -44,8 +44,7 @@ sudo ./b2 --buildtype=complete install
 安装依赖包：
 
 ```
-brew install openssl cmake git openssl autoconf automake doxygen autoreconfls libtool
-
+brew install wget cmake git openssl autoconf automake doxygen libtool
 ```
 
 安装 boost库：
