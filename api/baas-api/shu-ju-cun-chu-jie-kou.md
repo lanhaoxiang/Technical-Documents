@@ -97,9 +97,10 @@ StoreDataResp resp = baasClient.executeFormData(request,"data",request.getData()
 ```
 具体参照 com.gxb.block.baas.sdk.client.api.example.StoreDataExample
 ```
+
 帐户的id, 帐户活跃权限公钥可以在公信宝区块浏览器上根据帐户名获得：
 
-区块浏览器地址: [https://block.gxb.io/#/](https://block.gxb.io/#/)
+区块浏览器地址: [https://block.gxb.io/\#/](https://block.gxb.io/#/)
 
 ```js
 # 以帐户名gxs-dev为例，params传入帐户名

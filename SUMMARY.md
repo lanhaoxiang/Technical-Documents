@@ -34,7 +34,6 @@
     * [get\_account\_balances](api/witness-api/getaccount-balances.md)
     * [list\_assets](api/witness-api/listassets.md)
   * [BaaS存储API](api/baas-api.md)
-    * [获取费率接口](api/baas-api/huo-qu-fei-lv-jie-kou.md)
     * [获取服务提供方信息](api/baas-api/huo-qu-fu-wu-ti-gong-fang-xin-xi.md)
     * [数据存储接口](api/baas-api/shu-ju-cun-chu-jie-kou.md)
     * [获取已存数据接口](api/baas-api/huo-qu-yi-cun-shu-ju-jie-kou.md)

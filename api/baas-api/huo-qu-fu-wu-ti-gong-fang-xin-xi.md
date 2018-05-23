@@ -1,7 +1,7 @@
 # 获取服务提供方信息
 
 ```
-GET /api/v2/store/provider
+GET /api/provider
 
 {
     "code":200,
