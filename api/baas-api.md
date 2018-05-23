@@ -55,9 +55,9 @@ SDK提供了和BaaS存储服务交互的方法封装。目前暂时提供Java版
 
 | 接口 | 描述 |
 | :--- | :--- |
-| GET   v2/store/provider | 获取存储服务提供方信息，包括提供方账户信息，费率等信息 |
-| GET   v2/store/data | 获取数据接口，根据cid获取数据 |
-| POST v2/store | 数据存储接口 |
+| GET   /provider | 获取存储服务提供方信息，包括提供方账户信息，费率等信息 |
+| GET   /data | 获取数据接口，根据cid获取数据 |
+| POST /store | 数据存储接口 |
 
 
 
