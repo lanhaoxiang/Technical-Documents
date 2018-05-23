@@ -19,7 +19,7 @@
 
 # 发行资产
 
-1. 访问资产发行链接
+1. 资产创建完成后，需要发行资产
 
 ```
 https://wallet.gxb.io/#/account/${your_account_name}/assets
