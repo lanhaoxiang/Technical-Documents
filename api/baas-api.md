@@ -55,9 +55,9 @@ SDK提供了和BaaS存储服务交互的方法封装。目前暂时提供Java版
 
 | 接口 | 描述 |
 | :--- | :--- |
-| [storeFee](/api/baas-api/huo-qu-fei-lv-jie-kou.md) | 获取存储费率，以GXS支付 |
-| [store](/api/baas-api/shu-ju-cun-chu-jie-kou.md) | 数据存储接口 |
-| [data](/api/baas-api/huo-qu-yi-cun-shu-ju-jie-kou.md) | 获取数据接口，根据cid获取数据 |
+| GET   v2/store/provider | 获取存储服务提供方信息，包括提供方账户信息，费率等信息 |
+| GET   v2/store/data | 获取数据接口，根据cid获取数据 |
+| POST v2/store | 数据存储接口 |
 
 
 
