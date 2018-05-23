@@ -24,11 +24,11 @@
 | 1.13.x | 冻结中的财产对象vesting balance object |
 | 1.14.x | worker object |
 | 1.15.x | 余额对象balance object |
-| 2.0.x | 全局财产对象global\_property\_object |
-| 2.1.x | 动态全局财产对象dynamic\_global\_property\_object |
+| 2.0.x | 全局参数对象global\_property\_object |
+| 2.1.x | 动态全局参数对象dynamic\_global\_property\_object |
 | 2.3.x | 资产动态对象asset\_dynamic\_object |
-| 2.5.x | 账户月对象account\_balance\_object |
-| 2.6.x | 账户数据对象account\_statistics\_object |
+| 2.5.x | 账户余额对象account\_balance\_object |
+| 2.6.x | 账户统计对象account\_statistics\_object |
 | 2.7.x | 交易对象transaction\_object |
 | 2.8.x | 区块概要对象block\_summary\_object |
 | 2.9.x | 账户交易历史对象account\_transaction\_history\_object |
