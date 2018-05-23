@@ -19,15 +19,10 @@
 
 # 发行资产
 
-1. 资产创建完成后，需要发行资产
+1. 资产创建完成后，需要发行资产![](/assets/issue_asset1.png)
+2. ![](/assets/issue_asset1.png)
 
-```
-https://wallet.gxb.io/#/account/${your_account_name}/assets
-```
 
-其中${your\_account\_name}替换成你的公信宝钱包帐户名
-
-页面打开后，会显示已发行的资产，点击"发行资产"
 
 ![](/assets/import.png)
 
