@@ -4,7 +4,7 @@
 
 ## 请求地址
 
-GET /api/data/{cid}
+GET /data/{cid}
 
 ## 请求参数
 
