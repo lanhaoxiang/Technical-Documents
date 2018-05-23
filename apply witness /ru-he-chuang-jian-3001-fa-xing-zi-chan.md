@@ -1,12 +1,16 @@
 # 创建资产
 
-1. 访问创建资产链接
+1. 访问公信宝网页钱包，导入私钥
 
 ```
-https://wallet.gxb.io/#/account/${your_account_name}/create-asset
+https://wallet.gxb.io
 ```
 
-其中${your\_account\_name}替换成你的公信宝钱包帐户名
+其中${account\_name}替换成你的公信宝钱包帐户名，并且需要导入该帐户的私钥。比如我的帐户是asset-create，那么创建资产的网页地址是
+
+```
+
+```
 
 # 发行资产
 
