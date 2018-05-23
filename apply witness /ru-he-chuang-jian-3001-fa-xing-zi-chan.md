@@ -21,5 +21,5 @@
 
 1. 资产创建完成后，需要发行资产![](/assets/issue_asset1.png)
 
-
+![](/assets/issue_asset2.png)
 
