@@ -5,6 +5,8 @@
 
 #### ![](/assets/create_asset1.png)
 
+![](/assets/create_asset2.png)
+
 # 发行资产
 
 1. 访问资产发行链接
