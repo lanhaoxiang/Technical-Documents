@@ -34,7 +34,7 @@ data: 数据大小限制后续会放开
 例子：
 
 ```js
-{
+POST /store -d '{
     "from":"1.2.264",
     "to":"1.2.265",
     "proxy_account":"1.2.265",
@@ -44,8 +44,8 @@ data: 数据大小限制后续会放开
     "memo":"68b329da9893e34099c7d8ad5cb9c940",
     "expiration":1523390848,
     "signature": "1f150b63b7439559f258aa9830f05551c49172bf1862418480fa261e7456dda8d67f08c2c6e86f716",
-    "data":
-}
+    "data":""
+}'
 ```
 
 ## 响应参数
