@@ -20,9 +20,6 @@
 # 发行资产
 
 1. 资产创建完成后，需要发行资产![](/assets/issue_asset1.png)
-2. ![](/assets/issue_asset1.png)
 
 
-
-![](/assets/import.png)
 
