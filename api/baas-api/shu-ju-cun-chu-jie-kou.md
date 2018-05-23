@@ -4,7 +4,7 @@
 
 ## 请求地址
 
-POST /api/store
+POST /store
 
 Content-Type= **multipart/form-data**
 
