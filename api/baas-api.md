@@ -25,10 +25,8 @@ PC端钱包/网页钱包使用教程:
 
 ## 3. BaaS存储服务地址
 
-* 线上正式地址:  [https://baas.gxchain.cn/api/storage](https://baas.gxchain.cn/api/storage)
-* 线上开发者测试地址\(testnet\): [https://baas-developer.gxchain.cn/api/storage](https://baas-developer.gxchain.cn/api/storage)
-
-线上开发者测试, gxs-baas帐户id:1.2.60, pub\_key: GXC6MMbenFaJjrd6fg47KA6PvLi1Zo89QjccsKFAYLz85ZNtiGqmT
+* 线上正式地址:  **https://baas.gxchain.cn/api/storage**
+* 线上开发者测试地址: **https://baas-developer.gxchain.cn/api/storage**
 
 ## 4. 如何调用SDK
 
@@ -36,10 +34,20 @@ SDK提供了和BaaS存储服务交互的方法封装。目前暂时提供Java版
 
 #### Java - maven
 
-* maven仓库地址\(HTML View\): [https://repo.gxchain.cn/service/rest/repository/browse/maven-public/](https://repo.gxchain.cn/service/rest/repository/browse/maven-public/)
-* maven仓库引入地址: [https://repo.gxchain.cn/repository/maven-public/](https://repo.gxchain.cn/repository/maven-public/)
+* maven仓库地址(HTML View): [https://repo.gxchain.cn/service/rest/repository/browse/maven-public/](https://repo.gxchain.cn/service/rest/repository/browse/maven-public/)
+* maven仓库引入地址: **https://repo.gxchain.cn/repository/maven-public/**
 
-**\(ps: 如果无法引入包，请将https更换成http尝试一下\)**
+**(ps: 如果无法引入包，请将https更换成http尝试一下)**
+
+#### maven setting.xml
+
+```xml
+<mirror>
+    <id>gxchain</id>
+    <mirrorOf>*</mirrorOf>
+    <url>http://repo.gxchain.cn/repository/maven-public/</url>
+</mirror>
+```
 
 #### pom dependency
 
@@ -55,9 +63,9 @@ SDK提供了和BaaS存储服务交互的方法封装。目前暂时提供Java版
 
 | 接口 | 描述 |
 | :--- | :--- |
-| GET   /provider | 获取存储服务提供方信息，包括提供方账户信息，费率等信息 |
-| GET   /data | 获取数据接口，根据cid获取数据 |
-| POST /store | 数据存储接口 |
+| [store/fee](/api/baas-api/huo-qu-fei-lv-jie-kou.md) | 获取存储费率，以GXS支付 |
+| [store](/api/baas-api/shu-ju-cun-chu-jie-kou.md) | 数据存储接口 |
+| [data](/api/baas-api/huo-qu-yi-cun-shu-ju-jie-kou.md) | 获取数据接口，根据cid获取数据 |
 
 
 
