@@ -25,9 +25,18 @@ GET /api/data/QmaZrwThXyZm8Rxs93Tih3L6p4Q8NqYEXp32iN4PeAqDgv
 ## SDK示例-JAVA
 
 ```java
-String cid = "";
-BaasClient baasClient = new BaasDefaultClient(url + "/" + cid,false);
-byte[] result = IOUtils.toByteArray(baasClient.download());
+// build store client
+// EXAMPLE_ACCOUNT is your account id
+// EXAMPLE_PRIVATE_KEY is your account private key
+// EXAMPLE_PUBLIC_KEY is your account public key
+// * Attention: Your EXAMPLE_PRIVATE_KEY and EXAMPLE_PUBLIC_KEY can not be uploaded.
+StoreClient client = new StoreClient(EXAMPLE_ACCOUNT, EXAMPLE_PRIVATE_KEY, EXAMPLE_PUBLIC_KEY, false);
+// byte[]
+byte[] result = client.getRawBytes(CID);
+// String
+String str = client.getRawString(CID);
+// File
+String file = client.downloadFile(CID,TARGET_FILE); // TARGET_FILE is java.io.File.
 ```
 
 ## 错误情况
