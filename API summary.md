@@ -8,5 +8,5 @@
 
 如需了解Witness API 请点击[这里](/api/witness-api.md)。
 
-如需了解BaaS-API请点击[这里](/apidiao-yong/baas-api.md)。
+如需了解BaaS-API请点击[这里](/api/baas-api.md)。
 
