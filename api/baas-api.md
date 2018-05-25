@@ -55,7 +55,7 @@ SDK提供了和BaaS存储服务交互的方法封装。目前暂时提供Java版
 <dependency>
     <groupId>com.gxb.block.baas</groupId>
     <artifactId>baas-sdk-client</artifactId>
-    <version>1.0.0-RELEASE</version>
+    <version>1.0.1-RELEASE</version>
 </dependency>
 ```
 
