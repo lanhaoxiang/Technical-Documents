@@ -123,7 +123,7 @@ witness_node --data-dir data
 ********************************
 ```
 
-之后会有更多成功生成区块的日志生成:
+之后data/log/witness.log会有更多成功生成区块的日志生成:
 
 ```
 2322793ms th_a  main.cpp:176     main    ] Started witness node on a chain with 0 blocks.
@@ -141,6 +141,8 @@ witness_node --data-dir data
 2355609ms th_a  witness.cpp:194  block_production_loo ] Not producing block because slot has not yet arrived
 2356609ms th_a  witness.cpp:194  block_production_loo ] Not producing block because slot has not yet arrived
 ```
+
+如果
 
 ## 7、客户端（Cli）用法
 
@@ -240,7 +242,6 @@ suggest_brain_key
 register_account alpha GXC6vQtDEgHSickqe9itW8fbFyUrKZK5xsg4FRHzQZ7hStaWqEKhZ GXC6vQtDEgHSickqe9itW8fbFyUrKZK5xsg4FRHzQZ7hStaWqEKhZ nathan nathan 10
 ```
 
-  
 最终将有类似如下的回复：
 
 ```
