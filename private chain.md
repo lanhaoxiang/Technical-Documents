@@ -142,7 +142,7 @@ witness_node --data-dir data
 2356609ms th_a  witness.cpp:194  block_production_loo ] Not producing block because slot has not yet arrived
 ```
 
-如果witness.log无日志生成，可以修改data/config.ini文件如下，然后重新启动witness
+如果witness.log无日志生成，可以将日志打印打控制台，可以修改data/config.ini文件如下，然后重新启动witness
 
 ```
 [logger.default]
