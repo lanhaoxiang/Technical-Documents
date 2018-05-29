@@ -123,7 +123,7 @@ witness_node --data-dir data
 ********************************
 ```
 
-之后data/log/witness.log会有更多成功生成区块的日志生成:
+之后data/log/witness.log文件会有更多成功生成区块的日志生成:
 
 ```
 2322793ms th_a  main.cpp:176     main    ] Started witness node on a chain with 0 blocks.
