@@ -66,7 +66,7 @@ witness_node --data-dir data --genesis-json my-genesis.json   # your own genesis
 
 ## 5、配置见证人
 
-用文本编辑器打开刚生成的`/data/config.ini`, 做如下设置, 必要时请不要注释这些代码:
+用文本编辑器打开刚生成的`data/config.ini`, 做如下设置, 必要时请不要注释这些代码:
 
 ```
 rpc-endpoint = 127.0.0.1:11011
@@ -142,7 +142,13 @@ witness_node --data-dir data
 2356609ms th_a  witness.cpp:194  block_production_loo ] Not producing block because slot has not yet arrived
 ```
 
-如果
+如果witness.log无日志生成，可以修改data/config.ini文件如下，然后重新启动witness
+
+```
+[logger.default]
+level=debug
+appenders=stderr
+```
 
 ## 7、客户端（Cli）用法
 
