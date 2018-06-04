@@ -50,7 +50,5 @@
 
 上面的json文件中，每一行是一个json，其中id为对象id,  对象id文件参考[这里](https://github.com/gxchain/gxb-core/wiki/Objects-and-IDS)
 
-其中：
-
-1.25.x为锁仓余额对象
+其中：1.25.x为锁仓余额对象, 2.5.x为余额对象
 
