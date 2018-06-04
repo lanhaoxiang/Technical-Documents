@@ -21,7 +21,7 @@
 
 如果指定的区块高度小于最新区块高度，即过去某个时间点的快照，启动witness\_node时需要再加上--replay-blockchain参数
 
-#### 快照文件中将保存所有的内存数据对象，按行保存，每一行为一个json。如下：
+#### 快照文件中将保存所有的内存数据对象，按行保存，每一行是一个json。如下：
 
 ```
 {"id":"1.2.0","membership_expiration_date":"2106-02-07T06:28:15","merchant_expiration_date":"1970-01-01T00:00:00","datasource_expiration_date":"1970-01-01T00:00:00","data_transaction_member_expiration_date":"1970-01-01T00:00:00","registrar":"1.2.0","referrer":"1.2.0","lifetime_referrer":"1.2.0","merchant_auth_referrer":"1.2.0","datasource_auth_referrer":"1.2.0","network_fee_percentage":2000,"lifetime_referrer_fee_percentage":8000,"referrer_rewards_percentage":0,"name":"committee-account","owner":{"weight_threshold":1,"account_auths":[],"key_auths":[],"address_auths":[]},"active":{"weight_threshold":23858,"account_auths":[["1.2.6",45685],["1.2.7",203],["1.2.8",203],["1.2.9",203],["1.2.10",203],["1.2.11",203],["1.2.12",203],["1.2.13",203],["1.2.14",203],["1.2.15",203],["1.2.16",203]],"key_auths":[],"address_auths":[]},"options":{"memo_key":"GXC1111111111111111111111111111111114T1Anm","voting_account":"1.2.5","num_witness":0,"num_committee":0,"votes":[],"extensions":[]},"statistics":"2.6.0","whitelisting_accounts":[],"blacklisting_accounts":[],"whitelisted_accounts":[],"blacklisted_accounts":[],"owner_special_authority":[0,{}],"active_special_authority":[0,{}],"top_n_control_flags":0}
@@ -35,6 +35,8 @@
 {"id":"2.16.1","accumulated_fba_fees":0,"designated_asset":"1.3.743"}
 {"id":"2.16.2","accumulated_fba_fees":0,"designated_asset":"1.3.743"}
 ```
+
+上面的json文件中，每一行是一个json
 
 
 
