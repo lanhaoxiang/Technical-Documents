@@ -4,7 +4,7 @@
 
 | 阿里云 | [http://gxb-package.oss-cn-hangzhou.aliyuncs.com/gxb-core/gxb\_1.0.180604.tar.gz](http://gxb-package.oss-cn-hangzhou.aliyuncs.com/gxb-core/gxb_1.0.180604.tar.gz) |
 | :--- | :--- |
-
+| github | https://github.com/gxchain/gxb-core/releases/download/1.0.180604/gxb\_1.0.180604.tar.gz |
 
 #### 启动witness\_node程序, 在启动参数里指定区块高度和快照文件路径
 
