@@ -4,7 +4,7 @@
 
 | 阿里云 | [http://gxb-package.oss-cn-hangzhou.aliyuncs.com/gxb-core/gxb\_1.0.180604.tar.gz](http://gxb-package.oss-cn-hangzhou.aliyuncs.com/gxb-core/gxb_1.0.180604.tar.gz) |
 | :--- | :--- |
-| github | https://github.com/gxchain/gxb-core/releases/download/1.0.180604/gxb\_1.0.180604.tar.gz |
+| github | [https://github.com/gxchain/gxb-core/releases/download/1.0.180604/gxb\_1.0.180604.tar.gz](https://github.com/gxchain/gxb-core/releases/download/1.0.180604/gxb_1.0.180604.tar.gz) |
 
 #### 启动witness\_node程序, 在启动参数里指定区块高度和快照文件路径
 
@@ -48,7 +48,7 @@
 {"id":"2.16.2","accumulated_fba_fees":0,"designated_asset":"1.3.743"}
 ```
 
-上面的json文件中，每一行是一个json，其中id为对象id,  对象id文件参考[这里](https://github.com/gxchain/gxb-core/wiki/Objects-and-IDS)
+上面的json文件中，每一行是一个json，其中id为对象id, 1.25.x为忠诚计划余额对象, 2.5.x为余额对象; 对象id文件参考[这里](https://github.com/gxchain/gxb-core/wiki/Objects-and-IDS)
 
-其中：1.25.x为锁仓余额对象, 2.5.x为余额对象
+如果要解析帐户GXS余额，需要解析1.25.x和2.5.x两个对象， asset\_id的1.3.1, owner为余额所属帐户。
 
