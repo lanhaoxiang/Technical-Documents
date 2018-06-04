@@ -31,12 +31,18 @@
 {"id":"2.13.37553","time":"2018-06-04T06:00:00","record":{"time_since_last_budget":600,"from_initial_reserve":"10193891740740","from_accumulated_fees":0,"from_unused_witness_budget":300000,"requested_witness_budget":20000000,"total_budget":24209195,"witness_budget":20000000,"worker_budget":4209195,"leftover_worker_funds":4209195,"supply_delta":19700000}}
 {"id":"2.13.37554","time":"2018-06-04T06:10:00","record":{"time_since_last_budget":600,"from_initial_reserve":"10193872040740","from_accumulated_fees":0,"from_unused_witness_budget":300000,"requested_witness_budget":20000000,"total_budget":24209148,"witness_budget":20000000,"worker_budget":4209148,"leftover_worker_funds":4209148,"supply_delta":19700000}}
 {"id":"2.13.37555","time":"2018-06-04T06:20:00","record":{"time_since_last_budget":600,"from_initial_reserve":"10193852340740","from_accumulated_fees":0,"from_unused_witness_budget":300000,"requested_witness_budget":20000000,"total_budget":24209101,"witness_budget":20000000,"worker_budget":4209101,"leftover_worker_funds":4209101,"supply_delta":19700000}}
+...
+{"id":"1.25.1","owner":"1.2.15","create_date_time":"2017-10-31T14:16:16","lock_days":90,"program_id":"3","amount":{"amount":10000000,"asset_id":"1.3.1"},"interest_rate":400,"memo":""}
+{"id":"1.25.3","owner":"1.2.15","create_date_time":"2017-10-31T14:16:27","lock_days":1,"program_id":"1","amount":{"amount":10000000,"asset_id":"1.3.1"},"interest_rate":400,"memo":""}
+{"id":"1.25.17","owner":"1.2.17","create_date_time":"2017-10-31T14:18:22","lock_days":1,"program_id":"1","amount":{"amount":500000,"asset_id":"1.3.1"},"interest_rate":400,"memo":""}
+...
+
 {"id":"2.16.0","accumulated_fba_fees":0,"designated_asset":"1.3.743"}
 {"id":"2.16.1","accumulated_fba_fees":0,"designated_asset":"1.3.743"}
 {"id":"2.16.2","accumulated_fba_fees":0,"designated_asset":"1.3.743"}
 ```
 
-上面的json文件中，每一行是一个json
+上面的json文件中，每一行是一个json，其中id为对象id,  对象id文件参考[这里](https://github.com/gxchain/gxb-core/wiki/Objects-and-IDS)
 
-
+其中1.25.x为锁仓余额对象
 
