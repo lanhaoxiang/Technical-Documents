@@ -2,7 +2,7 @@
 
 下载最新版witness\_node程序，下载地址
 
-| 阿里云 | http://gxb-package.oss-cn-hangzhou.aliyuncs.com/gxb-core/gxb\_1.0.180604.tar.gz |
+| 阿里云 | [http://gxb-package.oss-cn-hangzhou.aliyuncs.com/gxb-core/gxb\_1.0.180604.tar.gz](http://gxb-package.oss-cn-hangzhou.aliyuncs.com/gxb-core/gxb_1.0.180604.tar.gz) |
 | :--- | :--- |
 
 
@@ -16,5 +16,5 @@
  --snapshot-at-block 9623000 --snapshot-to snapshot.0604.txt --plugins snapshot &
 ```
 
-
+其中--snapshot-at-block 9623000指定区块高度，即在此区块高度时，保存快照； --snapshot-to snapshot.0604.txt指定了快照文件，保存在当前目录下\(也可以使用绝对路径\)
 
