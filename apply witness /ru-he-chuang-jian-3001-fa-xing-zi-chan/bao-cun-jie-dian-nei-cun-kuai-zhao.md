@@ -36,7 +36,13 @@
 {"id":"1.25.3","owner":"1.2.15","create_date_time":"2017-10-31T14:16:27","lock_days":1,"program_id":"1","amount":{"amount":10000000,"asset_id":"1.3.1"},"interest_rate":400,"memo":""}
 {"id":"1.25.17","owner":"1.2.17","create_date_time":"2017-10-31T14:18:22","lock_days":1,"program_id":"1","amount":{"amount":500000,"asset_id":"1.3.1"},"interest_rate":400,"memo":""}
 ...
-
+{"id":"2.5.0","owner":"1.2.0","asset_type":"1.3.0","balance":"1982649276131"}
+{"id":"2.5.1","owner":"1.2.17","asset_type":"1.3.0","balance":"99975815407107840"}
+{"id":"2.5.2","owner":"1.2.18","asset_type":"1.3.0","balance":"100275999963"}
+{"id":"2.5.3","owner":"1.2.6","asset_type":"1.3.0","balance":75234770}
+{"id":"2.5.4","owner":"1.2.7","asset_type":"1.3.0","balance":"9921797683209"}
+{"id":"2.5.5","owner":"1.2.8","asset_type":"1.3.0","balance":"49990752447"}
+。。。
 {"id":"2.16.0","accumulated_fba_fees":0,"designated_asset":"1.3.743"}
 {"id":"2.16.1","accumulated_fba_fees":0,"designated_asset":"1.3.743"}
 {"id":"2.16.2","accumulated_fba_fees":0,"designated_asset":"1.3.743"}
@@ -44,5 +50,9 @@
 
 上面的json文件中，每一行是一个json，其中id为对象id,  对象id文件参考[这里](https://github.com/gxchain/gxb-core/wiki/Objects-and-IDS)
 
-其中1.25.x为锁仓余额对象
+其中：
+
+1.25.x为锁仓余额对象
+
+
 
