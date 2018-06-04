@@ -13,8 +13,11 @@
 --rpc-endpoint="0.0.0.0:28090" --p2p-endpoint="0.0.0.0:6789" \
  --log-file --max-ops-per-account=0 --partial-operations=true \
  --data-transaction-lifetime=1 \
- --snapshot-at-block 9623000 --snapshot-to snapshot.0604.txt --plugins snapshot &
+ --plugins snapshot \
+ --snapshot-at-block 9623000 --snapshot-to snapshot.0604.txt &
 ```
 
 其中--snapshot-at-block 9623000指定区块高度，即在此区块高度时，保存快照； --snapshot-to snapshot.0604.txt指定了快照文件，保存在当前目录下\(也可以使用绝对路径\)
+
+
 
