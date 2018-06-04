@@ -42,7 +42,7 @@
 {"id":"2.5.3","owner":"1.2.6","asset_type":"1.3.0","balance":75234770}
 {"id":"2.5.4","owner":"1.2.7","asset_type":"1.3.0","balance":"9921797683209"}
 {"id":"2.5.5","owner":"1.2.8","asset_type":"1.3.0","balance":"49990752447"}
-。。。
+...
 {"id":"2.16.0","accumulated_fba_fees":0,"designated_asset":"1.3.743"}
 {"id":"2.16.1","accumulated_fba_fees":0,"designated_asset":"1.3.743"}
 {"id":"2.16.2","accumulated_fba_fees":0,"designated_asset":"1.3.743"}
@@ -53,6 +53,4 @@
 其中：
 
 1.25.x为锁仓余额对象
-
-
 
