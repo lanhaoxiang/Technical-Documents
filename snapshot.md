@@ -2,6 +2,8 @@
 
 #### 下载最新版witness\_node程序，下载地址
 
+**程序可能会 更新，请**[**点击这里**](https://github.com/gxchain/gxb-core/releases/latest)**下载最新程序。**
+
 | 阿里云 | [http://gxb-package.oss-cn-hangzhou.aliyuncs.com/gxb-core/gxb\_1.0.180604.tar.gz](http://gxb-package.oss-cn-hangzhou.aliyuncs.com/gxb-core/gxb_1.0.180604.tar.gz) |
 | :--- | :--- |
 | github | [https://github.com/gxchain/gxb-core/releases/download/1.0.180604/gxb\_1.0.180604.tar.gz](https://github.com/gxchain/gxb-core/releases/download/1.0.180604/gxb_1.0.180604.tar.gz) |
