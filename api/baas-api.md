@@ -34,8 +34,8 @@ SDK提供了和BaaS存储服务交互的方法封装。目前暂时提供Java版
 
 #### Java - maven
 
-* maven仓库地址\(HTML View\): [https://repo.gxchain.cn/service/rest/repository/browse/maven-public/](https://repo.gxchain.cn/service/rest/repository/browse/maven-public/)
-* maven仓库引入地址: [https://repo.gxchain.cn/repository/maven-public/](https://repo.gxchain.cn/repository/maven-public/)
+* maven仓库地址\(HTML View\): `https://repo.gxchain.cn/service/rest/repository/browse/maven-public/`
+* maven仓库引入地址: `https://repo.gxchain.cn/repository/maven-public/`
 
 **\(ps: 如果无法引入包，请将https更换成http尝试一下\)**
 
