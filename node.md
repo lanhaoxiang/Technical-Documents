@@ -12,16 +12,11 @@ sudo apt-get install ntp
 
 ### Linux系统
 
-Ubuntu 14.04 LTS 64位系统，见证节点程序下载，选择其中一个下载即可。
+公信链程序目前只提供Ubuntu 14.04 LTS 64位系统的安装包，[点击这里](https://github.com/gxchain/gxb-core/releases/latest)下载最新程序。
 
-| 平台 | 下载地址 |
-| :--- | :--- |
-|github| https://github.com/gxchain/gxb-core/releases/ (选择相应的版本即可)|
-|阿里云| http://gxb-package.oss-cn-hangzhou.aliyuncs.com/gxb-core/gxb_1.0.171031.tar.gz |
+## OS X系统
 
-### OS X系统
 OS X系统运行，需要自主编译程序。点击[这里](/gxb-core.md)
-
 
 ## 公信链的安装方法
 
@@ -36,8 +31,9 @@ nohup ./programs/witness_node/witness_node --data-dir=trusted_node --rpc-endpoin
 --partial-operations=true >>witness.out 2>&1 &
 ```
 
-可使用--help 来查看命令参数
-witness_node启动参数：
+可使用--help 来查看命令参数  
+witness\_node启动参数：
+
 ```
 # 指定数据及配置文件存储的目录
 --data-dir=trusted_node
@@ -69,5 +65,6 @@ witness_node启动参数：
 --resync-blockchain
 ```
 
-完全同步区块，大约需要30分钟以上。通过后台日志文件trusted\_node/logs/witness.log可查看区块同步进度，访问[公信宝区块浏览器](https://block.gxb.io)查看最新区块。
+完全同步区块，大约需要30分钟以上。通过后台日志文件trusted\_node/logs/witness.log可查看区块同步进度，访问[公信宝区块浏览器](https://block.gxb.io)查看最新区块。  
 待区块同步至最新，公信链节点即部署成功。
+
