@@ -25,8 +25,8 @@ PC端钱包/网页钱包使用教程:
 
 ## 3. BaaS存储服务地址
 
-* 线上正式地址:  https://baas.gxchain.cn/api/storage
-* 线上开发者测试地址: https://baas-developer.gxchain.cn/api/storage
+* 线上正式地址:  `https://baas.gxchain.cn/api/storage`
+* 线上开发者测试地址: `https://baas-developer.gxchain.cn/api/storage`
 
 ## 4. 如何调用SDK
 
