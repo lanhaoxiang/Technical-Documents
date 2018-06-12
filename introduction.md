@@ -12,16 +12,9 @@ witness\_node 通过 P2P 方式连接到公信链网络，从网络接收最新�
 
 cli\_wallet 通过 websocket 方式连接到 witness\_node， 管理钱包文件； 提供交易签名功能，签名后通过 witness\_node 向外广播； 通过 http rpc 的方式提供 API 供其他程序调用。
 
-## **公信链客户端下载**
+## **公信链程序下载**
 
-公信链客户端下载地址， 目前只提供Ubuntu 14.04 LTS 64位系统的安装包;  OS X系统[安装包下载](http://gxb-package.oss-cn-hangzhou.aliyuncs.com/gxb-core/osx/gxb_osx_1.0.171227.tar.gz)。
-
-选择其中一个下载即可。
-
-| 平台 | 下载地址 |
-| :--- | :--- |
-| github | https://github.com/gxchain/gxb-core/releases/download/v1.0.180403/gxb_1.0.180404.tar.gz |
-| 阿里云 | http://gxb-package.oss-cn-hangzhou.aliyuncs.com/gxb-core/gxb_1.0.180404.tar.gz |
+公信链程序目前只提供Ubuntu 14.04 LTS 64位系统的安装包，[点击这里](https://github.com/gxchain/gxb-core/releases/latest)下载最新程序。
 
 ## 节点端口说明
 
