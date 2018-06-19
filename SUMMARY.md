@@ -9,7 +9,6 @@
 * [见证人申请](apply witness .md)
 * [GXChain资产钱包接入说明](gxchainzi-chan-qian-bao-jie-ru-shuo-ming.md)
 * [如何创建、发行资产](assets/asset-create.md)
-* [GXChain资产钱包接入说明](gxchainzi-chan-qian-bao-jie-ru-shuo-ming.md)
 * [API调用](API summary.md)
   * [安装环境](api/installation.md)
   * [Cli-wallet API调用](api/cli-wallet-api.md)
