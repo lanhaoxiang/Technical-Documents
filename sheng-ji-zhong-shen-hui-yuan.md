@@ -10,10 +10,11 @@
 
 
 ### 升级终身会员方法
-升级终身会员，轻钱包目前没有提供入口，需要使用命令行版本钱包cli_wallet来操作。以下步骤需要在mac环境中打开terminal执行命令。
+升级终身会员，轻钱包目前没有提供入口，需要使用命令行版本钱包cli_wallet来操作。cli_wallet下载，访问https://github.com/gxchain/gxb-core/releases/latest
 
 1. 下载 cli_wallet, 并解压缩
 ```
+# 在mac环境中打开terminal执行命令
 wget http://gxb-package.oss-cn-hangzhou.aliyuncs.com/gxb-core/cli_wallet.20180621.tar.gz -O  cli_wallet.20180621.tar.gz
 
 tar zxvf cli_wallet.20180621.tar.gz
