@@ -14,7 +14,6 @@
 
 1. 下载 cli_wallet, 并解压缩
 ```
-# 在mac环境中打开terminal执行命令
 wget http://gxb-package.oss-cn-hangzhou.aliyuncs.com/gxb-core/cli_wallet.20180621.tar.gz -O  cli_wallet.20180621.tar.gz
 
 tar zxvf cli_wallet.20180621.tar.gz
