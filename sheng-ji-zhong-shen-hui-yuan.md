@@ -48,7 +48,7 @@ unlock成功后，交互提示符变为:`unlocked >>>`
 
 如果交互提示符为`locked>>>` ,说明cli\_wallet处于锁定状态，需要执行`unlock "密码"` 来解锁
 
-### 导入帐户私钥  
+### 导入帐户私钥
 
 cli\_wallet在unlocked状态时，导入公信宝钱包帐户的私钥
 
@@ -58,36 +58,33 @@ import_key 帐户名 私钥
 
 导入成功，会打印true
 
-### 升级会员  
+### 升级会员
 
-\`\`\`  
+`upgrade_account 帐户名 GXS true`
 
-upgrade\_account 帐户名 GXS true
+其中GXS表示使用GXS支付手续费，true表示发起交易广播。如果帐户余额充足，执行成功后，会打印一段消息体：
 
 ```
-其中GXS表示使用GXS支付手续费，true表示发起交易广播。如果帐户余额充值，执行成功后，会打印一段消息体：
+{
+  "ref_block_num": 51719,
+  "ref_block_prefix": 2453137187,
+  "expiration": "2018-06-21T07:30:09",
+  "operations": [[
+      8,{
+        "fee": {
+          "amount": 600000,
+          "asset_id": "1.3.1"
+        },
+        "account_to_upgrade": "1.2.895678",
+        "upgrade_to_lifetime_member": true,
+        "extensions": []
+      }
+    ]
+  ],
+  "extensions": [],
+  "signatures": []
+}
 ```
-
-{  
-  "ref\_block\_num": 51719,  
-  "ref\_block\_prefix": 2453137187,  
-  "expiration": "2018-06-21T07:30:09",  
-  "operations": \[\[  
-      8,{  
-        "fee": {  
-          "amount": 600000,  
-          "asset\_id": "1.3.1"  
-        },  
-        "account\_to\_upgrade": "1.2.895678",  
-        "upgrade\_to\_lifetime\_member": true,  
-        "extensions": \[\]  
-      }  
-    \]  
-  \],  
-  "extensions": \[\],  
-  "signatures": \[\]  
-}  
-\`\`\`
 
 ### 网页钱包查看已升级的帐户状态
 
