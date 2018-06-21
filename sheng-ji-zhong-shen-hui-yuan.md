@@ -53,8 +53,9 @@ import_key 帐户名 私钥
 upgrade_account 帐户名 GXS true
 
 ```
-其中GXS表示使用GXS支付手续费，true表示发起交易广播
-如果帐户余额充值，执行成功后，会打印一段消息体：
+
+其中GXS表示使用GXS支付手续费，true表示发起交易广播。如果帐户余额充值，执行成功后，会打印一段消息体：
+
 ```
 {
   "ref_block_num": 51719,
