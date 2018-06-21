@@ -8,6 +8,7 @@
 * [私有链搭建](private chain.md)
 * [升级终身会员](sheng-ji-zhong-shen-hui-yuan.md)
 * [见证人申请](apply witness .md)
+* [区块链存证](qu-kuai-lian-shang-cun-zheng.md)
 * [GXChain资产钱包接入说明](gxchainzi-chan-qian-bao-jie-ru-shuo-ming.md)
 * [如何创建、发行资产](assets/asset-create.md)
 * [API调用](API summary.md)
@@ -39,5 +40,4 @@
     * [获取服务提供方信息](api/baas-api/huo-qu-fu-wu-ti-gong-fang-xin-xi.md)
     * [数据存储接口](api/baas-api/shu-ju-cun-chu-jie-kou.md)
     * [获取已存数据接口](api/baas-api/huo-qu-yi-cun-shu-ju-jie-kou.md)
-* [GXB-BOX](gxb-box.md)
 
