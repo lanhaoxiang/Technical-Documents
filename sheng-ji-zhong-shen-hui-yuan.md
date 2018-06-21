@@ -48,7 +48,7 @@ import_key 帐户名 私钥
 ```
 导入成功，会打印true
 
-4. 升级会员
+5. 升级会员
 ```
 upgrade_account 帐户名 GXS true
 
@@ -78,4 +78,4 @@ upgrade_account 帐户名 GXS true
 }
 ```
 
-5. 网页钱包查看已升级的帐户状态
+6. 网页钱包查看已升级的帐户状态
