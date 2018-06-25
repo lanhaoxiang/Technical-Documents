@@ -16,14 +16,14 @@
 mac环境下，打开terminal执行如下操作：
 
 ```
-wget http://gxb-package.oss-cn-hangzhou.aliyuncs.com/gxb-core/cli_wallet.20180621.tar.gz -O  cli_wallet.20180621.tar.gz
+wget http://gxb-package.oss-cn-hangzhou.aliyuncs.com/gxb-core/cli_wallet.20180621.tar.gz -O  cli_wallet.20180621.tar.gz && tar zxvf cli_wallet.20180621.tar.gz
 ```
 
-```
-tar zxvf cli_wallet.20180621.tar.gz
-```
+ubuntu环境最新的cli\_wallet下载，请访问[https://github.com/gxchain/gxb-core/releases/latest](https://github.com/gxchain/gxb-core/releases/latest)
 
-ubuntu环境的cli\_wallet下载，访问[https://github.com/gxchain/gxb-core/releases/latest](https://github.com/gxchain/gxb-core/releases/latest)
+```
+wget http://gxb-package.oss-cn-hangzhou.aliyuncs.com/gxb-core/gxb_1.0.180619a.tar.gz -O gxb_1.0.180619a.tar.gz && tar zxvf gxb_1.0.180619a.tar.gz
+```
 
 ### 启动cli\_wallet, 连接到主网的node1钱包接入点
 
