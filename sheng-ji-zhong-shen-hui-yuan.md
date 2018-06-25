@@ -9,9 +9,11 @@
 
 ### 升级终身会员方法
 
-升级终身会员，轻钱包目前没有提供入口，需要使用命令行版本钱包cli\_wallet来操作。cli\_wallet下载，访问[https://github.com/gxchain/gxb-core/releases/latest](https://github.com/gxchain/gxb-core/releases/latest)
+升级终身会员，轻钱包目前没有提供入口，需要使用命令行版本钱包cli\_wallet来操作。
 
 ### 下载 cli\_wallet, 并解压缩
+
+mac环境下，打开terminal执行如下操作：
 
 ```
 wget http://gxb-package.oss-cn-hangzhou.aliyuncs.com/gxb-core/cli_wallet.20180621.tar.gz -O  cli_wallet.20180621.tar.gz
@@ -20,6 +22,8 @@ wget http://gxb-package.oss-cn-hangzhou.aliyuncs.com/gxb-core/cli_wallet.2018062
 ```
 tar zxvf cli_wallet.20180621.tar.gz
 ```
+
+ubuntu环境的cli\_wallet下载，访问[https://github.com/gxchain/gxb-core/releases/latest](https://github.com/gxchain/gxb-core/releases/latest)
 
 ### 启动cli\_wallet, 连接到主网的node1钱包接入点
 
