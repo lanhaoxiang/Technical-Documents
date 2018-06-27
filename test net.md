@@ -16,15 +16,9 @@
 
 ### 1. 下载程序, 解压 {#1-下载程序-解压}
 
-**首先请**[**点击这里**](https://github.com/gxchain/gxb-core/releases/latest)**下载最新程序。**
+**首先请**[**点击这里**](https://github.com/gxchain/gxb-core/releases/latest)**下载最新程序, 解压**
 
 ```js
-# ubuntu 14.04+ 安装包下载
-wget http://gxb-package.oss-cn-hangzhou.aliyuncs.com/gxb-core/gxb_1.0.180404.tar.gz -O gxb_1.0.180404.tar.gz
-
-# osx 安装包下载
-wget http://gxb-package.oss-cn-hangzhou.aliyuncs.com/gxb-core/osx/gxb_osx_1.0.180404.tar.gz -O gxb_osx_1.0.180404.tar.gz
-
 # 解压程序
 tar zxvf gxb_1.0.180404.tar.gz
 ```
