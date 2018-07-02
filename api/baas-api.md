@@ -55,7 +55,7 @@ SDK提供了和BaaS存储服务交互的方法封装。目前暂时提供Java版
 <dependency>
     <groupId>com.gxb.block.baas</groupId>
     <artifactId>baas-sdk-client</artifactId>
-    <version>1.0.1-RELEASE</version>
+    <version>1.0.2-RELEASE</version>
 </dependency>
 ```
 
@@ -63,7 +63,7 @@ SDK提供了和BaaS存储服务交互的方法封装。目前暂时提供Java版
 
 | 接口 | 描述 |
 | :--- | :--- |
-| [store/fee](/api/baas-api/huo-qu-fei-lv-jie-kou.md) | 获取存储费率，以GXS支付 |
+| [provider](api/baas-api/huo-qu-fu-wu-ti-gong-fang-xin-xi.md) | 获取服务提供方信息 |
 | [store](/api/baas-api/shu-ju-cun-chu-jie-kou.md) | 数据存储接口 |
 | [data](/api/baas-api/huo-qu-yi-cun-shu-ju-jie-kou.md) | 获取数据接口，根据cid获取数据 |
 

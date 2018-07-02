@@ -46,7 +46,7 @@ Content-Type= **multipart/form-data**
 // EXAMPLE_PRIVATE_KEY is your account private key
 // EXAMPLE_PUBLIC_KEY is your account public key
 // * Attention: Your EXAMPLE_PRIVATE_KEY and EXAMPLE_PUBLIC_KEY can not be uploaded.
-StoreClient client = new StoreClient(EXAMPLE_ACCOUNT, EXAMPLE_PRIVATE_KEY, EXAMPLE_PUBLIC_KEY, false);
+StoreClient client = new StoreClient(EXAMPLE_ACCOUNT, EXAMPLE_PRIVATE_KEY, EXAMPLE_PUBLIC_KEY);
 // response
 StoreDataResp resp = client.store("Hello World!".getBytes());
 ```
@@ -54,9 +54,11 @@ StoreDataResp resp = client.store("Hello World!".getBytes());
 ```
 具体参照 com.gxb.block.baas.sdk.client.api.client.StoreClient
 ```
-帐户的id, 帐户活跃权限公钥可以在公信宝区块浏览器上根据帐户名获得：
+线上帐户的id, 帐户活跃权限公钥可以在公信宝区块浏览器上根据帐户名获得：
 
 区块浏览器地址: [https://block.gxb.io/#/](https://block.gxb.io/#/)
+
+**也可以通过[获取服务提供方信息](api/baas-api/huo-qu-fu-wu-ti-gong-fang-xin-xi.md)接口获取到线上正式环境与开发者测试环境对应的BaaS账户id**
 
 ```js
 # 以帐户名gxs-dev为例，params传入帐户名
