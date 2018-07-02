@@ -58,7 +58,7 @@ StoreDataResp resp = client.store("Hello World!".getBytes());
 
 区块浏览器地址: [https://block.gxb.io/#/](https://block.gxb.io/#/)
 
-**也可以通过[获取服务提供方信息](api/baas-api/huo-qu-fu-wu-ti-gong-fang-xin-xi.md)接口获取到线上正式环境与开发者测试环境对应的BaaS账户id**
+**也可以通过[获取服务提供方信息](/api/baas-api/huo-qu-fu-wu-ti-gong-fang-xin-xi.md)接口获取到线上正式环境与开发者测试环境对应的BaaS账户id**
 
 ```js
 # 以帐户名gxs-dev为例，params传入帐户名

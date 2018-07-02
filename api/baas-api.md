@@ -63,7 +63,7 @@ SDK提供了和BaaS存储服务交互的方法封装。目前暂时提供Java版
 
 | 接口 | 描述 |
 | :--- | :--- |
-| [provider](api/baas-api/huo-qu-fu-wu-ti-gong-fang-xin-xi.md) | 获取服务提供方信息 |
+| [provider](/api/baas-api/huo-qu-fu-wu-ti-gong-fang-xin-xi.md) | 获取服务提供方信息 |
 | [store](/api/baas-api/shu-ju-cun-chu-jie-kou.md) | 数据存储接口 |
 | [data](/api/baas-api/huo-qu-yi-cun-shu-ju-jie-kou.md) | 获取数据接口，根据cid获取数据 |
 
