@@ -21,8 +21,7 @@ curl https://baas.gxchain.cn/api/storage/provider
     "code":200,
     "msg":"ok",
     "data":{
-        "baas_account_id":"1.2.639287", // 提供方正式环境baas account id
-        "baas_account_dev_id":"1.2.241", // 提供者测试环境baas account id
+        "account_id":"1.2.639287", // 提供方正式环境baas account id
         "name":"GXChain Official BaaS Storage",
         "description":"公信宝BaaS存储+存证服务",
         "fees":[ // 支持的支付资产类型以及费率
