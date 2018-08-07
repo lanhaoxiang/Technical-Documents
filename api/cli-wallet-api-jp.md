@@ -36,11 +36,13 @@ curl --data '{"jsonrpc": "2.0", "method": "call", "params": [0, "get_accounts", 
 
 リクエストURLは以下
 
+
 ```
 https://node1.gxb.io/
 ```
 
 本体をリクエスト
+
 
 ```
 {
@@ -57,6 +59,7 @@ https://node1.gxb.io/
 
 
 返す結果
+
 
 ```
 {"id":1,"jsonrpc":"2.0","result":[{"id":"1.2.1",
@@ -82,6 +85,7 @@ https://node1.gxb.io/
 テストツール
 
 おすすめのテストツールはPOSTMAN
+
 
 [https://www.getpostman.com](https://www.getpostman.com)
 
