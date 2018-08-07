@@ -1,46 +1,48 @@
 ## Cli-wallet コマンドリスト
 
-| コマンド | パラメータ | 説明 | 備考 |
+| コマンド | パラメーター | 説明　| 備考 |
 | :--- | :--- | :--- | :--- |
-| [set\_password](/api/cli-wallet-api/setpassword.md) | &lt;new\_password&gt; | 新しいパスワードを設定。初回起動ウォレット後、パスワードを設定する必要がある |  |
+| [set\_password](/api/cli-wallet-api/setpassword.md) | &lt;new\_password&gt; | 新しいパスワードを設定するコマンド。初回起動する時にパスワードの設定が必要です |  |
 | [unlock](/api/cli-wallet-api/unlock.md) | &lt;my\_password&gt; | ウォレット解除 |  |
-| [import\_key](/api/cli-wallet-api/importkey.md) | &lt;account\_name\_or\_id&gt;         &lt;true&gt; &lt;wif\_private\_key&gt; | プライベートキー導入 |  |
-| [dump\_private\_keys](/api/cli-wallet-api/dumpprivate-keys.md) |  | ウォレットのすべてプライベートキーをプリント |  |
-| [get\_account](/api/cli-wallet-api/getaccount.md) | &lt;account\_name\_or\_id&gt; | 特定アカウントの情報を確認、パラメータはアカウント名あるいはアカウントid |  |
+| [import\_key](/api/cli-wallet-api/importkey.md) | &lt;account\_name\_or\_id&gt;         &lt;true&gt; &lt;wif\_private\_key&gt; | ウォレットにプライベートキーインポート |  |
+| [dump\_private\_keys](/api/cli-wallet-api/dumpprivate-keys.md) |  | ウォレットにあるすべてのプライベートキーをプリントする |  |
+| [get\_account](/api/cli-wallet-api/getaccount.md) | &lt;account\_name\_or\_id&gt; | 指定アカウントの情報を確認する。パラメータはアカウント名或いはアカウントid |  |
 | [list\_account\_balances](/api/cli-wallet-api/listaccount-balances.md) | &lt;account\_name\_or\_id&gt; | アカウント残高確認 |  |
-| [get\_account\_history](/api/cli-wallet-api/getaccount-history.md) | &lt;account\_name\_or\_id&gt;         &lt;limt\_num&gt; | アカウント最近取引履歴確認 |  |
-| [get\_relative\_account\_history](/api/cli-wallet-api/getrelative-account-history.md) | &lt;account\_name\_or\_id&gt;       &lt;start&gt; &lt;limit&gt; &lt;stop&gt; | アカウント最近取引履歴確認、ページによって確認できる |  |
-| [get\_account\_history\_by\_operations](/api/cli-wallet-api/getrelative-account-history_by_operations.md) | &lt;account\_name\_or\_id&gt; &lt;\[\]&gt;  &lt;start&gt; &lt;limit\_num&gt; | operation\_typeによって最近取引履歴確認、該当txIDの内容を返す |  |
+| [get\_account\_history](/api/cli-wallet-api/getaccount-history.md) | &lt;account\_name\_or\_id&gt;         &lt;limt\_num&gt; | アカウント最近の取引履歴確認 |  |
+| [get\_relative\_account\_history](/api/cli-wallet-api/getrelative-account-history.md) | &lt;account\_name\_or\_id&gt;       &lt;start&gt; &lt;limit&gt; &lt;stop&gt; | アカウント最近の取引履歴確認、 ページ変換機能付き |  |
+| [get\_account\_history\_by\_operations](/api/cli-wallet-api/getrelative-account-history_by_operations.md) | &lt;account\_name\_or\_id&gt; &lt;\[\]&gt;  &lt;start&gt; &lt;limit\_num&gt; | oeration\_typeにより最近の取引履歴確認、operationが対応しているtxIDを返す |  |
 | [transfer](/api/cli-wallet-api/transfer.md) | &lt;from\_account&gt;                   &lt;to\_account&gt; &lt;amount&gt;     &lt;GXS&gt; &lt;memo&gt; &lt;true&gt; | トランザクション操作 |  |
-| [transfer2](/api/cli-wallet-api/transfer2.md) | &lt;from\_account&gt;                   &lt;to\_account&gt; &lt;amount&gt;     &lt;GXS&gt; &lt;memo&gt; &lt;true&gt; | トランザクション操作、transferと同じパラメータ、返す結果に現取引のidを含める |  |
-| [get\_block](/api/cli-wallet-api/getblock.md) | &lt;block\_num&gt; | 特定ブロックの情報を確認 |  |
-| [info](/api/cli-wallet-api/info.md) |  | ブロックチェーンの情報を確認、最新ブロックを確認できる |  |
-| [help](/api/cli-wallet-api/help.md) |  | ヘルプコマンド、ウォレットのすべてのインターフェスを返す |  |
-| [gethelp](/api/cli-wallet-api/gethelp.md) | &lt;command&gt; | ヘルプコマンド、特定ウォレットを確認する |  |
+| [transfer2](/api/cli-wallet-api/transfer2.md) | &lt;from\_account&gt;                   &lt;to\_account&gt; &lt;amount&gt;     &lt;GXS&gt; &lt;memo&gt; &lt;true&gt; | トランザクション操作、transferのパラメーターと一緒、該当取引のidを返す |  |
+| [get\_block](/api/cli-wallet-api/getblock.md) | &lt;block\_num&gt; | 指定ブロック情報を収集 |  |
+| [info](/api/cli-wallet-api/info.md) |  | ブロックチェーン情報を収集、本コマンドで最新ブロックの長さを確認できる |  |
+| [help](/api/cli-wallet-api/help.md) |  | ヘルプコマンド、ウォレットに適応しているすべてのインターネットを返す |  |
+| [gethelp](/api/cli-wallet-api/gethelp.md) | &lt;command&gt; | ヘルプコマンド、特定ウォレットを確認する |  |
 
-### **利用事例**
+### **使用例**
 
-get\_accountsを例に
+get\_accountsを例にすると
 
-#### CURL  POST コマンドラインリクエスト
+#### CURL  POST コマンドリクエスト
 
-コマンドラインに（cmd）入力
+コマンドモードにする（cmd），
 
 ```
 curl --data '{"jsonrpc": "2.0", "method": "call", "params": [0, "get_accounts", [["1.2.1","1.2.2"]]], "id": 1}'  https://node1.gxb.io/rpc
 ```
 
-返す結果（return）を確認できる
+を入力すると、結果が見れる
 
 #### POSTリクエスト例
 
-リクエストURLは
+リクエストURLは以下
+
 
 ```
 https://node1.gxb.io/
 ```
 
-リクエストボディ
+本体をリクエスト
+
 
 ```
 {
@@ -50,13 +52,14 @@ https://node1.gxb.io/
 }
 ```
 
-注意：paramsのフォームは\[API種類，APIコマンド，パラメーター\]
+注意：paramsのフォーマットは\[API種類，APIコマンド，パラメーター\]
 
-例えば、上記のget\_accountsはdatabase API，database APIの種類は０
+例えば、上記のget\_accountsコマンドでは、database API，database APIの種類コードは0。
 
 
 
-返してくる結果（return）
+返す結果
+
 
 ```
 {"id":1,"jsonrpc":"2.0","result":[{"id":"1.2.1",
@@ -81,7 +84,8 @@ https://node1.gxb.io/
 
 テストツール
 
-おすすめのツールはPOSTMAN
+おすすめのテストツールはPOSTMAN
+
 
 [https://www.getpostman.com](https://www.getpostman.com)
 
