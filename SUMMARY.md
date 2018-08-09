@@ -1,11 +1,10 @@
 # Summary
 
-* [公信链](README.md)
-* [介绍](introduction.md)
-* [安装方法](node.md)
+* [GXChain](README.md)
 * [客户端使用说明](Client instructions.md)
-* [测试网络](test net.md)
+* [GXChain快速开始](node.md)
 * [私有链搭建](private chain.md)
+* [测试网络](test net.md)
 * [升级终身会员](sheng-ji-zhong-shen-hui-yuan.md)
 * [见证人申请](apply witness .md)
 * [上链彩蛋](qu-kuai-lian-shang-cun-zheng.md)
