@@ -12,7 +12,7 @@ crypto | [计算ripemd160](#ripemd160) | todo
 crypto 签名 | [验证签名](#verify_signature) | 抢红包验证权限，一些权限的控制
 区块 | [获取最新区块号](#get_head_block_num) | todo
 区块 | [获取最新区块hash](#get_head_block_id) | 一些根据区块hash来公平的判断yes or no
-区块 时间 | [获取最新区块时间(单位秒)](#get_head_block_time) | 锁仓合约的解锁条件，锁仓合约的线形释放
+区块 时间 | [获取最新区块时间(单位秒)](#get_head_block_time) | 锁仓合约的解锁条件，锁仓合约的线性释放
 合约 | [获取当前合约调用者id](#get_trx_sender) | 业务逻辑需要记录调用者id
 账户 | [通过账户名查询账户id](#get_account_id) | todo
 资产 | [通过资产符号查询资产id](#get_asset_id) | todo
@@ -24,7 +24,7 @@ crypto 签名 | [验证签名](#verify_signature) | 抢红包验证权限，一�
 desc: 返回当前合约账号的id  
 include: \<graphenelib/action.h>  
 example: 比如合约账号id是1.2.666，调用current_receiver()将返回666  
-[index](#index)
+[go_back](#index)
 
 
 
@@ -158,97 +158,124 @@ param @asset\_id: 指定资产的instance\_id
 
 include: \<graphenelib/asset.h>  
 example: 比如账号1.2.66有10个GXC，调用get_balance(66, 0)将返回1000000  
-[index](#index)
+[go_back](#index)
 
 
-## <a name="sha256"></a>void sha256()
-desc:   
+## <a name="sha256"></a>void sha256(char *data, uint32_t length, const checksum256 *hash)
+desc: 计算数据的sha256  
+
+param @data: 用于计算sha256的字符串首地址  
+param @length: data字符串的长度  
+param @hash: 出参 用于存储计算的sha256
+
 include: \<graphenelib/crypto.h>  
 example:   
-[index](#index)
+[go_back](#index)
 
 
-## <a name="sha512"></a>void sha512()
-desc:   
+## <a name="sha512"></a>void sha512(char *data, uint32_t length, const checksum512 *hash)
+desc: 计算数据的sha512  
+
+param @data: 用于计算sha512的字符串首地址  
+param @length: data字符串的长度  
+param @hash: 出参 用于存储计算的sha512
+
 include: \<graphenelib/crypto.h>  
 example:   
-[index](#index)
+[go_back](#index)
 
 
-## <a name="ripemd160"></a>void ripemd160()
-desc:   
+## <a name="ripemd160"></a>void ripemd160(char *data, uint32_t length, const checksum160 *hash)
+desc: 计算数据的ripemd160  
+
+param @data: 用于计算ripemd160的字符串首地址  
+param @length: data字符串的长度  
+param @hash: 出参 用于存储计算的ripemd160
+
 include: \<graphenelib/crypto.h>  
 example:   
-[index](#index)
+[go_back](#index)
 
 
-## <a name="verify_signature"></a>bool verify\_signature()
-desc:   
+## <a name="verify_signature"></a>bool verify\_signature(const char *data, uint32\_t datalen, signature* sig,  const char *pub\_key, uint32\_t pub\_keylen)
+desc: 验证签名  
+
+param @data: 签名的原始字符串  
+param @datalen: data字符串的长度  
+param @sig: 签名数据  
+param @pub_key: 签名私钥对应的公钥
+param @pub_keylen: 公钥的长度
+
+return true(1):验签通过 / false(0):验签失败  
+
 include: \<graphenelib/crypto.h>  
 example:   
-[index](#index)
+[go_back](#index)
 
 
 ## <a name="get_head_block_num"></a>int64\_t get\_head\_block\_num()
-desc:   
+desc: 获取当前区块号  
 include: \<graphenelib/global.h>  
-example:   
-[index](#index)
+example: [contracts/examples/redpacket/redpacket.cpp::issue](https://github.com/gxchain/gxb-core/blob/dev_master/contracts/examples/redpacket/redpacket.cpp) line39  
+[go_back](#index)
 
 
 ## <a name="get_head_block_id"></a>int64\_t get\_head\_block\_time()
-desc:   
+desc: 获取最新区块hash  
 include: \<graphenelib/global.h>  
-example:   
-[index](#index)
+example: todo  
+[go_back](#index)
 
 
-## <a name="get_head_block_time"></a>bool verify\_signature()
-desc:   
+## <a name="get_head_block_time"></a>int64\_t get\_head\_block\_time();
+desc: 获取最新区块的时间，返回值单位秒  
 include: \<graphenelib/global.h>  
-example:   
-[index](#index)
+example: [contracts/examples/dice/dice.cpp::reveal](https://github.com/gxchain/gxb-core/blob/dev_master/contracts/examples/dice/dice.cpp) line223  
+[go_back](#index)
 
 
 ## <a name="get_trx_sender"></a>int64\_t get\_trx\_sender()
-desc:   
+desc: 获取调用合约的账号的instance\_id  
 include: \<graphenelib/global.h>  
-example:   
-[index](#index)
+example: [contracts/examples/dice/dice.cpp::deposit](https://github.com/gxchain/gxb-core/blob/dev_master/contracts/examples/dice/dice.cpp) line62  
+[go_back](#index)
 
 
 ## <a name="get_account_id"></a>int64\_t get\_account\_id(const char *data, uint32\_t length)
-desc:   
+desc: 根据账号名获取账号的instance\_id  
+
+param @data: 账号名，例如nathan
+param @length: 账号名的长度，例如nathan的长度是6
 include: \<graphenelib/global.h>  
-example:   
-[index](#index)
+example: [contracts/examples/redpacket/redpacket.cpp::open](https://github.com/gxchain/gxb-core/blob/dev_master/contracts/examples/redpacket/redpacket.cpp) line78  
+[go_back](#index)
 
 
 ## <a name="get_asset_id"></a>int64\_t get\_asset\_id(const char *data, uint32\_t length)
-desc:   
+desc: 根据资产名获取资产的instance\_id  
 include: \<graphenelib/global.h>  
-example:   
-[index](#index)
+example: [contracts/examples/verify_sign/verify_sign.cpp::verify](https://github.com/gxchain/gxb-core/blob/dev_master/contracts/examples/redpacket/redpacket.cpp) line24  
+[go_back](#index)
 
 
 ## <a name="graphene_assert"></a>void  graphene\_assert(uint32\_t test, const char* msg);
-desc:   
+desc: 如果条件不满足，中断本次合约的执行并会滚所有状态  
 include: \<graphenelib/system.h>  
-example:   
-[index](#index)
+example: no need  
+[go_back](#index)
 
 
 ## <a name="graphene_assert_message"></a>void  graphene\_assert\_message(uint32\_t test, const char* msg, uint32\_t msg\_len)
-desc:   
+desc: 如果条件不满足，输出必要的信息，但是本次合约的执行会继续  
 include: \<graphenelib/system.h>  
-example:   
-[index](#index)
+example: no need  
+[go_back](#index)
 
 
 ## <a name="print"></a>void print(const char* ptr)
-desc:   
+desc: 用于调试时日志的打印  
 include: \<graphenelib/print.hpp>  
-example:   
-[index](#index)
+example: no need  
+[go_back](#index)
 
 
