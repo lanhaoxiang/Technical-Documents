@@ -86,7 +86,7 @@ gxx -g helloworld/helloworld.abi helloworld/helloworld.cpp
 #### 4. 部署合约
 需要开启cli_wallet，连接本地节点或者远程testnet节点
 ```
-./programs/cli_wallet/cli_wallet -sws://106.14.180.117:28090 --chain-id c2af30ef9340ff81fd61654295e98a1ff04b23189748f86727d0b26b40bb0ff4
+./programs/cli_wallet/cli_wallet -swss://testnet.gxchain.org --chain-id c2af30ef9340ff81fd61654295e98a1ff04b23189748f86727d0b26b40bb0ff4
 ```
 导入钱包私钥
 ```
@@ -124,7 +124,7 @@ wget http://gxb-package.oss-cn-hangzhou.aliyuncs.com/gxb-core/gxb_ubuntu_1.0.180
 tar zxvf gxb_ubuntu_1.0.180809.beta.tar.gz
 
 # 启动witness_node, 同步testnet区块数据
-./programs/witness_node/witness_node --data-dir=testnet_node --rpc-endpoint="0.0.0.0:28090" --p2p-endpoint="0.0.0.0:9999" --seed-nodes='["106.14.180.117:6789"]' --genesis-json genesis.json &
+./programs/witness_node/witness_node --data-dir=testnet_node --rpc-endpoint="0.0.0.0:28090" --p2p-endpoint="0.0.0.0:9999" --seed-nodes='["testnet.gxchain.org:6789"]' --genesis-json genesis.json &
 
 # 启动完成后，可以观察./testnet_node/log/witness.log观察区块同步情况，区块同步过程中每10000个区块会打印一条日志，同步完成后，每3秒打印一条日志ß
 ```
