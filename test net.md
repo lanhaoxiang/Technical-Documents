@@ -4,9 +4,9 @@
 
 ## 测试网络部署方法
 
-测试网络种子节点：106.14.180.117:6789 目前只有一个节点，社区开发者贡献节点可以加入测试网络，申请见证人。
+测试网络种子节点：testnet.gxchain.org:6789 目前只有一个节点，社区开发者贡献节点可以加入测试网络，申请见证人。
 
-钱包接入点：`ws://106.14.180.117:28090`
+钱包接入点：`wss://testnet.gxchain.org`
 
 **如需注册钱包账户，请进入GXS Community**
 
@@ -33,7 +33,7 @@ wget http://gxb-package.oss-cn-hangzhou.aliyuncs.com/gxb-core/genesis/testnet-ge
 ### 3. 启动witness\_node，同步区块 {#3-启动witness_node同步区块}
 
 ```
-./programs/witness_node/witness_node --data-dir=testnet_node --rpc-endpoint="0.0.0.0:28090" --p2p-endpoint="0.0.0.0:9999" --seed-nodes='["106.14.180.117:6789"]' --genesis-json genesis.json &
+./programs/witness_node/witness_node --data-dir=testnet_node --rpc-endpoint="0.0.0.0:28090" --p2p-endpoint="0.0.0.0:9999" --seed-nodes='["testnet.gxchain.org:6789"]' --genesis-json genesis.json &
 ```
 
 目前测试网络数据量不大，可以跑全节点。通过后台日志文件testnet\_node/logs/witness.log可查看区块同步进度。 
