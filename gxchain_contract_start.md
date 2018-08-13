@@ -131,11 +131,11 @@ tar zxvf gxb_ubuntu_1.0.180809.beta.tar.gz
 
 testnet 安装文档 ：https://github.com/gxchain/Technical-Documents/blob/master/test%20net.md
 
-#### 智能合约API 接口文档
+#### 智能合约 API 参考文档
 文档中列出了一些API和使用示例，供智能合约在运行时调用：
 https://github.com/gxchain/Technical-Documents/blob/master/gxb_contract_api.md
 
-#### 智能合约example:
+#### 智能合约示例:
 - helloworld合约： https://github.com/gxchain/gxb-core/tree/dev_master/contracts/examples/helloworld
 - 充值提现合约： https://github.com/gxchain/gxb-core/tree/dev_master/contracts/examples/bank
 - 红包合约： https://github.com/gxchain/gxb-core/tree/dev_master/contracts/examples/redpacket
