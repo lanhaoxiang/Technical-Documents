@@ -26,24 +26,24 @@ GXChain智能合约，底层使用WebAssembly虚拟机，目前支持C++语言�
 #include <graphenelib/print.hpp>
 #include <graphenelib/types.h>
 
-using namespace graphene;
+using namespace graphene; 
 
-class hello : public contract
+class hello : public contract // hello合约继承自contract合约
 {
   public:
     hello(uint64_t id)
-        : contract(id)
+        : contract(id) // 合约构造函数
     {
     }
 
     /// @abi action
-    void hi(std::string user)
+    void hi(std::string user) // 合约方法
     {
         print("hi, ", user, "\n");
     }
 };
 
-GRAPHENE_ABI(hello, (hi))
+GRAPHENE_ABI(hello, (hi)) // GRAPHENE_ABI 用来注册合约的abi
 ```
 
 #### 4. 编译智能合约
