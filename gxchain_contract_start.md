@@ -6,6 +6,7 @@
 
 GXChain智能合约，底层使用WebAssembly虚拟机，目前支持C++语言的智能合约编写。
 
+体验智能合约有两种方式： 使用智能合约IDE工具 和 使用cli_wallet
 ### 快速开始 （通过智能合约IDE）
 #### 1. 注册testnet钱包帐户
 
