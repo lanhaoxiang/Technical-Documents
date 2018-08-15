@@ -12,7 +12,7 @@ GXChain智能合约，底层使用WebAssembly虚拟机，目前支持C++语言�
 ### 快速开始 （通过智能合约IDE）
 #### 1. 注册testnet钱包帐户
 
-访问testnet网页钱包 ```https://testnet.wallet.gxchain.org/#/``` 注册钱包帐户。
+访问[testnet网页钱包](https://testnet.wallet.gxchain.org/#/)  ```https://testnet.wallet.gxchain.org/#/``` 注册钱包帐户。
 注册完成后，点击[这里](http://blockcity.mikecrm.com/2SVDb67) 申领测试GXS。
 
 
