@@ -5,7 +5,7 @@
 ### 智能合约介绍
 
 GXChain智能合约，底层使用WebAssembly虚拟机，目前支持C++语言的智能合约编写。
-开发者使用C++编写智能合约，通过llvm将代码编译成WebAssembly（又名WASM），部署到区块链上，通过智能合约ABI和智能合约交互。
+开发者使用C++编写智能合约，通过llvm将代码编译成WebAssembly（又名WASM），部署到区块链上，通过智能合约ABI(Application Binary Interface，应用程序的二进制接口)和智能合约交互。
 
 
 体验智能合约有两种方式： 使用智能合约IDE工具 和 使用cli_wallet
@@ -71,12 +71,12 @@ GXChain源码编译，目前支持ubuntu系统和mac系统：
 - Build on OS X： https://github.com/gxchain/gxb-core/wiki/BUILD_OS_X
 
 #### 2. 编译合约
-生成模板helloworld
+使用gxx的模板创建一个helloworld合约
 ```
 gxx -n helloworld
 ```
 
-#### 3. 编译合约
+#### 3. 编译合约，生成wast和abi
 编译合约，生成wast和wasm文件
 ```
 gxx -o helloworld/helloworld.wast helloworld/helloworld.cpp
