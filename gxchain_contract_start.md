@@ -4,7 +4,7 @@
 ------------
 ### 智能合约介绍
 
-GXChain智能合约，底层使用WebAssembly虚拟机，目前支持C++语言的智能合约编写。
+GXChain智能合约2.0，底层使用WebAssembly虚拟机，目前支持C++语言的智能合约编写。
 开发者使用C++编写智能合约，通过llvm将代码编译成WebAssembly（又名WASM），部署到区块链上，通过智能合约ABI(Application Binary Interface，应用程序的二进制接口)和智能合约交互。
 
 
