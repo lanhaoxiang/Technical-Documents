@@ -10,6 +10,7 @@ GXChain智能合约2.0，底层使用WebAssembly虚拟机，目前支持C++语�
 ##### 智能合约 API 参考文档
 文档中列出了一些API和使用示例，可以在编写合约时调用：
 https://github.com/gxchain/Technical-Documents/blob/master/gxb_contract_api.md
+
 智能合约存储参考文档：https://github.com/gxchain/Technical-Documents/blob/master/contract/contract_storage_usage.md
 
 ##### 智能合约示例:
