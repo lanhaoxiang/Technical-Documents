@@ -1,6 +1,6 @@
 GXChain智能合约数据库操作
 
-------
+---------------
 
 智能合约数据库的操作，主要使用multi-index table的emplace, erase, modify和find方法。
 
