@@ -31,7 +31,7 @@ IDE下载地址：
 
 系统 | 下载地址
 ---|---
-mac 1 | https://gxb-package.oss-cn-hangzhou.aliyuncs.com/gxchain-alpha-0.0.1.dmg 
+mac | https://gxb-package.oss-cn-hangzhou.aliyuncs.com/gxchain-alpha-0.0.1.dmg 
 windows 1 | 即将提供
 linux | 即将提供
 
