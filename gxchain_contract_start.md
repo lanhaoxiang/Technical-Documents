@@ -146,7 +146,5 @@ https://github.com/gxchain/Technical-Documents/blob/master/gxb_contract_api.md
 
 [note] 测试智能合约时需要注意：
   * 目前的存储表(Multi-Index table)只支持primary_key。
-  * 存储表不支持int128存储，不支付float / double存储。
+  * 存储表不支持的类型：int128, int256, float, double。
 
-  * 目前的存储表(Multi-Index table)只支持primary_key。e
-  * 目前的存储表(Multi-Index table)只支持primary_key。
