@@ -47,7 +47,7 @@ class hello : public contract // hello合约继承自contract合约
     }
 };
 
-GRAPHENE_ABI(hello, (hi)) // GRAPHENE_ABI 用来注册合约的abi
+GRAPHENE_ABI(hello, (hi)) // GRAPHENE_ABI 用来注册合约方法
 ```
 
 #### 4. 编译智能合约
