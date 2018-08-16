@@ -17,46 +17,43 @@ GXChain智能合约，底层使用WebAssembly虚拟机，目前支持C++语言�
 通过智能合约IDE，可以编写、编译、部署、调用智能合约。
 下载地址： 待补充
 
-#### 3. 编辑智能合约
+#### 3.导入账户
 
-比如一个简单的hello合约， 源代码如下:
-```
-#include <graphenelib/graphene.hpp>
-#include <graphenelib/contract.hpp>
-#include <graphenelib/dispatcher.hpp>
-#include <graphenelib/print.hpp>
-#include <graphenelib/types.h>
+先去步骤一中的testnet网页钱包找到自己的活跃权限私钥
 
-using namespace graphene; 
+![](./assets/ide/queryPvk.png)
 
-class hello : public contract // hello合约继承自contract合约
-{
-  public:
-    hello(uint64_t id)
-        : contract(id) // 合约构造函数
-    {
-    }
+![](./assets/ide/queryPvk2.png)
 
-    /// @abi action
-    void hi(std::string user) // 合约方法
-    {
-        print("hi, ", user, "\n");
-    }
-};
+再打开客户端，进入设置页面，导入账户(密码不会上传到服务器，如果忘记需要移除账户重新导入)：
 
-GRAPHENE_ABI(hello, (hi)) // GRAPHENE_ABI 用来注册合约的abi
-```
+![](./assets/ide/import.png)
 
-#### 4. 编译智能合约
+#### 4.选择模板工程
 
-![](/assets/contract_compile.png)
+![](./assets/ide/addProject.png)
 
-#### 5. 部署智能合约
-![](/assets/contract_deploy.png)
+#### 5. 编译
+
+![](./assets/ide/compile.png)
+
+#### 6.部署
+
+部署之前需要先解锁钱包
+
+![](./assets/ide/deploy.png)
+
+![](./assets/ide/deploy2.png)
+
+#### 7.调用
+
+与部署一样，也需要先解锁钱包
+
+![](./assets/ide/call.png)
+
+![](./assets/ide/call2.png)
 
 
-#### 6. 调用智能合约
-![](/assets/contract_call.png)
 
 
 ### 快速开始 (使用本地命令行方式)
