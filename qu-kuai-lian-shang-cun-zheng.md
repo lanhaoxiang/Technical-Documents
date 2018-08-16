@@ -1,8 +1,9 @@
 ## 上链彩蛋
+--------------------
 
 目前仅支持cli\_wallet操作。要求cli\_wallet已经导入帐户私钥。
 
-### 启动cli\_wallet, 连接到主网的node1钱包接入点
+### 1. 启动cli\_wallet, 连接到主网的node1钱包接入点
 
 ```
 ./programs/cli_wallet/cli_wallet -swss://node1.gxb.io -w wallet.json
@@ -14,7 +15,7 @@
 locked>>>
 ```
 
-### 解锁钱包
+### 2. 解锁钱包
 
 ```
 unlock "密码"
@@ -23,7 +24,7 @@ unlock "密码"
 其中"密码"是一串字符，为你的本地钱包密码  
 unlock成功后，交互提示符变为:`unlocked >>>`
 
-### 使用custom命令，在区块链上记录自定义的数据
+### 3. 使用custom命令，在区块链上记录自定义的数据
 
 命令行格式为
 
@@ -75,9 +76,7 @@ unlocked >>
 
 记录成功后，返回一串格式化的jso字符串。
 
-### 区块链浏览器上查看
+### 4. 区块链浏览器上查看
 
 访问区块浏览器https://block.gxb.io/\#/
-
-点击"16进制转字符“，可显示原文。
 
