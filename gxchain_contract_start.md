@@ -2,14 +2,23 @@
 # testnet 智能合约快速入门
 
 ------------
-### 智能合约介绍
+### 一、智能合约介绍
 
 GXChain智能合约2.0，底层使用WebAssembly虚拟机，目前支持C++语言的智能合约编写。
 开发者使用C++编写智能合约，通过llvm将代码编译成WebAssembly（又名WASM），部署到区块链上，通过智能合约ABI(Application Binary Interface，应用程序的二进制接口)和智能合约交互。
 
+#### 智能合约 API 参考文档
+文档中列出了一些API和使用示例，供智能合约在运行时调用：
+https://github.com/gxchain/Technical-Documents/blob/master/gxb_contract_api.md
+
+#### 智能合约示例:
+* helloworld合约： https://github.com/gxchain/gxb-core/tree/dev_master/contracts/examples/helloworld
+* 充值提现合约： https://github.com/gxchain/gxb-core/tree/dev_master/contracts/examples/bank
+* 红包合约： https://github.com/gxchain/gxb-core/tree/dev_master/contracts/examples/redpacket
+
 
 体验智能合约有两种方式： 使用智能合约IDE工具 和 使用cli_wallet
-### 快速开始 （通过智能合约IDE）
+### 二、 快速开始 （通过智能合约IDE）
 #### 1. 注册testnet钱包帐户
 
 访问[testnet网页钱包](https://testnet.wallet.gxchain.org/#/)  ```https://testnet.wallet.gxchain.org/#/``` 注册钱包帐户。
@@ -59,12 +68,13 @@ GXChain智能合约2.0，底层使用WebAssembly虚拟机，目前支持C++语�
 
 
 
-### 快速开始 (使用本地命令行方式)
+### 三、快速开始 (使用本地命令行方式)
 
 #### 1. GXChain源码编译
 
 如果不想使用智能合约IDE工具，可以本地编译GXChain程序，通过命令行方式编译、部署、调用智能合约。
 GXChain源码编译，目前支持ubuntu系统和mac系统：
+
 - Build on Ubuntu： https://github.com/gxchain/gxb-core/wiki/BUILD_UBUNTU
 - Build on OS X： https://github.com/gxchain/gxb-core/wiki/BUILD_OS_X
 
@@ -76,10 +86,12 @@ gxx -n helloworld
 
 #### 3. 编译合约，生成wast和abi
 编译合约，生成wast和wasm文件
+
 ```
 gxx -o helloworld/helloworld.wast helloworld/helloworld.cpp
 ```
 生成abi文件
+
 ```
 gxx -g helloworld/helloworld.abi helloworld/helloworld.cpp
 ```
@@ -89,9 +101,12 @@ gxx -g helloworld/helloworld.abi helloworld/helloworld.cpp
 ```
 ./programs/cli_wallet/cli_wallet -swss://testnet.gxchain.org --chain-id c2af30ef9340ff81fd61654295e98a1ff04b23189748f86727d0b26b40bb0ff4
 ```
+
 导入钱包私钥
+
 ```
 # 如果是新钱包，需要设置一个解锁密码，此处为mylocalpassword
+
 new >>> set_password mylocalpassword
 
 # 解锁
@@ -106,6 +121,7 @@ unlocked >>> deploy_contract helloworld your_account_name 0 0 ./helloworld GXS t
 
 #### 5. 调用合约
 部署合约成功后，可以使用get_account接口查询合约
+
 ```
 unlocked >>> call_contract nathan helloworld null hi "{\"user\":\"zhuliting\"}" GXS true
 
@@ -115,6 +131,7 @@ unlocked >>> call_contract nathan helloworld null hi "{\"user\":\"zhuliting\"}" 
 #### 安装GXChain testnet网络全节点程序
 如果不想使用testnet提供的接入点，也可以本地部署一个全节点。
 安装GXChain testnet全节点安装方法：
+
 ```
 # 下载testnet的genesis.json文件
 wget http://gxb-package.oss-cn-hangzhou.aliyuncs.com/gxb-core/genesis/testnet-genesis.json -O genesis.json
@@ -132,16 +149,9 @@ tar zxvf gxb_ubuntu_1.0.180809.beta.tar.gz
 
 testnet 安装文档 ：https://github.com/gxchain/Technical-Documents/blob/master/test%20net.md
 
-#### 智能合约 API 参考文档
-文档中列出了一些API和使用示例，供智能合约在运行时调用：
-https://github.com/gxchain/Technical-Documents/blob/master/gxb_contract_api.md
-
-#### 智能合约示例:
-- helloworld合约： https://github.com/gxchain/gxb-core/tree/dev_master/contracts/examples/helloworld
-- 充值提现合约： https://github.com/gxchain/gxb-core/tree/dev_master/contracts/examples/bank
-- 红包合约： https://github.com/gxchain/gxb-core/tree/dev_master/contracts/examples/redpacket
 
 [note] 测试智能合约时需要注意：
-  * 目前的存储表(Multi-Index table)只支持primary_key。
-  * 存储表不支持的类型：int128, int256, float, double。
+
+* 目前的存储表(Multi-Index table)只支持primary_key。
+* 存储表不支持的类型：int128, int256, float, double。
 
