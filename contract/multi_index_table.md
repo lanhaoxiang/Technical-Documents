@@ -6,10 +6,10 @@ GXChain智能合约数据库操作
 
 ### 1. 增加
 
-使用emplace方法，完成table中新对象的增加。其中emplace函数接收两个参数，第一个是`payer`,第二个是`lamada`表达式。
+使用emplace方法，完成table中新对象的增加。其中emplace函数的参数是`lamada`表达式。
 
 ```c++
-        tables.emplace(payer, [&](auto &o) {
+        tables.emplace([&](auto &o) {
             o.issuer = owner;
         }); 
 ```
@@ -27,7 +27,7 @@ GXChain智能合约数据库操作
 使用modify方法，更新table中的对象。
 
 ```c++
-        tables.modify(table_iter, payer, [&](auto &o) {
+        tables.modify(table_iter, [&](auto &o) {
             o.issuer = new_issuer;
         });
 ```
