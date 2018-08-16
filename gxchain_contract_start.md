@@ -7,11 +7,12 @@
 GXChain智能合约2.0，底层使用WebAssembly虚拟机，目前支持C++语言的智能合约编写。
 开发者使用C++编写智能合约，通过llvm将代码编译成WebAssembly（又名WASM），部署到区块链上，通过智能合约ABI(Application Binary Interface，应用程序的二进制接口)和智能合约交互。
 
-#### 智能合约 API 参考文档
+##### 智能合约 API 参考文档
 文档中列出了一些API和使用示例，可以在编写合约时调用：
 https://github.com/gxchain/Technical-Documents/blob/master/gxb_contract_api.md
+智能合约存储参考文档：https://github.com/gxchain/Technical-Documents/blob/master/contract/contract_storage_usage.md
 
-#### 智能合约示例:
+##### 智能合约示例:
 * helloworld合约： https://github.com/gxchain/gxb-core/tree/dev_master/contracts/examples/helloworld
 * 充值提现合约： https://github.com/gxchain/gxb-core/tree/dev_master/contracts/examples/bank
 * 红包合约： https://github.com/gxchain/gxb-core/tree/dev_master/contracts/examples/redpacket
