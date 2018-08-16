@@ -4,13 +4,16 @@
 ------------
 ### 智能合约介绍
 
-GXChain智能合约，底层使用WebAssembly虚拟机，目前支持C++语言的智能合约编写。
+GXChain智能合约2.0，底层使用WebAssembly虚拟机，目前支持C++语言的智能合约编写。
+开发者使用C++编写智能合约，通过llvm将代码编译成WebAssembly（又名WASM），部署到区块链上，通过智能合约ABI(Application Binary Interface，应用程序的二进制接口)和智能合约交互。
+
 
 体验智能合约有两种方式： 使用智能合约IDE工具 和 使用cli_wallet
 ### 快速开始 （通过智能合约IDE）
 #### 1. 注册testnet钱包帐户
 
-访问testnet网页钱包 ```https://testnet.wallet.gxchain.org/#/``` 注册钱包帐户，注册完成后。
+访问[testnet网页钱包](https://testnet.wallet.gxchain.org/#/)  ```https://testnet.wallet.gxchain.org/#/``` 注册钱包帐户。
+注册完成后，点击[这里](http://blockcity.mikecrm.com/2SVDb67) 申领测试GXS。
 
 
 #### 2. 下载智能合约IDE
@@ -66,12 +69,12 @@ GXChain源码编译，目前支持ubuntu系统和mac系统：
 - Build on OS X： https://github.com/gxchain/gxb-core/wiki/BUILD_OS_X
 
 #### 2. 编译合约
-生成模板helloworld
+使用gxx的模板创建一个helloworld合约
 ```
 gxx -n helloworld
 ```
 
-#### 3. 编译合约
+#### 3. 编译合约，生成wast和abi
 编译合约，生成wast和wasm文件
 ```
 gxx -o helloworld/helloworld.wast helloworld/helloworld.cpp
@@ -137,3 +140,8 @@ https://github.com/gxchain/Technical-Documents/blob/master/gxb_contract_api.md
 - helloworld合约： https://github.com/gxchain/gxb-core/tree/dev_master/contracts/examples/helloworld
 - 充值提现合约： https://github.com/gxchain/gxb-core/tree/dev_master/contracts/examples/bank
 - 红包合约： https://github.com/gxchain/gxb-core/tree/dev_master/contracts/examples/redpacket
+
+[note] 测试智能合约时需要注意：
+  * 目前的存储表(Multi-Index table)只支持primary_key。
+  * 存储表不支持的类型：int128, int256, float, double。
+
