@@ -157,7 +157,9 @@ tar zxvf gxb_ubuntu_1.0.180809.beta.tar.gz
 ```
 
 testnet 安装文档 ：https://github.com/gxchain/Technical-Documents/blob/master/test%20net.md
-
+testnet 区块浏览器：https://testnet.explorer.gxchain.org/#/
+testnet 网页钱包：https://testnet.wallet.gxchain.org/
+testnet 钱包接入点：wss://testnet.gxchain.org
 
 [note] 测试智能合约时需要注意：
 
