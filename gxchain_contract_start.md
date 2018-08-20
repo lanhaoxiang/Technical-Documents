@@ -17,6 +17,8 @@ https://github.com/gxchain/Technical-Documents/blob/master/gxb_contract_api.md
 * helloworld合约： https://github.com/gxchain/gxb-core/tree/dev_master/contracts/examples/helloworld
 * 充值提现合约： https://github.com/gxchain/gxb-core/tree/dev_master/contracts/examples/bank
 * 红包合约： https://github.com/gxchain/gxb-core/tree/dev_master/contracts/examples/redpacket
+* 线性释放资产合约：https://github.com/gxchain/gxb-core/tree/dev_master/contracts/examples/linear_vesting_asset
+* 基于hash验证的猜谜合约：https://github.com/gxchain/gxb-core/tree/dev_master/contracts/examples/riddle
 
 
 体验智能合约有两种方式： 使用智能合约IDE工具 和 使用cli_wallet
