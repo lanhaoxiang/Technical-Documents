@@ -8,11 +8,8 @@
 
 钱包接入点：`wss://testnet.gxchain.org`
 
-**如需注册钱包账户，请进入GXS Community**
-
-**Https://forum.gxb.io**
-
-**私信联系管理员@admin，提供公钥和账户名。团队将帮你注册账户和发放一定量的GXS用作测试。**
+**访问[testnet网页钱包](https://testnet.wallet.gxchain.org/#/)  ```https://testnet.wallet.gxchain.org/#/``` 注册钱包帐户。
+注册完成后，点击[这里](http://blockcity.mikecrm.com/2SVDb67) 申领测试GXS。**
 
 ### 1. 下载程序, 解压 {#1-下载程序-解压}
 
