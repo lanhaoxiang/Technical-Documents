@@ -20,15 +20,14 @@
 
 ### **调用示例**
 
-以get\_accounts为例
+以get\_account为例
 
 #### CURL  POST 命令行请求
 
 进入命令行（cmd），输入
 
 ```
-curl --data '{"jsonrpc": "2.0", "method": "call", "params": [0, "get_accounts", [["1.2.1","1.2.2"]]], "id": 1}'  https://node1.gxb.io/rpc
-```
+curl --data '{"jsonrpc": "2.0", "method": "get_account", "params": ["nathan"], "id": 1}' http://127.0.0.1:8091```
 
 即可看到返回结果
 
@@ -37,22 +36,16 @@ curl --data '{"jsonrpc": "2.0", "method": "call", "params": [0, "get_accounts", 
 请求URL如下
 
 ```
-https://node1.gxb.io/
+http://127.0.0.1:8091
 ```
 
 请求主体
 
 ```
-{
-"jsonrpc": "2.0", 
-"method": "call", 
-"params": [0, "get_accounts", [["1.2.1","1.2.2"]]], "id": 1
-}
+{"jsonrpc": "2.0", "method": "get_account", "params": ["nathan"], "id": 1}
 ```
 
 注：params的格式为\[API类型，API指令，参数\]
-
-例如上述get\_accounts为database API，database API的类型编号为0。
 
 
 
