@@ -27,7 +27,8 @@
 进入命令行（cmd），输入
 
 ```
-curl --data '{"jsonrpc": "2.0", "method": "get_account", "params": ["nathan"], "id": 1}' http://127.0.0.1:8091```
+curl --data '{"jsonrpc": "2.0", "method": "get_account", "params": ["nathan"], "id": 1}' http://127.0.0.1:8091
+```
 
 即可看到返回结果
 
