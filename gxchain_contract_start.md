@@ -31,14 +31,7 @@ https://github.com/gxchain/Technical-Documents/blob/master/gxb_contract_api.md
 
 #### 2. 下载智能合约IDE
 通过智能合约IDE，可以编写、编译、部署、调用智能合约。
-IDE下载地址：
-
-系统 | 下载地址
----|---
-mac | https://gxb-package.oss-cn-hangzhou.aliyuncs.com/gxchain-alpha-0.0.1.dmg
-windows | https://gxb-package.oss-cn-hangzhou.aliyuncs.com/gxchain-alpha%20Setup%200.0.1.exe
-linux | https://gxb-package.oss-cn-hangzhou.aliyuncs.com/gxchain-alpha-0.0.1-x86_64.AppImage
-
+[IDE下载地址](https://github.com/gxchain/gxchain-alpha/releases)
 
 #### 3.导入账户
 
