@@ -1,11 +1,11 @@
 ## <a name="index"></a>index
 category|portal|what you can do with it
 ---|---|---
-合约 | [获取当前合约id](#current_receiver) | todo
-资产 | [获取当前调用发送的资产id](#get_action_asset_id) | 记录合约的资产信息
-资产 | [获取当前调用发送的资产数量](#get_action_asset_amount) | 记录合约的资产信息
+合约 | [获取当前合约id](#current_receiver) | 返回当前被调用的合约帐户id
+资产 | [获取当前调用发送的资产id](#get_action_asset_id) | 用户调用合约时，向合约发送的资产id，如果发送的资产id是1.3.1，则该函数返回为1
+资产 | [获取当前调用发送的资产数量](#get_action_asset_amount) | 用户调用合约时，向合约发送的资产数量
 资产 | [从当前合约转账到外部账号](#withdraw_asset) | 转账， 这是从合约账户转出资产的唯一方法
-资产 账户 | [获取外部账户的某资产数量](#get_balance) | todo
+资产 账户 | [获取外部账户的某资产数量](#get_balance) | 获取指定帐户的余额
 crypto | [计算sha256](#sha256) | todo
 crypto | [计算sha512](#sha512) | todo
 crypto | [计算ripemd160](#ripemd160) | todo
@@ -25,7 +25,6 @@ desc: 返回当前合约账号的id
 include: \<graphenelib/action.h>  
 example: 比如合约账号id是1.2.666，调用current_receiver()将返回666  
 [go_back](#index)
-
 
 
 ## <a name="get_action_asset_id"></a>uint64\_t get\_action\_asset\_id()
@@ -67,7 +66,7 @@ call\_contract nathan helloworld {"amount":10000000,"asset\_id":1.3.1} deposit "
 
 
 ## <a name="get_action_asset_amount"></a>uint64\_t get\_action\_asset\_amount()
-desc: 返回本次调用向合约发送的资产id  
+desc: 返回本次调用向合约发送的资产数量
 include: \<graphenelib/action.h>  
 example: 
 
@@ -151,7 +150,7 @@ call\_contract nathan helloworld null testwithdraw "{}" GXC true
 
 
 ## <a name="get_balance"></a>int64\_t get\_balance(int64\_t account, int64\_t asset_id)
-desc: 获取外部账户的某资产数量  
+desc: 获取外部账户的某资产余额
 
 param @account: 外部账户的instace\_id  
 param @asset\_id: 指定资产的instance\_id  
@@ -214,13 +213,13 @@ example:
 
 
 ## <a name="get_head_block_num"></a>int64\_t get\_head\_block\_num()
-desc: 获取当前区块号  
+desc: 获取最新区块号  
 include: \<graphenelib/global.h>  
 example: [contracts/examples/redpacket/redpacket.cpp::issue](https://github.com/gxchain/gxb-core/blob/dev_master/contracts/examples/redpacket/redpacket.cpp) line39  
 [go_back](#index)
 
 
-## <a name="get_head_block_id"></a>int64\_t get\_head\_block\_time()
+## <a name="get_head_block_id"></a>int64\_t get\_head\_block\_id()
 desc: 获取最新区块hash  
 include: \<graphenelib/global.h>  
 example: todo  
