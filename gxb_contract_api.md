@@ -222,7 +222,17 @@ example: [contracts/examples/redpacket/redpacket.cpp::issue](https://github.com/
 ## <a name="get_head_block_id"></a>int64\_t get\_head\_block\_id()
 desc: 获取最新区块hash  
 include: \<graphenelib/global.h>  
-example: todo  
+example: 
+```c++
+/// @abi action
+    void hi()
+    {
+        block_id_type  block_id;
+        get_head_block_id(&block_id);
+        printhex(static_cast<const void*>(block_id.hash), 20);
+
+    }
+```
 [go_back](#index)
 
 
