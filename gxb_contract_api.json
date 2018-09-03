@@ -7,6 +7,20 @@
             "name": "int64_t"
         }
     ],
+    "keywords":[
+        {
+            "name": "@abi"
+        },
+        {
+            "name": "action"
+        },
+        {
+            "name": "table"
+        },
+        {
+            "name": "payable"
+        }
+    ],
     "apis": [
         {
             "name": "current_receiver",
