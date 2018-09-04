@@ -5,11 +5,47 @@
         },
         {
             "name": "int64_t"
+        },
+        {
+            "name": "uint32_t"
+        },
+        {
+            "name": "int32_t"
+        },
+        {
+            "name": "uint16_t"
+        },
+        {
+            "name": "int16_t"
+        },
+        {
+            "name": "signature"
+        },
+        {
+            "name": "checksum256"
+        },
+        {
+            "name": "checksum512"
+        },
+        {
+            "name": "block_id_type"
+        },
+        {
+            "name": "contract"
+        },
+        {
+            "name": "contract_asset"
         }
     ],
     "keywords":[
         {
             "name": "@abi"
+        },
+        {
+            "name": "GRAPHENE_ABI"
+        },
+        {
+            "name": "GRAPHENE_SERIALIZE"
         }
     ],
     "abi_keywords":[
