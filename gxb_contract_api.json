@@ -10,7 +10,9 @@
     "keywords":[
         {
             "name": "@abi"
-        },
+        }
+    ],
+    "abi_keywords":[
         {
             "name": "action"
         },
