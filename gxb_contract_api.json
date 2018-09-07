@@ -7,12 +7,12 @@
             "name": "int64_t"
         }
     ],
-    "keywords":[
+    "keywords": [
         {
             "name": "@abi"
         }
     ],
-    "abi_keywords":[
+    "abi_keywords": [
         {
             "name": "action"
         },
@@ -38,14 +38,18 @@
             "returnType": "uint64_t",
             "belong": "<graphenelib/action.h>",
             "description": {
-                "zh-CN": "返回本次调用向合约发送的资产id"
+                "zh-CN": "返回本次调用向合约发送的资产id",
+                "en-US": "get aseet ID of this call"
             }
         },
         {
             "name": "get_action_asset_amount",
             "returnType": "uint64_t",
             "belong": "<graphenelib/action.h>",
-            "description": "返回本次调用向合约发送的资产数量"
+            "description": {
+                "zh-CN": "返回本次调用向合约发送的资产数量",
+                "en-US": "get asset amount of this call"
+            }
         },
         {
             "name": "withdraw_asset",
@@ -64,25 +68,389 @@
                     "name": "to",
                     "type": "uint64_t",
                     "description": {
-                        "zh-CN": "转账到哪个外部账户，必须只传账号的instance_id，比如外部账户是1.2.33，那么传33即可"
+                        "zh-CN": "转账到哪个外部账户，必须只传账号的instance_id，比如外部账户是1.2.33，那么传33即可",
+                        "en-US": ""
                     }
                 },
                 {
                     "name": "asset_id",
                     "type": "uint64_t",
                     "description": {
-                        "zh-CN": "指定转账的资产id，必须只传资产id的instance_id, 比如资产id是1.3.0， 那么传0即可"
+                        "zh-CN": "指定转账的资产id，必须只传资产id的instance_id, 比如资产id是1.3.0， 那么传0即可",
+                        "en-US": ""
                     }
                 },
                 {
                     "name": "amount",
                     "type": "int64_t",
                     "description": {
-                        "zh-CN": "转账金额，这个数字包含了资产的精度，比如想转1个GXC，那么应该写100000"
+                        "zh-CN": "转账金额，这个数字包含了资产的精度，比如想转1个GXC，那么应该写100000",
+                        "en-US": ""
                     }
                 }
             ],
-            "description": "将当前合约的资产转移到外部账户"
+            "description": {
+                "zh-CN": "将当前合约的资产转移到外部账户",
+                "en-US": "withdraw current account asset to another account"
+            }
+        },
+        {
+            "name": "get_balance",
+            "returnType": "int64_t",
+            "belong": "<graphenelib/asset.h>",
+            "fields": [
+                {
+                    "name": "account",
+                    "type": "int64_t",
+                    "description": {
+                        "zh-CN": "外部账户的instace_id",
+                        "en-US": ""
+                    }
+                },
+                {
+                    "name": "asset_id",
+                    "type": "int64_t",
+                    "description": {
+                        "zh-CN": "指定资产的instance_id",
+                        "en-US": ""
+                    }
+                }
+            ],
+            "description": {
+                "zh-CN": "获取外部账户的某资产余额",
+                "en-US": "get balance of some account"
+            }
+        },
+        {
+            "name": "sha256",
+            "returnType": "void",
+            "belong": "<graphenelib/crypto.h>",
+            "fields": [
+                {
+                    "name": "data",
+                    "type": "char",
+                    "description": {
+                        "zh-CN": "用于计算sha256的字符串首地址",
+                        "en-US": ""
+                    }
+                },
+                {
+                    "name": "length",
+                    "type": "uint32_t",
+                    "description": {
+                        "zh-CN": "data字符串的长度",
+                        "en-US": ""
+                    }
+                },
+                {
+                    "name": "hash",
+                    "type": "const checksum256 *",
+                    "description": {
+                        "zh-CN": "出参 用于存储计算的sha256",
+                        "en-US": ""
+                    }
+                }
+            ],
+            "description": {
+                "zh-CN": "计算数据的sha256",
+                "en-US": "get data's sha256"
+            }
+        },
+        {
+            "name": "sha512",
+            "returnType": "void",
+            "belong": "<graphenelib/crypto.h>",
+            "fields": [
+                {
+                    "name": "data",
+                    "type": "char",
+                    "description": {
+                        "zh-CN": "用于计算sha512的字符串首地址",
+                        "en-US": ""
+                    }
+                },
+                {
+                    "name": "length",
+                    "type": "uint32_t",
+                    "description": {
+                        "zh-CN": "data字符串的长度",
+                        "en-US": ""
+                    }
+                },
+                {
+                    "name": "hash",
+                    "type": "const checksum512 *",
+                    "description": {
+                        "zh-CN": "出参 用于存储计算的sha512",
+                        "en-US": ""
+                    }
+                }
+            ],
+            "description": {
+                "zh-CN": "计算数据的sha512",
+                "en-US": "get data's sha512"
+            }
+        },
+        {
+            "name": "ripemd160",
+            "returnType": "void",
+            "belong": "<graphenelib/crypto.h>",
+            "fields": [
+                {
+                    "name": "data",
+                    "type": "char",
+                    "description": {
+                        "zh-CN": "用于计算ripemd160的字符串首地址",
+                        "en-US": ""
+                    }
+                },
+                {
+                    "name": "length",
+                    "type": "uint32_t",
+                    "description": {
+                        "zh-CN": "data字符串的长度",
+                        "en-US": ""
+                    }
+                },
+                {
+                    "name": "hash",
+                    "type": "const checksum160 *",
+                    "description": {
+                        "zh-CN": "出参 用于存储计算的ripemd160",
+                        "en-US": ""
+                    }
+                }
+            ],
+            "description": {
+                "zh-CN": "计算数据的ripemd160",
+                "en-US": "get data's ripemd160"
+            }
+        },
+        {
+            "name": "verify_signature",
+            "returnType": "bool",
+            "belong": "<graphenelib/crypto.h>",
+            "fields": [
+                {
+                    "name": "data",
+                    "type": "const char",
+                    "description": {
+                        "zh-CN": "签名的原始字符串",
+                        "en-US": ""
+                    }
+                },
+                {
+                    "name": "datalen",
+                    "type": "uint32_t",
+                    "description": {
+                        "zh-CN": "data字符串的长度",
+                        "en-US": ""
+                    }
+                },
+                {
+                    "name": "sig",
+                    "type": "signature",
+                    "description": {
+                        "zh-CN": "签名数据",
+                        "en-US": ""
+                    }
+                },
+                {
+                    "name": "pub_key",
+                    "type": "const char *",
+                    "description": {
+                        "zh-CN": "签名私钥对应的公钥",
+                        "en-US": ""
+                    }
+                },
+                {
+                    "name": "pub_keylen",
+                    "type": "uint32_t",
+                    "description": {
+                        "zh-CN": "公钥的长度",
+                        "en-US": ""
+                    }
+                }
+            ],
+            "description": {
+                "zh-CN": "验证签名",
+                "en-US": "verify signature"
+            }
+        },
+        {
+            "name": "get_head_block_num",
+            "returnType": "int64_t",
+            "belong": "<graphenelib/global.h>",
+            "fields": [],
+            "description": {
+                "zh-CN": "获取最新区块号",
+                "en-US": "get latest block number"
+            }
+        },
+        {
+            "name": "get_head_block_id",
+            "returnType": "int64_t",
+            "belong": "<graphenelib/global.h>",
+            "fields": [],
+            "description": {
+                "zh-CN": "获取最新区块hash",
+                "en-US": "get latest block hash"
+            }
+        },
+        {
+            "name": "get_head_block_time",
+            "returnType": "int64_t",
+            "belong": "<graphenelib/global.h>",
+            "fields": [],
+            "description": {
+                "zh-CN": "获取最新区块的时间，返回值单位秒",
+                "en-US": "get latest block time, unit is seconds"
+            }
+        },
+        {
+            "name": "get_trx_sender",
+            "returnType": "int64_t",
+            "belong": "<graphenelib/global.h>",
+            "fields": [],
+            "description": {
+                "zh-CN": "获取调用合约的账号的instance_id",
+                "en-US": "get caller account's instance_id"
+            }
+        },
+        {
+            "name": "get_account_id",
+            "returnType": "int64_t",
+            "belong": "<graphenelib/global.h>",
+            "fields": [
+                {
+                    "name": "data",
+                    "type": "const char *",
+                    "description": {
+                        "zh-CN": "账号名，例如nathan",
+                        "en-US": ""
+                    }
+                },
+                {
+                    "name": "length",
+                    "type": "uint32_t",
+                    "description": {
+                        "zh-CN": "账号名的长度，例如nathan的长度是6",
+                        "en-US": ""
+                    }
+                }
+            ],
+            "description": {
+                "zh-CN": "根据账号名获取账号的instance_id",
+                "en-US": "get account instance_id by account name"
+            }
+        },
+        {
+            "name": "get_asset_id",
+            "returnType": "int64_t",
+            "belong": "<graphenelib/global.h>",
+            "fields": [
+                {
+                    "name": "data",
+                    "type": "const char *",
+                    "description": {
+                        "zh-CN": "资产名",
+                        "en-US": ""
+                    }
+                },
+                {
+                    "name": "length",
+                    "type": "uint32_t",
+                    "description": {
+                        "zh-CN": "账号名的长度，例如nathan的长度是6",
+                        "en-US": ""
+                    }
+                }
+            ],
+            "description": {
+                "zh-CN": "根据资产名获取资产的instance_id",
+                "en-US": "get asset instance_id by asset name"
+            }
+        },
+        {
+            "name": "graphene_assert",
+            "returnType": "void",
+            "belong": "<graphenelib/system.h>",
+            "fields": [
+                {
+                    "name": "test",
+                    "type": "uint32_t",
+                    "description": {
+                        "zh-CN": "",
+                        "en-US": ""
+                    }
+                },
+                {
+                    "name": "msg",
+                    "type": "const char*",
+                    "description": {
+                        "zh-CN": "",
+                        "en-US": ""
+                    }
+                }
+            ],
+            "description": {
+                "zh-CN": "如果条件不满足，中断本次合约的执行并会滚所有状态",
+                "en-US": ""
+            }
+        },
+        {
+            "name": "graphene_assert_message",
+            "returnType": "void",
+            "belong": "<graphenelib/system.h>",
+            "fields": [
+                {
+                    "name": "test",
+                    "type": "uint32_t",
+                    "description": {
+                        "zh-CN": "",
+                        "en-US": ""
+                    }
+                },
+                {
+                    "name": "msg",
+                    "type": "const char*",
+                    "description": {
+                        "zh-CN": "",
+                        "en-US": ""
+                    }
+                },
+                {
+                    "name": "msg_len",
+                    "type": "uint32_t",
+                    "description": {
+                        "zh-CN": "",
+                        "en-US": ""
+                    }
+                }
+            ],
+            "description": {
+                "zh-CN": "如果条件不满足，输出必要的信息，但是本次合约的执行会继续",
+                "en-US": ""
+            }
+        },
+        {
+            "name": "print",
+            "returnType": "void",
+            "belong": "<graphenelib/system.h>",
+            "fields": [
+                {
+                    "name": "ptr",
+                    "type": "const char*",
+                    "description": {
+                        "zh-CN": "",
+                        "en-US": ""
+                    }
+                }
+            ],
+            "description": {
+                "zh-CN": "用于调试时日志的打印",
+                "en-US": ""
+            }
         }
     ]
 }
