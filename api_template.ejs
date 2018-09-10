@@ -1,5 +1,11 @@
+## Index
+| belong | api name | description |
+| --- | --- | --- |
+<% _.forEach(apis, function(api){ %>| <%= api.belong %> | <%= api.name %> | <%= i18n(api.description) %> |
+<% }); %>
+
 <% _.forEach(apis, function(api){ %>
-## <a name="<%= api.name %>"></a><%= api.returnType %> <%= api.name %>(<% _.forEach(api.fields, function(field, idx){ %><% if(idx>0){ %>, <% } %><%= field.type %> <%= field.name %><% }); %>)
+## <%= api.returnType %> <%= api.name %>(<% _.forEach(api.fields, function(field, idx){ %><% if(idx>0){ %>, <% } %><%= field.type %> <%= field.name %><% }); %>)
 
 include: <%= api.belong %>
 
