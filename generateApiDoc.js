@@ -3,7 +3,6 @@ var templateString = fs.readFileSync('api_template.ejs', 'utf-8');
 var template = require('lodash').template
 var json = require('./gxb_contract_api.json')
 import examples from './gxb_contract_api_example.js'
-let lang = 'en-US'
 
 // combo json and examples
 json.apis.forEach(api => {
@@ -19,13 +18,29 @@ const content = template(templateString)({apis:json.apis, i18n: function(desc){
         return desc
     }
 
-    return desc[lang] || ''
+    return desc['zh-CN'] || ''
 }})
 
-fs.writeFile("./test.md", content, function(err) {
+const enContent = template(templateString)({apis:json.apis, i18n: function(desc){
+    if(typeof desc === 'string'){
+        return desc
+    }
+
+    return desc['en-US'] || ''
+}})
+
+fs.writeFile("./gxb_contract_api.md", content, function(err) {
     if(err) {
         throw err
     }
 
-    console.log('combo succeed!')
+    console.log('combo cn doc succeed!')
+});
+
+fs.writeFile("./gxb_contract_api_EN.md", enContent, function(err) {
+    if(err) {
+        throw err
+    }
+
+    console.log('combo en doc succeed!')
 }); 

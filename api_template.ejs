@@ -1,23 +1,20 @@
 <% _.forEach(apis, function(api){ %>
-## <%= api.returnType %> <%= api.name %>
+## <a name="<%= api.name %>"></a><%= api.returnType %> <%= api.name %>(<% _.forEach(api.fields, function(field, idx){ %><% if(idx>0){ %>, <% } %><%= field.type %> <%= field.name %><% }); %>)
 
 include: <%= api.belong %>
 
 desc: <%= i18n(api.description) %>
 
-**params:**
 <% if(api.fields && api.fields.length > 0){ %>
+**params:**
 <% _.forEach(api.fields, function(field){ %>
-\<<%= field.type %>\><%= field.name %>: <%= i18n(field.description) %>
-
+\<<%= field.type %>\> <%= field.name %>: <%= i18n(field.description) %>
 <% }); %>
 <% } %>
 <% _.forEach(api.examples, function(example, index){ %>
-### example<%= index %>
+### example<%= index+1 %>
 <%= example.example %>
-
 <%= i18n(example.description) %>
 
 <% }); %>
-
 <% }); %>

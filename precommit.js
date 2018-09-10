@@ -9,7 +9,7 @@ listChangedFiles.stdout.on('data', (data) => {
         arr.push(temp[0])
     }
 
-    if(arr.includes('gxb_contract_api.json') || arr.includes('gxb_contract_api_example.js')){
+    if(arr.includes('gxb_contract_api.json') || arr.includes('gxb_contract_api_example.js') || arr.includes('api_template.ejs')){
         cp.exec('babel-node generateApiDoc.js',function(err, stdout, stderr){
             if(err){
                 throw stderr

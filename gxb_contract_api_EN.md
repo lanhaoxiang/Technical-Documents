@@ -3,7 +3,7 @@
 
 include: <graphenelib/action.h>
 
-desc: 返回当前合约账号的id
+desc: return current contract account ID
 
 
 
@@ -12,7 +12,7 @@ desc: 返回当前合约账号的id
 
 include: <graphenelib/action.h>
 
-desc: 返回本次调用向合约发送的资产id
+desc: get aseet ID of this call
 
 
 
@@ -43,11 +43,7 @@ void deposit()
 
 GRAPHENE_ABI(helloworld, (deposit))
 ```
-
-对这个合约通过钱包客户端调用
-call_contract nathan helloworld {"amount":10000000,"asset_id":1.3.1} deposit "{}" GXC true
-调用helloworld的deposit方法，在deposit方法的实现中调用get_action_asset_id()将返回1
-            
+test for desc 123
 
 
 
@@ -55,7 +51,7 @@ call_contract nathan helloworld {"amount":10000000,"asset_id":1.3.1} deposit "{}
 
 include: <graphenelib/action.h>
 
-desc: 返回本次调用向合约发送的资产数量
+desc: get asset amount of this call
 
 
 
@@ -64,18 +60,18 @@ desc: 返回本次调用向合约发送的资产数量
 
 include: <graphenelib/asset.h>
 
-desc: 将当前合约的资产转移到外部账户
+desc: withdraw current account asset to another account
 
 
 **params:**
 
-\<uint64_t\> from: 从哪个账号转账，一般是_self
+\<uint64_t\> from: transfer from which account, normally _self
 
-\<uint64_t\> to: 转账到哪个外部账户，必须只传账号的instance_id，比如外部账户是1.2.33，那么传33即可
+\<uint64_t\> to: 
 
-\<uint64_t\> asset_id: 指定转账的资产id，必须只传资产id的instance_id, 比如资产id是1.3.0， 那么传0即可
+\<uint64_t\> asset_id: 
 
-\<int64_t\> amount: 转账金额，这个数字包含了资产的精度，比如想转1个GXC，那么应该写100000
+\<int64_t\> amount: 
 
 
 
@@ -84,14 +80,14 @@ desc: 将当前合约的资产转移到外部账户
 
 include: <graphenelib/asset.h>
 
-desc: 获取外部账户的某资产余额
+desc: get balance of some account
 
 
 **params:**
 
-\<int64_t\> account: 外部账户的instace_id
+\<int64_t\> account: 
 
-\<int64_t\> asset_id: 指定资产的instance_id
+\<int64_t\> asset_id: 
 
 
 
@@ -100,16 +96,16 @@ desc: 获取外部账户的某资产余额
 
 include: <graphenelib/crypto.h>
 
-desc: 计算数据的sha256
+desc: get data's sha256
 
 
 **params:**
 
-\<char\> data: 用于计算sha256的字符串首地址
+\<char\> data: 
 
-\<uint32_t\> length: data字符串的长度
+\<uint32_t\> length: 
 
-\<const checksum256 *\> hash: 出参 用于存储计算的sha256
+\<const checksum256 *\> hash: 
 
 
 
@@ -118,16 +114,16 @@ desc: 计算数据的sha256
 
 include: <graphenelib/crypto.h>
 
-desc: 计算数据的sha512
+desc: get data's sha512
 
 
 **params:**
 
-\<char\> data: 用于计算sha512的字符串首地址
+\<char\> data: 
 
-\<uint32_t\> length: data字符串的长度
+\<uint32_t\> length: 
 
-\<const checksum512 *\> hash: 出参 用于存储计算的sha512
+\<const checksum512 *\> hash: 
 
 
 
@@ -136,16 +132,16 @@ desc: 计算数据的sha512
 
 include: <graphenelib/crypto.h>
 
-desc: 计算数据的ripemd160
+desc: get data's ripemd160
 
 
 **params:**
 
-\<char\> data: 用于计算ripemd160的字符串首地址
+\<char\> data: 
 
-\<uint32_t\> length: data字符串的长度
+\<uint32_t\> length: 
 
-\<const checksum160 *\> hash: 出参 用于存储计算的ripemd160
+\<const checksum160 *\> hash: 
 
 
 
@@ -154,20 +150,20 @@ desc: 计算数据的ripemd160
 
 include: <graphenelib/crypto.h>
 
-desc: 验证签名
+desc: verify signature
 
 
 **params:**
 
-\<const char\> data: 签名的原始字符串
+\<const char\> data: 
 
-\<uint32_t\> datalen: data字符串的长度
+\<uint32_t\> datalen: 
 
-\<signature\> sig: 签名数据
+\<signature\> sig: 
 
-\<const char *\> pub_key: 签名私钥对应的公钥
+\<const char *\> pub_key: 
 
-\<uint32_t\> pub_keylen: 公钥的长度
+\<uint32_t\> pub_keylen: 
 
 
 
@@ -176,7 +172,7 @@ desc: 验证签名
 
 include: <graphenelib/global.h>
 
-desc: 获取最新区块号
+desc: get latest block number
 
 
 
@@ -185,7 +181,7 @@ desc: 获取最新区块号
 
 include: <graphenelib/global.h>
 
-desc: 获取最新区块hash
+desc: get latest block hash
 
 
 
@@ -194,7 +190,7 @@ desc: 获取最新区块hash
 
 include: <graphenelib/global.h>
 
-desc: 获取最新区块的时间，返回值单位秒
+desc: get latest block time, unit is seconds
 
 
 
@@ -203,7 +199,7 @@ desc: 获取最新区块的时间，返回值单位秒
 
 include: <graphenelib/global.h>
 
-desc: 获取调用合约的账号的instance_id
+desc: get caller account's instance_id
 
 
 
@@ -212,14 +208,14 @@ desc: 获取调用合约的账号的instance_id
 
 include: <graphenelib/global.h>
 
-desc: 根据账号名获取账号的instance_id
+desc: get account instance_id by account name
 
 
 **params:**
 
-\<const char *\> data: 账号名，例如nathan
+\<const char *\> data: 
 
-\<uint32_t\> length: 账号名的长度，例如nathan的长度是6
+\<uint32_t\> length: 
 
 
 
@@ -228,14 +224,14 @@ desc: 根据账号名获取账号的instance_id
 
 include: <graphenelib/global.h>
 
-desc: 根据资产名获取资产的instance_id
+desc: get asset instance_id by asset name
 
 
 **params:**
 
-\<const char *\> data: 资产名
+\<const char *\> data: 
 
-\<uint32_t\> length: 账号名的长度，例如nathan的长度是6
+\<uint32_t\> length: 
 
 
 
@@ -244,7 +240,7 @@ desc: 根据资产名获取资产的instance_id
 
 include: <graphenelib/system.h>
 
-desc: 如果条件不满足，中断本次合约的执行并会滚所有状态
+desc: 
 
 
 **params:**
@@ -260,7 +256,7 @@ desc: 如果条件不满足，中断本次合约的执行并会滚所有状态
 
 include: <graphenelib/system.h>
 
-desc: 如果条件不满足，输出必要的信息，但是本次合约的执行会继续
+desc: 
 
 
 **params:**
@@ -278,12 +274,12 @@ desc: 如果条件不满足，输出必要的信息，但是本次合约的执�
 
 include: <graphenelib/system.h>
 
-desc: 用于调试时日志的打印
+desc: 
 
 
 **params:**
 
-\<const char*\> ptr: 
+\<const char*\> ptr: print content
 
 
 
