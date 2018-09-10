@@ -1,5 +1,6 @@
 var listChangedFiles = require('child_process').exec('git status --porcelain | sed s/^...//')
 var cp = require('child_process')
+var path = require('path')
 
 listChangedFiles.stdout.on('data', (data) => {
     var reg = /.+/g
@@ -9,11 +10,9 @@ listChangedFiles.stdout.on('data', (data) => {
         arr.push(temp[0])
     }
 
-    console.log(arr)
-
-    if(arr.includes('scripts/gxb_contract_api.json') || arr.includes('scripts/gxb_contract_api_example.js') || arr.includes('scripts/api_template.ejs')){
-        cp.exec('babel-node generateApiDoc.js',function(err, stdout, stderr){
-            if(err){
+    if (arr.includes('scripts/gxb_contract_api.json') || arr.includes('scripts/gxb_contract_api_example.js') || arr.includes('templates/api_template.ejs')) {
+        cp.exec(`babel-node ${path.join(__dirname, './generateApiDoc.js')}`, function (err, stdout, stderr) {
+            if (err) {
                 throw stderr
             }
 
