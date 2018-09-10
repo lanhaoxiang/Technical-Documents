@@ -42,7 +42,7 @@ fs.writeFile(path.join(__dirname,'../gxb_contract_api.md'), content, function (e
     console.log('combo cn doc succeed!')
 });
 
-fs.writeFile(path.join(__dirname,'./gxb_contract_api_EN.md'), enContent, function (err) {
+fs.writeFile(path.join(__dirname,'../gxb_contract_api_EN.md'), enContent, function (err) {
     if (err) {
         throw err
     }
