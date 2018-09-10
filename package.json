@@ -1,0 +1,29 @@
+{
+  "name": "Technical-Documents",
+  "version": "1.0.0",
+  "description": "这是GXChain的技术文档，查看全文点击[这里](/introduction.md)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DophinL/Technical-Documents.git"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "babel-node precommit.js"
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DophinL/Technical-Documents/issues"
+  },
+  "homepage": "https://github.com/DophinL/Technical-Documents#readme",
+  "devDependencies": {
+    "babel-preset-env": "^1.7.0",
+    "husky": "^1.0.0-rc.13"
+  }
+}

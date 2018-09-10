@@ -29,7 +29,9 @@ example: 比如合约账号id是1.2.666，调用current_receiver()将返回666
 
 ## <a name="get_action_asset_id"></a>uint64\_t get\_action\_asset\_id()
 desc: 返回本次调用向合约发送的资产id  
+
 include: \<graphenelib/action.h>  
+
 example: 
 
 ```c++
@@ -143,7 +145,7 @@ class helloworld : public contract
 };
 
 GRAPHENE_ABI(helloworld, (deposit)(testwithdraw))
-``` 
+```
 call\_contract nathan helloworld null testwithdraw "{}" GXC true  
 调用helloworld合约的testwithdraw方法，在testwithdraw方法中调用withdraw\_asset()从helloworld合约账户转账1个GXC到1.2.33账号
 [实际的案例](https://github.com/gxchain/gxb-core/blob/dev_master/contracts/examples/bank2/bank.cpp) ,在bank2合约代码的withdraw方法的最后有调用这个api
