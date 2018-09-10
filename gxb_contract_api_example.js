@@ -35,7 +35,7 @@ GRAPHENE_ABI(helloworld, (deposit))
             call\_contract nathan helloworld {"amount":10000000,"asset\_id":1.3.1} deposit "{}" GXC true
             
             调用helloworld的deposit方法，在deposit方法的实现中调用get\_action\_asset\_id()将返回1`,
-            'en-US': `test for desc`
+            'en-US': `test for desc 123`
         }
     }]
 }
