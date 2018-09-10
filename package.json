@@ -12,7 +12,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "babel-node precommit.js"
+      "pre-commit": "babel-node scripts/precommit.js"
     }
   },
   "keywords": [],
