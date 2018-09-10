@@ -333,7 +333,7 @@ desc:
 **params:**
 
 
-\<const char*\>ptr: 
+\<const char*\>ptr: print content
 
 
 

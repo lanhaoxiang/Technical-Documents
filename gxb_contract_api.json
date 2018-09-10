@@ -479,7 +479,7 @@
                     "type": "const char*",
                     "description": {
                         "zh-CN": "",
-                        "en-US": ""
+                        "en-US": "print content"
                     }
                 }
             ],
