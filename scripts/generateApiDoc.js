@@ -34,7 +34,7 @@ const enContent = template(templateString)({
     }
 })
 
-fs.writeFile("./gxb_contract_api.md", content, function (err) {
+fs.writeFile(path.join(__dirname,'../gxb_contract_api.md'), content, function (err) {
     if (err) {
         throw err
     }
@@ -42,7 +42,7 @@ fs.writeFile("./gxb_contract_api.md", content, function (err) {
     console.log('combo cn doc succeed!')
 });
 
-fs.writeFile("./gxb_contract_api_EN.md", enContent, function (err) {
+fs.writeFile(path.join(__dirname,'./gxb_contract_api_EN.md'), enContent, function (err) {
     if (err) {
         throw err
     }
