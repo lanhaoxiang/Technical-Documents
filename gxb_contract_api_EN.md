@@ -1,4 +1,4 @@
-## Index
+## Index Table
 | belong | api name | description |
 | --- | --- | --- |
 | <graphenelib/action.h> | current_receiver | return current contract account ID |

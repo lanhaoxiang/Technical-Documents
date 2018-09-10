@@ -19,8 +19,7 @@ listChangedFiles.stdout.on('data', (data) => {
             console.log(stdout)
 
             // git add generated doc
-            cp.exec('git add gxb_contract_api_EN.md')
-            cp.exec('git add gxb_contract_api.md')
+            cp.exec('git add gxb_contract_api_EN.md && git add gxb_contract_api.md')
         })
     }
 })
