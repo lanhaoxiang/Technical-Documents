@@ -1,0 +1,26 @@
+## Index Table
+| belong | api name | description |
+| --- | --- | --- |
+<% _.forEach(apis, function(api){ %>| <%= api.belong %> | <%= api.name %> | <%= i18n(api.description) %> |
+<% }); %>
+
+<% _.forEach(apis, function(api){ %>
+## <%= api.returnType %> <%= api.name %>(<% _.forEach(api.fields, function(field, idx){ %><% if(idx>0){ %>, <% } %><%= field.type %> <%= field.name %><% }); %>)
+
+include: <%= api.belong %>
+
+desc: <%= i18n(api.description) %>
+
+<% if(api.fields && api.fields.length > 0){ %>
+**params:**
+<% _.forEach(api.fields, function(field){ %>
+\<<%= field.type %>\> <%= field.name %>: <%= i18n(field.description) %>
+<% }); %>
+<% } %>
+<% _.forEach(api.examples, function(example, index){ %>
+### example<%= index+1 %>
+<%= example.example %>
+<%= i18n(example.description) %>
+
+<% }); %>
+<% }); %>
