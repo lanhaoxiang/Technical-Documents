@@ -23,6 +23,8 @@
   },
   "homepage": "https://github.com/DophinL/Technical-Documents#readme",
   "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/node": "^7.0.0",
     "babel-preset-env": "^1.7.0",
     "husky": "^1.0.0-rc.13"
   }
