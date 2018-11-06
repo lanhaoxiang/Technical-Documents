@@ -244,6 +244,8 @@ desc: 根据账号名获取账号的instance_id
 
 \<uint32_t\> length: 账号名的长度，例如nathan的长度是6
 
+如果帐户存在，返回帐户的instance_id，如果帐户不存在，则返回-1
+
 
 
 
