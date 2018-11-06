@@ -1,11 +1,11 @@
 ## Index Table
 | belong | api name | description |
 | --- | --- | --- |
-| <graphenelib/action.h> | current_receiver | 返回当前合约账号的id |
-| <graphenelib/action.h> | get_action_asset_id | 返回本次调用向合约发送的资产id |
+| <graphenelib/action.h> | current_receiver | 返回当前合约账号的instance id (即帐户id的最后一位) |
+| <graphenelib/action.h> | get_action_asset_id | 返回本次调用向合约发送的资产instance id (即资产id的最后一位)|
 | <graphenelib/action.h> | get_action_asset_amount | 返回本次调用向合约发送的资产数量 |
-| <graphenelib/asset.h> | withdraw_asset | 将当前合约的资产转移到外部账户 |
-| <graphenelib/asset.h> | get_balance | 获取外部账户的某资产余额 |
+| <graphenelib/asset.h> | withdraw_asset | 将当前合约帐户的资产转移到链上账户 |
+| <graphenelib/asset.h> | get_balance | 获取链上账户的某资产余额 |
 | <graphenelib/crypto.h> | sha256 | 计算数据的sha256 |
 | <graphenelib/crypto.h> | sha512 | 计算数据的sha512 |
 | <graphenelib/crypto.h> | ripemd160 | 计算数据的ripemd160 |
@@ -26,7 +26,7 @@
 
 include: <graphenelib/action.h>
 
-desc: 返回当前合约账号的id
+desc: 返回当前合约账号的instance id (即帐户id的最后一位)
 
 
 
@@ -35,8 +35,9 @@ desc: 返回当前合约账号的id
 
 include: <graphenelib/action.h>
 
-desc: 返回本次调用向合约发送的资产id
+desc: 返回本次调用向合约发送的资产instance id (即资产id的最后一位)
 
+返回值：返回0表示action无附带资产，返回非0表示资产的instance id 
 
 
 ### example1
@@ -80,6 +81,8 @@ include: <graphenelib/action.h>
 
 desc: 返回本次调用向合约发送的资产数量
 
+返回值：返回0表示合约无附带资产，返回非0表示附带资产数量，数量需要除以10万
+
 
 
 
@@ -110,9 +113,10 @@ include: <graphenelib/asset.h>
 desc: 获取外部账户的某资产余额
 
 
+
 **params:**
 
-\<int64_t\> account: 外部账户的instace_id
+\<int64_t\> account: 链上账户的instace_id
 
 \<int64_t\> asset_id: 指定资产的instance_id
 
@@ -199,7 +203,7 @@ desc: 验证签名
 
 include: <graphenelib/global.h>
 
-desc: 获取最新区块号
+desc: 返回最新区块号
 
 
 
@@ -208,7 +212,7 @@ desc: 获取最新区块号
 
 include: <graphenelib/global.h>
 
-desc: 获取最新区块hash
+desc: 返回最新区块hash
 
 
 
@@ -237,6 +241,7 @@ include: <graphenelib/global.h>
 
 desc: 根据账号名获取账号的instance_id
 
+返回值： 返回-1表示无此帐户名，返回值>=0 表示帐户的instance id
 
 **params:**
 
@@ -248,13 +253,13 @@ desc: 根据账号名获取账号的instance_id
 
 
 
-
 ## int64_t get_asset_id(const char * data, uint32_t length)
 
 include: <graphenelib/global.h>
 
 desc: 根据资产名获取资产的instance_id
 
+返回值： 返回-1表示无此资产名，返回值>=0 表示资产的instance id
 
 **params:**
 
