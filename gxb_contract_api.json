@@ -408,6 +408,77 @@
             }
         },
         {
+            "name": "read_transaction",
+            "returnType": "int",
+            "belong": "<graphenelib/global.h>",
+            "fields": [
+                {
+                    "name": "dst",
+                    "type": "char *",
+                    "description": {
+                        "zh-CN": "交易序列化数据目的buffer",
+                        "en-US": "transaction binary data destination buffer"
+                    }
+                },
+                {
+                    "name": "dst_size",
+                    "type": "uint32_t",
+                    "description": {
+                        "zh-CN": "交易序列化数据目的buffer的字节数",
+                        "en-US": "transaction binary data destination buffer size"
+                    }
+                }
+            ],
+            "description": {
+                "zh-CN": "获取当前合约调用所属的transaction的binary数据",
+                "en-US": "get transaction binary data which current contract calling in"
+            }
+        },
+        {
+            "name": "transaction_size",
+            "returnType": "int",
+            "belong": "<graphenelib/global.h>",
+            "fields": [
+            ],
+            "description": {
+                "zh-CN": "获取当前合约调用所属的transaction的binary数据的字节数",
+                "en-US": "get transaction binary data size which current contract calling in"
+            }
+        },
+        {
+            "name": "expiration",
+            "returnType": "int64_t",
+            "belong": "<graphenelib/global.h>",
+            "fields": [
+            ],
+            "description": {
+                "zh-CN": "获取当前合约调用所在交易的过期时间",
+                "en-US": "get expiration of transaction which current contract calling belonging to"
+            }
+        },
+        {
+            "name": "tapos_block_num",
+            "returnType": "int",
+            "belong": "<graphenelib/global.h>",
+            "fields": [
+            ],
+            "description": {
+                "zh-CN": "获取本次合约调用所属block的ref block num",
+                "en-US": "get ref block number of current block"
+            }
+        },
+        {
+            "name": "tapos_block_prefix",
+            "returnType": "int64_t",
+            "belong": "<graphenelib/global.h>",
+            "fields": [
+            ],
+            "description": {
+                "zh-CN": "获取本次合约调用所属block的ref block prefix",
+                "en-US": "get ref block prefix of current block"
+            }
+        },
+        {
             "name": "graphene_assert",
             "returnType": "void",
             "belong": "<graphenelib/system.h>",
