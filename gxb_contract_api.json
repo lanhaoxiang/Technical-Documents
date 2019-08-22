@@ -360,6 +360,16 @@
             }
         },
         {
+            "name": "get_trx_origin",
+            "returnType": "int64_t",
+            "belong": "<graphenelib/global.h>",
+            "fields": [],
+            "description": {
+                "zh-CN": "获取原始调用合约的账号的instance_id",
+                "en-US": "get original caller account's instance_id"
+            }
+        },
+        {
             "name": "get_account_id",
             "returnType": "int64_t",
             "belong": "<graphenelib/global.h>",
