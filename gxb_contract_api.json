@@ -42,6 +42,12 @@
             "name": "@abi"
         },
         {
+            "name": "ACTION"
+        },
+        {
+            "name": "PAYABLE"
+        },
+        {
             "name": "GRAPHENE_ABI"
         },
         {
