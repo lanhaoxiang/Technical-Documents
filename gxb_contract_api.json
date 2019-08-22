@@ -48,6 +48,9 @@
             "name": "PAYABLE"
         },
         {
+            "name": "TABLE"
+        },
+        {
             "name": "GRAPHENE_ABI"
         },
         {
